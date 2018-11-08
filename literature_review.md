@@ -21,3 +21,5 @@ General information about Data Wrangling and different processes inside the DW.
 #### [Analysing the meaning of sentences](http://www.ling.helsinki.fi/kit/2009s/clt231/NLTK/book/ch10-AnalyzingTheMeaningOfSentences.html#querying-a-database)
 
 #### [Apache OpenNLP for processing text](https://opennlp.apache.org/)
+
+### [Automatic SQL Query Formation from Natural Language Query](https://www.researchgate.net/publication/296561401_Automatic_SQL_Query_Formation_from_Natural_Language_Query)
