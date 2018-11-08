@@ -14,3 +14,10 @@ General information about Data Wrangling and different processes inside the DW.
 
 ## English queries to structured files
 
+### [Forum question about converting English to SQL](https://www.researchgate.net/post/How_to_approach_a_system_to_convert_english_text_to_SQL_query)
+
+#### [Natural Language Interface for DBs](https://www.researchgate.net/post/How_to_approach_a_system_to_convert_english_text_to_SQL_query)
+
+#### [Analysing the meaning of sentences](http://www.ling.helsinki.fi/kit/2009s/clt231/NLTK/book/ch10-AnalyzingTheMeaningOfSentences.html#querying-a-database)
+
+#### [Apache OpenNLP for processing text](https://opennlp.apache.org/)
