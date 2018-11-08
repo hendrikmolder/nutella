@@ -23,3 +23,10 @@ General information about Data Wrangling and different processes inside the DW.
 #### [Apache OpenNLP for processing text](https://opennlp.apache.org/)
 
 ### [Automatic SQL Query Formation from Natural Language Query](https://www.researchgate.net/publication/296561401_Automatic_SQL_Query_Formation_from_Natural_Language_Query)
+
+### [Constructing an Interactive Natural Language Interface for Relational Databases](http://www.eecs.umich.edu/eecs/about/articles/2015/VLDB_Best_Paper.pdf)
+
+### [Natural language interfaces to databases – an introduction](https://www.cambridge.org/core/journals/natural-language-engineering/article/natural-language-interfaces-to-databases-an-introduction/21C30448C70DD4988E6DA0D54205FB56)
+
+### [Quepy](https://github.com/machinalis/quepy)
+
