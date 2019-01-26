@@ -2,6 +2,34 @@
 
 Relevant articles and other resources are linked here with a short description of why they are relevant.
 
+flatten nested json https://www.kaggle.com/jboysen/quick-tutorial-flatten-nested-json-in-pandas/data
+
+pd dataframe iteration https://stackoverflow.com/questions/16476924/how-to-iterate-over-rows-in-a-dataframe-in-pandas
+
+pd dataframe doc https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.add.html
+
+pd json_normalize function doc https://pandas.pydata.org/pandas-docs/stable/generated/pandas.io.json.json_normalize.html
+
+dataframe rename https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.rename.html
+
+dataframe to csv https://datatofish.com/export-dataframe-to-csv/
+
+taverna 2 components how to http://www.taverna.org.uk/documentation/taverna-2-x/components/
+
+taverna 2 rest api http://www.taverna.org.uk/documentation/taverna-2-x/server/2-2/rest-api/
+
+taverna 2 rest services presentation https://www.slideshare.net/mygrid/2014-taverna-tutorial-rest-services
+
+python file download https://stackoverflow.com/questions/19602931/basic-http-file-downloading-and-saving-to-disk-in-python
+
+bottle server docs https://bottlepy.org/docs/dev/tutorial.html
+
+py str replace https://www.tutorialspoint.com/python/string_replace.htm
+
+taverna 2 rest http://dev.mygrid.org.uk/wiki/display/tav250/REST
+
+bottle fromdisk https://bottlepy.org/docs/dev/api.html#bottle.FormsDict
+
 ## Data Wrangling, DWL, D2WL
 
 ### [A Conceptual Approach to Traffic Data Wrangling](https://link.springer.com/chapter/10.1007/978-3-319-60795-5_2)
