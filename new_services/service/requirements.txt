@@ -1,0 +1,4 @@
+bottle
+pandas
+requests
+atexit
