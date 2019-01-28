@@ -6,7 +6,7 @@ _Services created by Hendrik Molder. Where indicated, parts of Hapsoro's code is
 
 ## Services
 
-**For more detailed docuemntation. please see [REST API documentation](doc/api-doc.md).**
+**For more detailed docuemntation please see [REST API documentation](doc/api-doc.md).**
 
 1. **Weather JSON to CSV**\
     Transforms the weather observations nested JSON file into a CSV file. Returns the _full_ URL of the CSV file, which can be used or downloaded from the server.
