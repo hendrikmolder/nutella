@@ -18,7 +18,7 @@ Converts the weather JSON file into a tabular format (CSV) and returns the URL o
 
 **Example**
 ```bash
-curl -X POST 
+curl -X GET 
   http://localhost:8881/services/weather_json_to_csv/weather_obs-1.json
 ```
 
