@@ -3,6 +3,8 @@
 In this example, `localhost:8881` is used as the host. If you have configured the web server to start on a different port,
 please don't forget to keep that in mind when reading this document.
 
+---
+
 ### Convert weather JSON to CSV
 
 Converts the weather JSON file into a tabular format (CSV) and returns the URL of the converted file.
@@ -22,6 +24,7 @@ curl -X GET
   http://localhost:8881/services/weather_json_to_csv/weather_obs-1.json
 ```
 
+---
 
 ### Upload a file to the server
 
@@ -44,6 +47,7 @@ curl -X PUT
   -F file_url=http://localhost:8888/files/weather_obs-1.json
 ```
 
+---
 
 ### Get the file from the server
 
