@@ -20,3 +20,13 @@ To start the web server, first ensure you have Python installed. Then navigate i
 
 1. Install all required packages by running `pip install -r service/requirements.txt`.
 2. Start the webserver by running `python service/main.py`.
+
+## Structure
+```
+.
+├── docs            (Documentation in Markdown)
+├── downloads       (Downloads directory for the web server)
+├── notebooks       (Jupyter Notebooks used for development)
+├── service         (The REST services as Python scripts)
+└── test_data       (Data used for testing)
+```
