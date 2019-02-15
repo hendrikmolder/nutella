@@ -1,0 +1,30 @@
+# Rescue DAG file, created after running
+#   the wrangling-0.dag DAG file
+# Created 7/9/2018 14:02:24 UTC
+# Rescue DAG version: 2.0.1 (partial)
+#
+# Total number of Nodes: 19
+# Nodes premarked DONE: 1
+# Nodes that failed: 1
+#   svn0_ID0000000,<ENDLIST>
+
+DONE create_dir_wrangling_0_local
+RETRY create_dir_wrangling_0_local 1
+RETRY svn0_ID0000000 1
+RETRY filter1_ID0000002 1
+RETRY stage_out_local_local_0_0 1
+RETRY filter1_ID0000001 1
+RETRY separate2_ID0000004 1
+RETRY register_local_0_0 1
+RETRY separate2_ID0000003 1
+RETRY separate3_ID0000006 1
+RETRY separate3_ID0000005 1
+RETRY filter4_ID0000008 1
+RETRY filter4_ID0000007 1
+RETRY filter5_ID0000010 1
+RETRY filter5_ID0000009 1
+RETRY union6_ID0000011 1
+RETRY stage_out_local_local_6_0 1
+RETRY mutate_ID0000012 1
+RETRY stage_out_local_local_7_0 1
+RETRY cleanup_wrangling_0_local 1

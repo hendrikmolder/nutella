@@ -1,0 +1,29 @@
+{
+  "root_workflow_uuid": "de6a8476-52ed-4615-94e6-696c895099ca",
+  "workflow_uuid": "de6a8476-52ed-4615-94e6-696c895099ca",
+  "wf_metadata": {
+    "creator": "qh@qh-Lenovo-R720-15IKBN",
+    "created": "Tue Jun 19 03:04:19 2018"
+  },
+  "graph": {
+    "jobs": {
+      "cleanup_wrangling_0_local": {},
+      "deselect_ID0000001": {},
+      "unite1_ID0000008": {},
+      "svn_ID0000000": {},
+      "filteris_ID0000007": {},
+      "line_ID0000010": {},
+      "stage_out_local_local_0_0": {},
+      "defilter_ID0000005": {},
+      "stage_out_local_local_10_0": {},
+      "summarise_ID0000006": {},
+      "create_dir_wrangling_0_local": {},
+      "filterin_ID0000002": {},
+      "register_local_0_0": {},
+      "separate2_ID0000003": {},
+      "unite2_ID0000009": {},
+      "separate3_ID0000004": {},
+      "stage_out_local_local_9_0": {}
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "client": "pegasus-plan",
+  "version": "4.8.2",
+  "type": "metrics",
+  "start_time": 1.530748003362E9,
+  "end_time": 1.53074800764E9,
+  "duration": 4.278,
+  "exitcode": 0,
+  "root_wf_uuid": "c3929164-eabc-4e98-b041-b37e0864bead",
+  "wf_uuid": "c3929164-eabc-4e98-b041-b37e0864bead",
+  "data_config": "condorio",
+  "planner_args": "--conf pegasus.properties --dax wrangling2.dax --dir /home/qh/wranglingWF2/submit --output-dir /home/qh/output --cleanup leaf --force --sites condorpool --submit ",
+  "uses_pmc": false,
+  "wf_metrics": {
+    "compute_tasks": 10,
+    "dax_tasks": 0,
+    "dag_tasks": 0,
+    "total_tasks": 10,
+    "deleted_tasks": 0,
+    "dax_input_files": 0,
+    "dax_inter_files": 9,
+    "dax_output_files": 1,
+    "dax_total_files": 10,
+    "compute_jobs": 10,
+    "clustered_jobs": 0,
+    "si_tx_jobs": 0,
+    "so_tx_jobs": 2,
+    "inter_tx_jobs": 0,
+    "reg_jobs": 1,
+    "cleanup_jobs": 1,
+    "create_dir_jobs": 1,
+    "dax_jobs": 0,
+    "dag_jobs": 0,
+    "chmod_jobs": 0,
+    "total_jobs": 15
+  },
+  "app_metrics": {
+    "name": "pegasus-tutorial"
+  }
+}
+

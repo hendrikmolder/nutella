@@ -1,0 +1,11 @@
+[
+ { "type": "transfer",
+   "lfn": "f.a",
+   "id": 1,
+   "src_urls": [
+     { "site_label": "local", "url": "file:///home/qh/Diamond/input/f.a", "priority": 100 }
+   ],
+   "dest_urls": [
+     { "site_label": "local", "url": "file:///home/qh/Diamond/scratch/root/pegasus/diamond/run0002/./f.a" }
+   ] }
+]

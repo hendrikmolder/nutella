@@ -1,0 +1,53 @@
+
+# Transformation - name of the transformation.
+# Count          - the number of times the invocations corresponding to
+#                  the transformation was executed.
+# Succeeded      - the count of the succeeded invocations corresponding
+#                  to the transformation.
+# Failed         - the count of the failed invocations corresponding to
+#                  the transformation.
+# Min(sec)       - the minimum invocation runtime value corresponding
+#                  to the transformation.
+# Max(sec)       - the maximum invocation runtime value corresponding
+#                  to the transformation.
+# Mean(sec)      - the mean of the invocation runtime corresponding
+#                  to the transformation.
+# Total(sec)     - the cumulative of invocation runtime corresponding
+#                  to the transformation.
+
+# c3929164-eabc-4e98-b041-b37e0864bead (wrangling)
+Transformation           Count     Succeeded Failed  Min       Max       Mean      Total     
+dagman::post             14        14        0       5.0       5.0       5.0       70.0      
+defilter                 1         1         0       0.479     0.479     0.479     0.479     
+deselect                 1         1         0       1.197     1.197     1.197     1.197     
+filterin                 1         1         0       0.492     0.492     0.492     0.492     
+filteris                 1         1         0       0.402     0.402     0.402     0.402     
+line                     1         1         0       1.208     1.208     1.208     1.208     
+pegasus::cleanup         1         1         0       0.0       0.0       0.0       0.0       
+pegasus::dirmanager      1         1         0       0.0       0.0       0.0       0.0       
+pegasus::rc-client       1         1         0       0.532     0.532     0.532     0.532     
+pegasus::transfer        2         2         0       2.094     2.107     2.101     4.201     
+separate2                1         1         0       0.509     0.509     0.509     0.509     
+separate3                1         1         0       0.454     0.454     0.454     0.454     
+summarise                1         1         0       0.439     0.439     0.439     0.439     
+summarise2               1         1         0       0.453     0.453     0.453     0.453     
+svn                      1         1         0       1.958     1.958     1.958     1.958     
+
+
+# All (All)
+Transformation           Count     Succeeded Failed  Min       Max       Mean      Total     
+dagman::post             14        14        0       5.0       5.0       5.0       70.0      
+defilter                 1         1         0       0.479     0.479     0.479     0.479     
+deselect                 1         1         0       1.197     1.197     1.197     1.197     
+filterin                 1         1         0       0.492     0.492     0.492     0.492     
+filteris                 1         1         0       0.402     0.402     0.402     0.402     
+line                     1         1         0       1.208     1.208     1.208     1.208     
+pegasus::cleanup         1         1         0       0.0       0.0       0.0       0.0       
+pegasus::dirmanager      1         1         0       0.0       0.0       0.0       0.0       
+pegasus::rc-client       1         1         0       0.532     0.532     0.532     0.532     
+pegasus::transfer        2         2         0       2.094     2.107     2.101     4.201     
+separate2                1         1         0       0.509     0.509     0.509     0.509     
+separate3                1         1         0       0.454     0.454     0.454     0.454     
+summarise                1         1         0       0.439     0.439     0.439     0.439     
+summarise2               1         1         0       0.453     0.453     0.453     0.453     
+svn                      1         1         0       1.958     1.958     1.958     1.958     

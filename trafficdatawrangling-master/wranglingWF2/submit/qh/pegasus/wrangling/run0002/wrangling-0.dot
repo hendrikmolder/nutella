@@ -1,0 +1,37 @@
+digraph E {
+size="8.0,10.0"
+ratio=fill
+node [shape=ellipse]
+edge [arrowhead=normal, arrowsize=1.0]
+	"cleanup_wrangling_0_local" [color=deepskyblue,style=filled,label="cleanup_wrangling_0_local"]
+	"deselect_ID0000001" [color=blueviolet,style=filled,label="deselect_ID0000001"]
+	"svn_ID0000000" [color=blueviolet,style=filled,label="svn_ID0000000"]
+	"filteris_ID0000007" [color=blueviolet,style=filled,label="filteris_ID0000007"]
+	"stage_out_local_local_0_0" [color=goldenrod,style=filled,label="stage_out_local_local_0_0"]
+	"defilter_ID0000005" [color=blueviolet,style=filled,label="defilter_ID0000005"]
+	"summarise_ID0000006" [color=blueviolet,style=filled,label="summarise_ID0000006"]
+	"line_ID0000009" [color=blueviolet,style=filled,label="line_ID0000009"]
+	"create_dir_wrangling_0_local" [color=darkturquoise,style=filled,label="create_dir_wrangling_0_local"]
+	"filterin_ID0000002" [color=blueviolet,style=filled,label="filterin_ID0000002"]
+	"register_local_0_0" [color=orange,style=filled,label="register_local_0_0"]
+	"separate2_ID0000003" [color=blueviolet,style=filled,label="separate2_ID0000003"]
+	"summarise2_ID0000008" [color=blueviolet,style=filled,label="summarise2_ID0000008"]
+	"separate3_ID0000004" [color=blueviolet,style=filled,label="separate3_ID0000004"]
+	"stage_out_local_local_9_0" [color=goldenrod,style=filled,label="stage_out_local_local_9_0"]
+
+	"deselect_ID0000001" -> "filterin_ID0000002"
+	"svn_ID0000000" -> "deselect_ID0000001"
+	"svn_ID0000000" -> "stage_out_local_local_0_0"
+	"filteris_ID0000007" -> "summarise2_ID0000008"
+	"stage_out_local_local_0_0" -> "cleanup_wrangling_0_local"
+	"stage_out_local_local_0_0" -> "register_local_0_0"
+	"defilter_ID0000005" -> "summarise_ID0000006"
+	"summarise_ID0000006" -> "filteris_ID0000007"
+	"line_ID0000009" -> "stage_out_local_local_9_0"
+	"create_dir_wrangling_0_local" -> "svn_ID0000000"
+	"filterin_ID0000002" -> "separate2_ID0000003"
+	"separate2_ID0000003" -> "separate3_ID0000004"
+	"summarise2_ID0000008" -> "line_ID0000009"
+	"separate3_ID0000004" -> "defilter_ID0000005"
+	"stage_out_local_local_9_0" -> "cleanup_wrangling_0_local"
+}

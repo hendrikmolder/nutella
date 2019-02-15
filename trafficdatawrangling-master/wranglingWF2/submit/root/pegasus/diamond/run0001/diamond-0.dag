@@ -1,0 +1,62 @@
+######################################################################
+# PEGASUS WMS GENERATED DAG FILE
+# DAG diamond
+# Index = 0, Count = 1
+######################################################################
+MAXJOBS registration 1
+MAXJOBS stagein 10
+MAXJOBS cleanup 4
+MAXJOBS stageout 10
+
+JOB create_dir_diamond_0_local 00/00/create_dir_diamond_0_local.sub
+SCRIPT POST create_dir_diamond_0_local /usr/bin/pegasus-exitcode  -l diamond-0.exitcode.log -r $RETURN .//00/00/create_dir_diamond_0_local.out
+RETRY create_dir_diamond_0_local 1
+VARS create_dir_diamond_0_local +DAGNodeRetry="$(RETRY)"
+
+JOB stage_in_remote_local_0_0 00/00/stage_in_remote_local_0_0.sub
+SCRIPT POST stage_in_remote_local_0_0 /usr/bin/pegasus-exitcode  -l diamond-0.exitcode.log  .//00/00/stage_in_remote_local_0_0.out
+RETRY stage_in_remote_local_0_0 1
+CATEGORY stage_in_remote_local_0_0 stagein
+VARS stage_in_remote_local_0_0 +DAGNodeRetry="$(RETRY)"
+
+JOB preprocess_ID0000001 00/00/preprocess_ID0000001.sub
+SCRIPT POST preprocess_ID0000001 /usr/bin/pegasus-exitcode  -s PegasusLite:+exitcode+0 -l diamond-0.exitcode.log  .//00/00/preprocess_ID0000001.out
+RETRY preprocess_ID0000001 1
+VARS preprocess_ID0000001 +DAGNodeRetry="$(RETRY)"
+
+JOB findrange_ID0000003 00/00/findrange_ID0000003.sub
+SCRIPT POST findrange_ID0000003 /usr/bin/pegasus-exitcode  -s PegasusLite:+exitcode+0 -l diamond-0.exitcode.log  .//00/00/findrange_ID0000003.out
+RETRY findrange_ID0000003 1
+VARS findrange_ID0000003 +DAGNodeRetry="$(RETRY)"
+
+JOB findrange_ID0000002 00/00/findrange_ID0000002.sub
+SCRIPT POST findrange_ID0000002 /usr/bin/pegasus-exitcode  -s PegasusLite:+exitcode+0 -l diamond-0.exitcode.log  .//00/00/findrange_ID0000002.out
+RETRY findrange_ID0000002 1
+VARS findrange_ID0000002 +DAGNodeRetry="$(RETRY)"
+
+JOB analyze_ID0000004 00/00/analyze_ID0000004.sub
+SCRIPT POST analyze_ID0000004 /usr/bin/pegasus-exitcode  -s PegasusLite:+exitcode+0 -l diamond-0.exitcode.log  .//00/00/analyze_ID0000004.out
+RETRY analyze_ID0000004 1
+VARS analyze_ID0000004 +DAGNodeRetry="$(RETRY)"
+
+JOB stage_out_local_local_2_0 00/00/stage_out_local_local_2_0.sub
+SCRIPT POST stage_out_local_local_2_0 /usr/bin/pegasus-exitcode  -l diamond-0.exitcode.log  .//00/00/stage_out_local_local_2_0.out
+RETRY stage_out_local_local_2_0 1
+CATEGORY stage_out_local_local_2_0 stageout
+VARS stage_out_local_local_2_0 +DAGNodeRetry="$(RETRY)"
+
+JOB cleanup_diamond_0_local 00/00/cleanup_diamond_0_local.sub
+RETRY cleanup_diamond_0_local 1
+VARS cleanup_diamond_0_local +DAGNodeRetry="$(RETRY)"
+
+PARENT  stage_in_remote_local_0_0 CHILD preprocess_ID0000001
+PARENT  preprocess_ID0000001 CHILD findrange_ID0000003
+PARENT  preprocess_ID0000001 CHILD findrange_ID0000002
+PARENT  analyze_ID0000004 CHILD stage_out_local_local_2_0
+PARENT  stage_out_local_local_2_0 CHILD cleanup_diamond_0_local
+PARENT  create_dir_diamond_0_local CHILD stage_in_remote_local_0_0
+PARENT  findrange_ID0000003 CHILD analyze_ID0000004
+PARENT  findrange_ID0000002 CHILD analyze_ID0000004
+######################################################################
+# End of DAG
+######################################################################

@@ -1,0 +1,61 @@
+000 (774.000.000) 07/05 11:33:55 Job submitted from host: <127.0.0.1:45328?addrs=127.0.0.1-45328>
+    DAG Node: create_dir_wrangling_0_local
+    pool:local
+...
+001 (774.000.000) 07/05 11:33:55 Job executing on host: <127.0.0.1:50133?addrs=127.0.0.1-50133>
+...
+005 (774.000.000) 07/05 11:33:58 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	0  -  Total Bytes Sent By Job
+	0  -  Total Bytes Received By Job
+...
+000 (775.000.000) 07/05 11:34:11 Job submitted from host: <127.0.0.1:45328?addrs=127.0.0.1-45328>
+    DAG Node: svn0_ID0000000
+    pool:condorpool
+...
+001 (775.000.000) 07/05 11:34:16 Job executing on host: <127.0.0.1:23661?addrs=127.0.0.1-23661>
+...
+006 (775.000.000) 07/05 11:34:24 Image size of job updated: 176016
+	17  -  MemoryUsage of job (MB)
+	17244  -  ResidentSetSize of job (KB)
+...
+007 (775.000.000) 07/05 11:34:36 Shadow exception!
+	Error from slot1@qh-Lenovo-R720-15IKBN: STARTER at 127.0.0.1 failed to send file(s) to <127.0.0.1:55451>: error reading from /var/lib/condor/execute/dir_13985/a.csv: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <127.0.0.1:62895>
+	8569  -  Run Bytes Sent By Job
+	10854752  -  Run Bytes Received By Job
+...
+012 (775.000.000) 07/05 11:34:36 Job was held.
+	Error from slot1@qh-Lenovo-R720-15IKBN: STARTER at 127.0.0.1 failed to send file(s) to <127.0.0.1:55451>: error reading from /var/lib/condor/execute/dir_13985/a.csv: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <127.0.0.1:62895>
+	Code 13 Subcode 2
+...
+009 (775.000.000) 07/05 12:12:20 Job was aborted by the user.
+	The job attribute PeriodicRemove expression '( JobStatus == 5 ) && ( ( CurrentTime - EnteredCurrentStatus ) > 1800 )' evaluated to TRUE
+...
+000 (814.000.000) 07/05 12:12:31 Job submitted from host: <127.0.0.1:45328?addrs=127.0.0.1-45328>
+    DAG Node: svn0_ID0000000
+    pool:condorpool
+...
+001 (814.000.000) 07/05 12:12:31 Job executing on host: <127.0.0.1:23661?addrs=127.0.0.1-23661>
+...
+006 (814.000.000) 07/05 12:12:31 Image size of job updated: 2
+	0  -  MemoryUsage of job (MB)
+	0  -  ResidentSetSize of job (KB)
+...
+007 (814.000.000) 07/05 12:12:31 Shadow exception!
+	Error from slot2@qh-Lenovo-R720-15IKBN: STARTER at 127.0.0.1 failed to send file(s) to <127.0.0.1:5641>: error reading from /var/lib/condor/execute/dir_18665/a.csv: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <127.0.0.1:55235>
+	8512  -  Run Bytes Sent By Job
+	10854752  -  Run Bytes Received By Job
+...
+012 (814.000.000) 07/05 12:12:31 Job was held.
+	Error from slot2@qh-Lenovo-R720-15IKBN: STARTER at 127.0.0.1 failed to send file(s) to <127.0.0.1:5641>: error reading from /var/lib/condor/execute/dir_18665/a.csv: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <127.0.0.1:55235>
+	Code 13 Subcode 2
+...
+009 (814.000.000) 07/09 15:02:19 Job was aborted by the user.
+	The job attribute PeriodicRemove expression '( JobStatus == 5 ) && ( ( CurrentTime - EnteredCurrentStatus ) > 1800 )' evaluated to TRUE
+...

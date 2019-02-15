@@ -1,0 +1,554 @@
+
+<html>
+<head>
+<style type ='text/css'>
+#breakdown_chart{
+border:2px solid orange;
+}
+#breakdown_chart_footer_div{
+border:2px solid  #C35617;
+border-top-style:none;
+}
+#time_chart{
+border:2px solid orange;
+}
+#time_chart_footer_div{
+border:2px solid #C35617;
+border-top-style:none;
+}
+#breakdown_chart_legend_div{
+color:#0066CC;
+}
+.header_level1{
+font-family:"Times New Roman", Times, serif; 
+font-size:36px;
+}
+.header_level2{
+font-family:"Times New Roman", Times, serif; 
+font-size:30px;
+padding-top:25px;
+}
+</style>
+
+</head>
+<body>
+<center>
+<div class ='header_level1'>Pegasus plots </div>
+
+<script type='text/javascript' src='js/protovis-r3.2.js'>
+</script>
+			<a href ='gantt_chart/c8389675-ec2b-42be-9468-9d40bef67207.html'>Workflow Execution Gantt Chart (Per workflow)</a><br/>
+<a href ='host_chart/c8389675-ec2b-42be-9468-9d40bef67207.html'>Host Over Time Chart (Per workflow)</a><br/>
+<a href ='#breakdown_chart_div'>Invocation Breakdown Chart (Across workflows)</a><br/>
+<a href ='breakdown_chart/c8389675-ec2b-42be-9468-9d40bef67207.html'>Invocation Breakdown Chart (Per workflow)</a><br/>
+<a href ="#time_chart_div">Time Chart (Across workflows)</a><br/>
+<a href ='dax_graph/c8389675-ec2b-42be-9468-9d40bef67207.html'>DAX graph</a><br/>
+<a href ='dag_graph/c8389675-ec2b-42be-9468-9d40bef67207.html'>DAG graph</a><br/>
+<a href ='#env_div'> Workflow environment</a><br/><br/><br/>
+<div id ='env_div' class ='header_level2'> Workflow environment </div>
+<table style='color:#600000;'>
+<tr>
+<th align ='left' style ='color:#600000'>dag_file_name</th>
+<td style ='color:#888888'>:wrangling-0.dag</td>
+</tr>
+<tr>
+<th align ='left' style ='color:#600000'>wf_uuid</th>
+<td style ='color:#888888'>:c8389675-ec2b-42be-9468-9d40bef67207</td>
+</tr>
+<tr>
+<th align ='left' style ='color:#600000'>submit_hostname</th>
+<td style ='color:#888888'>:qh-Lenovo-R720-15IKBN</td>
+</tr>
+<tr>
+<th align ='left' style ='color:#600000'>dax_label</th>
+<td style ='color:#888888'>:wrangling</td>
+</tr>
+<tr>
+<th align ='left' style ='color:#600000'>planner_version</th>
+<td style ='color:#888888'>:4.8.2</td>
+</tr>
+<tr>
+<th align ='left' style ='color:#600000'>planner_arguments</th>
+<td style ='color:#888888'>:--conf pegasus.properties --dax wrangling.dax --dir /home/qh/wranglingWF/submit --output-dir /home/qh/output --cleanup leaf --force --sites condorpool --submit</td>
+</tr>
+<tr>
+<th align ='left' style ='color:#600000'>grid_dn</th>
+<td style ='color:#888888'>:-</td>
+</tr>
+<tr>
+<th align ='left' style ='color:#600000'>user</th>
+<td style ='color:#888888'>:qh</td>
+</tr>
+<tr>
+<th align ='left' style ='color:#600000'>submit_dir</th>
+<td style ='color:#888888'>:/home/qh/wranglingWF/submit/qh/pegasus/wrangling/run0005</td>
+</tr>
+<tr>
+<th align ='left' style ='color:#600000'>dax_version</th>
+<td style ='color:#888888'>:3.6</td>
+</tr>
+</table>
+<div id ='breakdown_chart_div' class ='header_level2'> Invocation breakdown chart (Across workflows) </div>
+			
+<script type='text/javascript' src='bc_action.js'>
+</script>
+<script type='text/javascript' src='bc_c8389675-ec2b-42be-9468-9d40bef67207_data.js'>
+</script>
+
+<script type='text/javascript'>
+var bc_w = 860;
+var bc_h = 400;
+var bc_radius = 120;
+var bc_centerX = bc_w/2;
+var bc_centerY = bc_h/2;
+var bc_headerPanelWidth =  bc_w;
+var bc_headerPanelHeight  = 100 ;
+var bc_total_count  = 19;
+var bc_total_runtime =  15.34;
+var bc_footerPanelWidth =  bc_w;
+var bc_footerPanelHeight  =75;
+var bc_label_padding = 30
+var bc_xLabelPos = bc_label_padding;
+var bc_yLabelPos = 30;
+var bc_labelWidth =200;
+var breakdownByCount = true;
+</script>
+	
+<div id ='breakdown_chart' style='width: 860px; margin : 0 auto;' >
+	
+<script type="text/javascript+protovis">
+var bc_headerPanel = new pv.Panel()
+.width(bc_headerPanelWidth)
+.height(bc_headerPanelHeight)
+.fillStyle('white');
+bc_headerPanel.add(pv.Label)
+.top(40)
+.left( bc_label_padding)
+.font(function() {return 24 +'px sans-serif';})
+.textAlign('left')
+.textBaseline('bottom')
+.text(function(){ return setBCChartTitle();});
+
+bc_headerPanel.add(pv.Label)
+	.top(80)
+	.left(bc_label_padding)
+	.font(function() {return 16 +'px sans-serif';})
+	.textAlign('left')
+	.textBaseline('bottom')
+	.text('wrangling');
+
+bc_headerPanel.render();
+
+</script>	
+
+<script type="text/javascript+protovis">
+var bc_chartPanel = new pv.Panel()
+.width(bc_w)
+.height(bc_h);
+
+bc_chartPanel.def("o", -1); 
+
+var outerWedge = bc_chartPanel.add(pv.Wedge)
+.left(bc_centerX)
+.bottom(bc_centerY);
+
+outerWedge.data(bc_data)
+.outerRadius(bc_radius)
+.angle(function(d){return getOuterAngle(d);})
+.left(function() bc_centerX
+	+ Math.cos(this.startAngle() + this.angle() / 2)
+	* ((this.parent.o() == this.index) ? 10 : 0))
+.bottom(function() bc_centerY
+	- Math.sin(this.startAngle() + this.angle() / 2)
+	* ((this.parent.o() == this.index) ? 10 : 0))
+.event("mouseover", function() this.parent.o(this.index))
+.event("click", function(d) printTransformationDetails(d))
+.fillStyle(function(d)d.color);
+
+
+var innerWedge = bc_chartPanel.add(pv.Wedge)
+.data(bc_data)
+.left(bc_centerX)
+.bottom(bc_centerY)
+.outerRadius( function(d){return getInnerRadius(d);})
+.angle(function(d) {return getOuterAngle(d);})
+.left(function() bc_centerX
++ Math.cos(this.startAngle() + this.angle() / 2)
+* ((this.parent.o() == this.index) ? 10 : 0))
+.bottom(function() bc_centerY
+- Math.sin(this.startAngle() + this.angle() / 2)
+* ((this.parent.o() == this.index) ? 10 : 0))
+.event("mouseover", function() this.parent.o(this.index))
+ .event("click", function(d) printTransformationDetails(d))   
+.fillStyle("red");
+bc_chartPanel.render();
+</script>
+	
+<script type="text/javascript+protovis">
+var bc_footerPanel = new pv.Panel()
+.width(bc_footerPanelWidth)
+.height(bc_footerPanelHeight)
+.fillStyle('white');
+bc_footerPanel.add(pv.Dot)
+.data(bc_data)
+.left( function(d){
+	if(this.index == 0){
+		bc_xLabelPos = bc_label_padding;
+		bc_yLabelPos = bc_footerPanelHeight - 15 ;
+	}else{
+		if(bc_xLabelPos + bc_labelWidth > bc_w - (bc_label_padding + bc_labelWidth)){
+			bc_xLabelPos =  bc_label_padding;
+			bc_yLabelPos -=15;
+		}
+		else{
+			bc_xLabelPos += bc_labelWidth;
+		}
+	}
+	return bc_xLabelPos;}
+)
+.bottom(function(d){
+	return bc_yLabelPos;}
+)
+.fillStyle(function(d) d.color)
+.strokeStyle(null)
+.size(49)
+.event("click", function(d) printTransformationDetails(d))
+.anchor('right').add(pv.Label)
+.textMargin(6)
+.textAlign('left')
+.text(function(d) d.name);
+
+bc_footerPanel.render();
+</script>
+
+</div>
+
+<div id ='breakdown_chart_footer_div' style='width: 860px; margin : 0 auto;' >
+	<div>
+		<div>Breakdown  by</div>
+		<input type='radio' name='by_filter' value='by count' onclick="setBreakdownBy(true);" checked/> count<br />
+		<input type='radio' name='by_filter' value='by runtime' onclick="setBreakdownBy(false);"/> runtime<br />
+	</div>
+	<div id = 'breakdown_chart_legend_div'>
+	<p><b>Note</b>: Legends can be clicked to find information corresponding to the transformation name.</p>
+	</div>
+</div>
+	
+<div id ='time_chart_div' class ='header_level2'> Time chart (Across workflows) </div>
+			
+<script type="text/javascript" src="tc_data.js"></script>
+<script type="text/javascript" src="tc_action.js"></script>	
+	
+<script type='text/javascript'>
+var tc_isJob = true;
+var tc_isHour = true;
+
+var tc_dateTimeCount =1;
+var tc_maxRuntime =5.0;
+var tc_maxCount = 19;
+tc_maxRuntime +=  tc_maxRuntime/10;
+tc_maxCount += tc_maxCount/10;
+var tc_bar_spacing = 50;
+var tc_single_bar_width = 20;
+var tc_yScaleMargin  = 100;
+var tc_xScaleBottomMargin = 120;
+var tc_color =['steelblue','orange'];
+var tc_desc=['Runtime in seconds','count'];
+var tc_h = 840;
+var tc_w = 1400;
+var tc_toolbar_width = 550;
+var tc_containerPanelPadding = 50;
+var tc_chartPanelWidth = tc_w+ tc_containerPanelPadding*2;
+var tc_chartPanelHeight  = tc_h + tc_containerPanelPadding*2;
+var tc_curX  = 0;
+var tc_curEndX  = tc_dateTimeCount*tc_bar_spacing;
+var tc_curRuntimeY = 0;
+var tc_curRuntimeEndY =  tc_maxRuntime;
+var tc_curCountY = 0;
+var tc_curCountEndY =  tc_maxCount;
+var tc_xLabelPos = tc_containerPanelPadding + tc_yScaleMargin;
+var tc_yLabelPos = 40;
+var tc_labelWidth = 200;
+var tc_panXFactor = 10;
+var tc_panYFactor  = 10;
+var tc_headerPanelWidth = tc_w+ tc_containerPanelPadding*2;
+var tc_headerPanelHeight  = 100;
+var tc_footerPanelWidth = tc_w+ tc_containerPanelPadding*2;
+var tc_footerPanelHeight  = 60;
+var tc_xScale = pv.Scale.linear(tc_curX, tc_curEndX).range(0, tc_w-2*tc_yScaleMargin);
+var tc_yRuntimeScale = pv.Scale.linear(tc_curRuntimeY, tc_curRuntimeEndY).range(0, tc_h -tc_xScaleBottomMargin);
+var tc_yCountScale = pv.Scale.linear(tc_curCountY, tc_curCountEndY).range(0, tc_h -tc_xScaleBottomMargin);
+</script>
+<div id ='time_chart' style='width: 1500px; margin : 0 auto;' >
+
+<script type="text/javascript+protovis">
+var tc_headerPanel = new pv.Panel()
+	.width(tc_headerPanelWidth)
+	.height(tc_headerPanelHeight)
+	.fillStyle('white');
+
+var tc_panPanel  = tc_headerPanel.add(pv.Panel)
+	.left(tc_w + tc_containerPanelPadding -tc_toolbar_width)
+	.width(tc_toolbar_width)
+	.height(tc_headerPanelHeight);
+
+tc_panPanel.add(pv.Image)
+	.left(10)
+	.top(34)
+	.width(32)
+	.height(32)
+	.title('Pan left')
+	.url('images/left.png').event('click', tc_panLeft);
+
+tc_panPanel.add(pv.Image)
+	.left(50)
+	.top(34)
+	.width(32)
+	.height(32)
+	.url(tc_fadeRight)
+	.title('Pan right')
+	.event('click', tc_panRight);
+
+tc_panPanel.add(pv.Image)
+	.left(90)
+	.top(34)
+	.width(32)
+	.height(32)
+	.url('images/up.png')
+	.title('Pan up')
+	.event('click', tc_panUp);
+ 
+ tc_panPanel.add(pv.Image)
+	.left(140)
+	.top(34)
+	.width(32)
+	.height(32)
+	.url(tc_fadeDown)
+	.title('Pan down')
+	.event('click', tc_panDown);
+
+tc_panPanel.add(pv.Image)
+	.left(190)
+	.top(34)
+	.width(32)
+	.height(32)
+	.url('images/zoom-in.png')
+	.title('Zoom in')
+	.event('click',tc_zoomIn);
+
+tc_panPanel.add(pv.Image)
+	.left(240)
+	.top(34)
+	.width(32)
+	.height(32)
+	.url('images/zoom-out.png')
+	.title('Zoom out')
+	.event('click', tc_zoomOut);
+
+tc_panPanel.add(pv.Image)
+	.left(290)
+	.top(34)
+	.width(32)
+	.height(32)
+	.url('images/zoom-reset.png')
+	.title('Zoom reset')
+	.event('click', tc_resetZooming);
+
+tc_headerPanel.add(pv.Label)
+	.top(40)
+	.left( tc_containerPanelPadding + tc_yScaleMargin)
+	.font(function() {return 24 +'px sans-serif';})
+	.textAlign('left')
+	.textBaseline('bottom')
+	.text(function(){ return tc_setChartTitle();});
+
+tc_headerPanel.add(pv.Label)
+	.top(80)
+	.left(tc_containerPanelPadding + tc_yScaleMargin)
+	.font(function() {return 16 +'px sans-serif';})
+	.textAlign('left')
+	.textBaseline('bottom')
+.text('wrangling');
+
+tc_headerPanel.render();
+</script>	
+
+<script type="text/javascript+protovis">
+var tc_rootPanel = new pv.Panel()
+	.width(tc_chartPanelWidth)
+	.height(tc_chartPanelHeight)
+	.fillStyle('white');
+
+var tc_vis = tc_rootPanel.add(pv.Panel)
+	.bottom(tc_containerPanelPadding)
+	.top(tc_containerPanelPadding)
+	.left(tc_containerPanelPadding)
+	.width(tc_w)
+	.height(tc_h)
+	.fillStyle('white');
+
+var tc_rulePanelH = tc_vis.add(pv.Panel)
+	.overflow('hidden')
+	.bottom(tc_xScaleBottomMargin);
+
+tc_rulePanelH.add(pv.Rule)
+	.left(tc_yScaleMargin - 20)
+	.data(function()tc_yRuntimeScale.ticks())
+	.strokeStyle(tc_desc[0])
+	.width(20)
+	.bottom(tc_yRuntimeScale)
+	.anchor('left').add(pv.Label)
+	.textBaseline('bottom')
+	.text(tc_yRuntimeScale.tickFormat);
+
+tc_rulePanelH.add(pv.Rule)
+	.left( tc_w - tc_yScaleMargin)
+	.data(function()tc_yCountScale.ticks())
+	.strokeStyle(tc_desc[1])
+	.width(20)
+	.bottom(tc_yCountScale)
+	.anchor('right').add(pv.Label)
+	.textBaseline('bottom')
+	.text(tc_yCountScale.tickFormat);
+
+var tc_rulePanelV = tc_vis.add(pv.Panel)
+	.overflow('hidden')
+	.left(tc_yScaleMargin)
+	.width(tc_w-2*tc_yScaleMargin)
+	.bottom(0);
+
+tc_rulePanelV.add(pv.Rule)
+	.bottom(tc_xScaleBottomMargin)
+	.data(function(){return tc_getData();})
+	.strokeStyle('#F8F8F8')
+	.left(function(){
+	return tc_xScale(this.index*tc_bar_spacing) + tc_single_bar_width;
+	})
+	.height(tc_h )
+	.anchor('bottom').add(pv.Label)
+	.textAlign('left')
+	.textBaseline("middle")
+	.textAngle(Math.PI / 2)
+	.text(function(d){return d.datetime;});
+
+var tc_chartPanelContainer = tc_vis.add(pv.Panel)
+	.left(tc_yScaleMargin)
+	.bottom(tc_xScaleBottomMargin)
+	.width(tc_w-2*tc_yScaleMargin)
+	.strokeStyle('black')
+	.overflow('hidden');
+
+var tc_runtimePanel = tc_chartPanelContainer.add(pv.Panel)
+	.data(function(){return tc_getData();});
+  
+tc_runtimePanel.add(pv.Bar)
+	.bottom(0)
+	.left(function(d){
+	return tc_xScale(this.parent.index*tc_bar_spacing);
+	})
+	.width(tc_single_bar_width)
+	.height(function(d){
+	return tc_yRuntimeScale(d.runtime);})
+	.fillStyle('steelblue')
+	.anchor("top").add(pv.Label)
+	.textAlign('middle')
+	.textBaseline(function(d) "center")
+	.textAngle(-Math.PI / 2)
+	.text(function(d)d.runtime);
+    
+tc_runtimePanel.add(pv.Bar)
+	.bottom(0)
+	.left(function(d){
+	return tc_xScale(this.parent.index*tc_bar_spacing) + tc_single_bar_width;
+	})
+	.width(tc_single_bar_width)
+	.height(function(d){
+	return tc_yCountScale(d.count);})
+	.fillStyle('orange')
+	.anchor("top").add(pv.Label)
+	.textAlign('middle')
+	.textBaseline(function(d) "center")
+	.textAngle(-Math.PI / 2)
+	.text(function(d)d.count);
+    
+ tc_rootPanel.add(pv.Label)
+	.bottom(tc_containerPanelPadding + tc_xScaleBottomMargin)
+	.font(function() {return 20 +'px sans-serif';})
+	.textAlign('left')
+	.textBaseline('top')
+	.text('Runtime in seconds -->')
+	.textAngle(-Math.PI / 2);
+
+tc_rootPanel.add(pv.Label)
+	.bottom(tc_containerPanelPadding + tc_xScaleBottomMargin)
+	.left(tc_containerPanelPadding + tc_w)
+	.font(function() {return 20 +'px sans-serif';})
+	.textAlign('left')
+	.textBaseline('top')
+	.text('count -->')
+	.textAngle(-Math.PI / 2);
+
+tc_rootPanel.add(pv.Label)
+	.left(tc_containerPanelPadding + tc_yScaleMargin)
+	.bottom(0)
+	.font(function() {return 20 +'px sans-serif';})
+	.textAlign('left')
+	.textBaseline('bottom')
+	.text('Date time -->');
+ 
+tc_rootPanel.render();
+</script>
+
+<script type="text/javascript+protovis">
+var tc_footerPanel = new pv.Panel()
+	.width(tc_footerPanelWidth)
+	.height(tc_footerPanelHeight)
+	.fillStyle('white');
+	tc_footerPanel.add(pv.Dot)
+	.data(tc_desc)
+	.left( function(d){
+	if(this.index == 0){
+		tc_xLabelPos = tc_containerPanelPadding +  tc_yScaleMargin;
+		tc_yLabelPos = tc_footerPanelHeight-15;
+	}else{
+		if(tc_xLabelPos + tc_labelWidth > tc_w - (tc_containerPanelPadding + tc_yScaleMargin+ tc_labelWidth)){
+			tc_xLabelPos =  tc_containerPanelPadding + tc_yScaleMargin;
+			tc_yLabelPos -=15;
+		}
+		else{
+			tc_xLabelPos += tc_labelWidth;
+		}
+	}
+	return tc_xLabelPos;}
+	)
+	.bottom(function(d){
+	return tc_yLabelPos;})
+	.fillStyle(function(d) tc_color[this.index])
+	.strokeStyle(null)
+	.size(49)
+	.anchor('right').add(pv.Label)
+	.textMargin(6)
+	.textAlign('left')
+	.text(function(d) d);
+
+tc_footerPanel.render();
+</script>
+	</div>
+
+<div id ='time_chart_footer_div' style='width: 1500px; margin : 0 auto;' >
+	<div style ='float:right'>
+		<div> Time filter </div>
+		<input type='radio' name='time_filter' value='by day' onclick="tc_setTime(false);" /> by day<br />
+		<input type='radio' name='time_filter' value='by hour' onclick="tc_setTime(true);" checked /> by hour<br />
+	</div>
+	<div>
+		<div>Type filter</div>
+		<input type='radio' name='type_filter' value='show jobs' onclick="tc_setType(true);" checked/> show jobs<br />
+		<input type='radio' name='type_filter' value='show invocations' onclick="tc_setType(false);"/> show invocations<br />
+	</div>
+</div>
+	
+	
+</center>
+</body>
+</html>

@@ -1,0 +1,13 @@
+[
+  {
+    "_type": "file", 
+    "_id": "a.csv", 
+    "_attributes": {
+      "checksum.type": "sha256", 
+      "user": "qh", 
+      "checksum.value": "0c8a05e2fe7adb3fdfba55e2c1fc722f49617753608e77c56fd45bfb24917add", 
+      "ctime": "2018-07-02T19:39:44+01:00", 
+      "size": "299489"
+    }
+  }
+]

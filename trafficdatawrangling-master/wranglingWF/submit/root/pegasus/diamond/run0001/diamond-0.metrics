@@ -1,0 +1,42 @@
+{
+  "client": "pegasus-plan",
+  "version": "4.8.2",
+  "type": "error",
+  "start_time": 1.529077118101E9,
+  "end_time": 1.52907712038E9,
+  "duration": 2.279,
+  "exitcode": 1,
+  "root_wf_uuid": "a65cbaab-df33-4d87-8175-28225fc16e76",
+  "wf_uuid": "a65cbaab-df33-4d87-8175-28225fc16e76",
+  "data_config": "condorio",
+  "planner_args": "--conf pegasus.properties --dax diamond.dax --dir /home/qh/Diamond/submit --output-dir /home/qh/split/output --cleanup leaf --force --sites condorpool --submit ",
+  "uses_pmc": false,
+  "wf_metrics": {
+    "compute_tasks": 4,
+    "dax_tasks": 0,
+    "dag_tasks": 0,
+    "total_tasks": 4,
+    "deleted_tasks": 0,
+    "dax_input_files": 1,
+    "dax_inter_files": 4,
+    "dax_output_files": 1,
+    "dax_total_files": 6,
+    "compute_jobs": 4,
+    "clustered_jobs": 0,
+    "si_tx_jobs": 1,
+    "so_tx_jobs": 1,
+    "inter_tx_jobs": 0,
+    "reg_jobs": 0,
+    "cleanup_jobs": 1,
+    "create_dir_jobs": 1,
+    "dax_jobs": 0,
+    "dag_jobs": 0,
+    "chmod_jobs": 0,
+    "total_jobs": 8
+  },
+  "app_metrics": {
+    "name": "pegasus-tutorial"
+  },
+  "error": "java.lang.RuntimeException: Unable to submit the workflow using pegasus-run\n\tat edu.isi.pegasus.planner.client.CPlanner.executeCommand(CPlanner.java:695)\n\tat edu.isi.pegasus.planner.client.CPlanner.executeCommand(CPlanner.java:364)\n\tat edu.isi.pegasus.planner.client.CPlanner.main(CPlanner.java:245)\n"
+}
+

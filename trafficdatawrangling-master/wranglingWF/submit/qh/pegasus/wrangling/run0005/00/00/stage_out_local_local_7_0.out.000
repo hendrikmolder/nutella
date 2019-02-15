@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<invocation xmlns="http://pegasus.isi.edu/schema/invocation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pegasus.isi.edu/schema/invocation http://pegasus.isi.edu/schema/iv-2.3.xsd" version="2.3" start="2018-07-05T11:40:19.431+01:00" duration="2.108" transformation="pegasus::transfer" derivation="null" resource="local" wf-label="wrangling" wf-stamp="2018-07-02T20:00:17+01:00" interface="enx025701513834" hostaddr="192.168.42.114" hostname="qh-Lenovo-R720-15IKBN" pid="16591" uid="1000" user="qh" gid="1000" group="qh" umask="0022">
+  <mainjob start="2018-07-05T11:40:19.450+01:00" duration="2.089" pid="16592">
+    <usage utime="0.056" stime="0.020" maxrss="15728" minflt="9079" majflt="0" nswap="0" inblock="0" outblock="32" msgsnd="0" msgrcv="0" nsignals="0" nvcsw="40" nivcsw="14"/>
+    <status raw="0"><regular exitcode="0"/></status>
+    <statcall error="0">
+      <file name="/usr/bin/pegasus-transfer">23212F7573722F62696E2F707974686F</file>
+      <statinfo mode="0100755" size="144226" inode="543275" nlink="1" blksize="4096" blocks="288" mtime="2018-05-03T18:21:02+01:00" atime="2018-07-04T15:53:29+01:00" ctime="2018-05-22T03:15:35+01:00" uid="0" user="root" gid="0" group="root"/>
+    </statcall>
+    <argument-vector>
+      <arg nr="1">--threads</arg>
+      <arg nr="2">2</arg>
+    </argument-vector>
+  </mainjob>
+  <jobids condor="794.0"/>
+  <cwd>/home/qh/wranglingWF/submit/qh/pegasus/wrangling/run0005</cwd>
+  <usage utime="0.000" stime="0.020" maxrss="5988" minflt="201" majflt="0" nswap="0" inblock="0" outblock="0" msgsnd="0" msgrcv="0" nsignals="0" nvcsw="3" nivcsw="1"/>
+  <machine page-size="4096">
+    <stamp>2018-07-05T11:40:19.431+01:00</stamp>
+    <uname system="linux" nodename="qh-lenovo-r720-15ikbn" release="4.4.0-124-generic" machine="x86_64">#148-Ubuntu SMP Wed May 2 13:00:18 UTC 2018</uname>
+    <linux>
+      <ram total="8046892" free="4364908" shared="415816" buffer="166752"/>
+      <swap total="3000316" free="3000316"/>
+      <boot idle="11381.960">2018-07-05T11:06:25.631+01:00</boot>
+      <cpu count="8" speed="1940" vendor="GenuineIntel">Intel(R) Core(TM) i7-7700HQ CPU @ 2.80GHz</cpu>
+      <load min1="0.77" min5="0.67" min15="0.64"/>
+      <procs total="281" running="1" sleeping="280" vmsize="65256332" rss="4331984"/>
+      <task total="704" running="1" sleeping="703"/>
+    </linux>
+  </machine>
+  <statcall error="0" id="stdin">
+    <descriptor number="0"/>
+    <statinfo mode="0100664" size="278" inode="2098370" nlink="1" blksize="4096" blocks="8" mtime="2018-07-05T11:37:56+01:00" atime="2018-07-05T11:37:56+01:00" ctime="2018-07-05T11:37:56+01:00" uid="1000" user="qh" gid="1000" group="qh"/>
+  </statcall>
+  <statcall error="0" id="stdout">
+    <temporary name="/var/spool/condor/local_univ_execute/dir_16590/ks.out.O0rHOW" descriptor="3"/>
+    <statinfo mode="0100600" size="981" inode="1846717" nlink="1" blksize="4096" blocks="8" mtime="2018-07-05T11:40:21+01:00" atime="2018-07-05T11:40:19+01:00" ctime="2018-07-05T11:40:21+01:00" uid="1000" user="qh" gid="1000" group="qh"/>
+    <data>2018-07-05 11:40:19,500    INFO:  Reading URL pairs from stdin
+2018-07-05 11:40:19,500    INFO:  1 transfers loaded
+2018-07-05 11:40:19,501    INFO:  PATH=/usr/bin:/bin
+2018-07-05 11:40:19,501    INFO:  LD_LIBRARY_PATH=
+2018-07-05 11:40:19,511    INFO:  --------------------------------------------------------------------------------
+2018-07-05 11:40:19,511    INFO:  Starting transfers - attempt 1
+2018-07-05 11:40:21,515    INFO:  /bin/cp -f -R -L &apos;/home/qh/scratch/qh/pegasus/wrangling/run0005/./h.csv&apos; &apos;/home/qh/output/h.csv&apos;
+2018-07-05 11:40:21,530    INFO:  --------------------------------------------------------------------------------
+2018-07-05 11:40:21,531    INFO:  Stats: Total 1 transfers, 4.9 KB transferred in 2 seconds. Rate: 2.4 KB/s (19.4 Kb/s)
+2018-07-05 11:40:21,531    INFO:         Between sites local-&gt;local : 1 transfers, 4.9 KB transferred in 2 seconds. Rate: 2.4 KB/s (19.4 Kb/s)
+2018-07-05 11:40:21,531    INFO:  All transfers completed successfully.
+</data>
+  </statcall>
+  <statcall error="0" id="stderr">
+    <temporary name="/var/spool/condor/local_univ_execute/dir_16590/ks.err.FqlWUe" descriptor="4"/>
+    <statinfo mode="0100600" size="0" inode="1846722" nlink="1" blksize="4096" blocks="0" mtime="2018-07-05T11:40:19+01:00" atime="2018-07-05T11:40:19+01:00" ctime="2018-07-05T11:40:19+01:00" uid="1000" user="qh" gid="1000" group="qh"/>
+  </statcall>
+  <statcall error="0" id="metadata">
+    <temporary name="/var/spool/condor/local_univ_execute/dir_16590/ks.meta.v9lb1w" descriptor="5"/>
+    <statinfo mode="0100600" size="0" inode="1846736" nlink="1" blksize="4096" blocks="0" mtime="2018-07-05T11:40:19+01:00" atime="2018-07-05T11:40:19+01:00" ctime="2018-07-05T11:40:19+01:00" uid="1000" user="qh" gid="1000" group="qh"/>
+  </statcall>
+</invocation>

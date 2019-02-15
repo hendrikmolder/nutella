@@ -1,0 +1,21 @@
+[
+ { "type": "transfer",
+   "lfn": "a.csv",
+   "id": 1,
+   "src_urls": [
+     { "site_label": "local", "url": "file:///home/qh/scratch/qh/pegasus/wrangling/run0006/./a.csv" }
+   ],
+   "dest_urls": [
+     { "site_label": "local", "url": "file:///home/qh/output/a.csv" }
+   ] }
+ ,
+ { "type": "transfer",
+   "lfn": "a2.csv",
+   "id": 2,
+   "src_urls": [
+     { "site_label": "local", "url": "file:///home/qh/scratch/qh/pegasus/wrangling/run0006/./a2.csv" }
+   ],
+   "dest_urls": [
+     { "site_label": "local", "url": "file:///home/qh/output/a2.csv" }
+   ] }
+]

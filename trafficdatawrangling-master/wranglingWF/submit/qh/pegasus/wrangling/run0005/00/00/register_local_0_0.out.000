@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<invocation xmlns="http://pegasus.isi.edu/schema/invocation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pegasus.isi.edu/schema/invocation http://pegasus.isi.edu/schema/iv-2.3.xsd" version="2.3" start="2018-07-05T11:38:47.438+01:00" duration="0.448" transformation="pegasus::rc-client" derivation="null" resource="local" wf-label="wrangling" wf-stamp="2018-07-02T20:00:17+01:00" interface="enx025701513834" hostaddr="192.168.42.114" hostname="qh-Lenovo-R720-15IKBN" pid="15458" uid="1000" user="qh" gid="1000" group="qh" umask="0022">
+  <mainjob start="2018-07-05T11:38:47.458+01:00" duration="0.428" pid="15460">
+    <usage utime="0.500" stime="0.044" maxrss="40412" minflt="9480" majflt="0" nswap="0" inblock="0" outblock="80" msgsnd="0" msgrcv="0" nsignals="0" nvcsw="748" nivcsw="20"/>
+    <status raw="0"><regular exitcode="0"/></status>
+    <statcall error="0">
+      <file name="/usr/bin/pegasus-rc-client">23212F62696E2F626173680A230A2320</file>
+      <statinfo mode="0100755" size="606" inode="543255" nlink="1" blksize="4096" blocks="8" mtime="2018-05-03T17:44:26+01:00" atime="2018-07-04T15:53:29+01:00" ctime="2018-05-22T03:15:35+01:00" uid="0" user="root" gid="0" group="root"/>
+    </statcall>
+    <argument-vector>
+      <arg nr="1">--conf</arg>
+      <arg nr="2">/home/qh/wranglingWF/submit/qh/pegasus/wrangling/run0005/pegasus.7322102531353816309.properties</arg>
+      <arg nr="3">-v</arg>
+      <arg nr="4">--insert</arg>
+      <arg nr="5">/home/qh/wranglingWF/submit/qh/pegasus/wrangling/run0005/00/00/register_local_0_0.in</arg>
+    </argument-vector>
+  </mainjob>
+  <jobids condor="784.0"/>
+  <cwd>/home/qh/wranglingWF/submit/qh/pegasus/wrangling/run0005</cwd>
+  <usage utime="0.008" stime="0.012" maxrss="5824" minflt="201" majflt="0" nswap="0" inblock="0" outblock="0" msgsnd="0" msgrcv="0" nsignals="0" nvcsw="3" nivcsw="1"/>
+  <machine page-size="4096">
+    <stamp>2018-07-05T11:38:47.438+01:00</stamp>
+    <uname system="linux" nodename="qh-lenovo-r720-15ikbn" release="4.4.0-124-generic" machine="x86_64">#148-Ubuntu SMP Wed May 2 13:00:18 UTC 2018</uname>
+    <linux>
+      <ram total="8046892" free="4351420" shared="422928" buffer="164952"/>
+      <swap total="3000316" free="3000316"/>
+      <boot idle="10689.340">2018-07-05T11:06:25.629+01:00</boot>
+      <cpu count="8" speed="3462" vendor="GenuineIntel">Intel(R) Core(TM) i7-7700HQ CPU @ 2.80GHz</cpu>
+      <load min1="0.85" min5="0.62" min15="0.63"/>
+      <procs total="283" running="1" sleeping="280" vmsize="65469200" rss="4359572"/>
+      <task total="704" running="1" sleeping="703"/>
+    </linux>
+  </machine>
+  <statcall error="0" id="stdin">
+    <file name="/dev/null"/>
+    <statinfo mode="020666" size="0" inode="6" nlink="1" blksize="4096" blocks="0" mtime="2018-07-05T11:06:35+01:00" atime="2018-07-05T11:06:35+01:00" ctime="2018-07-05T11:06:35+01:00" uid="0" user="root" gid="0" group="root"/>
+  </statcall>
+  <statcall error="0" id="stdout">
+    <temporary name="/var/spool/condor/local_univ_execute/dir_15454/ks.out.JOC0Os" descriptor="3"/>
+    <statinfo mode="0100600" size="0" inode="1847020" nlink="1" blksize="4096" blocks="0" mtime="2018-07-05T11:38:47+01:00" atime="2018-07-05T11:38:47+01:00" ctime="2018-07-05T11:38:47+01:00" uid="1000" user="qh" gid="1000" group="qh"/>
+  </statcall>
+  <statcall error="0" id="stderr">
+    <temporary name="/var/spool/condor/local_univ_execute/dir_15454/ks.err.rrGKZc" descriptor="4"/>
+    <statinfo mode="0100600" size="76" inode="1847037" nlink="1" blksize="4096" blocks="8" mtime="2018-07-05T11:38:47+01:00" atime="2018-07-05T11:38:47+01:00" ctime="2018-07-05T11:38:47+01:00" uid="1000" user="qh" gid="1000" group="qh"/>
+    <data>#Successfully worked on    : 2 lines.
+#Worked on total number of : 2 lines.
+</data>
+  </statcall>
+  <statcall error="0" id="metadata">
+    <temporary name="/var/spool/condor/local_univ_execute/dir_15454/ks.meta.aoNuaX" descriptor="5"/>
+    <statinfo mode="0100600" size="0" inode="1847040" nlink="1" blksize="4096" blocks="0" mtime="2018-07-05T11:38:47+01:00" atime="2018-07-05T11:38:47+01:00" ctime="2018-07-05T11:38:47+01:00" uid="1000" user="qh" gid="1000" group="qh"/>
+  </statcall>
+</invocation>

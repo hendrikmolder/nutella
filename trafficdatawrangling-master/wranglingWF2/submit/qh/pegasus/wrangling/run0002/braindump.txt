@@ -1,0 +1,27 @@
+user qh
+grid_dn null
+submit_hostname qh-Lenovo-R720-15IKBN
+root_wf_uuid c3929164-eabc-4e98-b041-b37e0864bead
+wf_uuid c3929164-eabc-4e98-b041-b37e0864bead
+dax /home/qh/wranglingWF2/wrangling2.dax
+dax_label wrangling
+dax_index 0
+dax_version 3.6
+pegasus_wf_name wrangling-0
+timestamp 20180705T004643+0100
+basedir /home/qh/wranglingWF2/submit
+submit_dir /home/qh/wranglingWF2/submit/qh/pegasus/wrangling/run0002
+planner /usr/bin/pegasus-plan
+planner_version 4.8.2
+pegasus_build 20180503172008Z
+planner_arguments "--conf pegasus.properties --dax wrangling2.dax --dir /home/qh/wranglingWF2/submit --output-dir /home/qh/output --cleanup leaf --force --sites condorpool --submit "
+jsd jobstate.log
+rundir run0002
+bindir /usr/bin
+vogroup pegasus
+uses_pmc false
+properties pegasus.7753739492966552710.properties
+condor_log wrangling-0.log
+dag wrangling-0.dag
+type dag
+notify wrangling-0.notify

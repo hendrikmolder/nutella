@@ -1,0 +1,20 @@
+{
+  "root_workflow_uuid": "384a6e61-2448-4f2b-aaf7-dddd01952a77",
+  "workflow_uuid": "384a6e61-2448-4f2b-aaf7-dddd01952a77",
+  "wf_metadata": {
+    "creator": "qh@qh-Lenovo-R720-15IKBN",
+    "created": "Sun Jun 10 04:18:00 2018"
+  },
+  "graph": {
+    "jobs": {
+      "stage_in_remote_local_0_0": {},
+      "preprocess_ID0000001": {},
+      "analyze_ID0000004": {},
+      "stage_out_local_local_2_0": {},
+      "cleanup_diamond_0_local": {},
+      "create_dir_diamond_0_local": {},
+      "findrange_ID0000003": {},
+      "findrange_ID0000002": {}
+    }
+  }
+}

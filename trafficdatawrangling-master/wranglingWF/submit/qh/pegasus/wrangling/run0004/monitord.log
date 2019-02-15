@@ -1,0 +1,23 @@
+2018-07-09 14:58:10,371:INFO:pegasus-monitord(68): pegasus-monitord starting - pid 10290 
+2018-07-09 14:58:10,375:INFO:pegasus-monitord(320): Final Command line options are: ['-N', 'wrangling-0.dag.dagman.out']
+2018-07-09 14:58:10,396:INFO:Pegasus.monitoring.event_output(315): output type=DB namespace=stampede. name=sqlite:////home/qh/wranglingWF/submit/qh/pegasus/wrangling/run0004/wrangling-0.stampede.db
+2018-07-09 14:58:10,414:INFO:Pegasus.monitoring.event_output(315): output type=DB namespace=dashboard. name=sqlite:////home/qh/.pegasus/workflow.db
+2018-07-09 14:58:10,414:INFO:pegasus-monitord(1010): monitord started in fast start mode
+2018-07-09 14:58:10,423:INFO:Pegasus.monitoring.workflow(951): Appending to existing jobstate.log replay_mode 0 previous_processed_line 0
+2018-07-09 14:58:10,423:INFO:Pegasus.monitoring.notifications(394): loading notifications from /home/qh/wranglingWF/submit/qh/pegasus/wrangling/run0004/wrangling-0.notify
+2018-07-09 14:58:10,423:INFO:pegasus-monitord(817): Enabling DAGMAN RECOVERY MODE
+2018-07-09 14:58:10,424:INFO:pegasus-monitord(641): DONE with DAGMAN RECOVERY MODE
+2018-07-09 15:02:20,670:WARNING:pegasus-monitord(544): cannot find job_submit_seq for job: svn0_ID0000000
+2018-07-09 15:02:20,670:WARNING:pegasus-monitord(544): cannot find job_submit_seq for job: svn0_ID0000000
+2018-07-09 15:02:25,678:WARNING:pegasus-monitord(544): cannot find job_submit_seq for job: svn0_ID0000000
+2018-07-09 15:02:25,678:WARNING:pegasus-monitord(544): cannot find job_submit_seq for job: svn0_ID0000000
+2018-07-09 15:02:25,681:INFO:pegasus-monitord(737): DAGMan wrangling-0.dag finished with exit code 1
+2018-07-09 15:02:26,736:INFO:pegasus-monitord(1169): workflow /home/qh/wranglingWF/submit/qh/pegasus/wrangling/run0004/wrangling-0.dag.dagman.out ended
+2018-07-09 15:02:26,736:INFO:Pegasus.monitoring.workflow(1117): recovery file deleted: /home/qh/wranglingWF/submit/qh/pegasus/wrangling/run0004/monitord.recover
+2018-07-09 15:02:26,737:INFO:pegasus-monitord(1343): finishing workflow: /home/qh/wranglingWF/submit/qh/pegasus/wrangling/run0004/wrangling-0.dag.dagman.out
+2018-07-09 15:02:26,737:INFO:pegasus-monitord(1395): finishing notifications...
+2018-07-09 15:02:26,737:INFO:pegasus-monitord(1400): monitord process 10290 exiting with 0
+2018-07-09 15:02:26,738:INFO:pegasus-monitord(183): DB flushing beginning
+2018-07-09 15:02:26,738:INFO:Pegasus.db.workflow_loader.WorkflowLoader(1053): Executing final flush
+2018-07-09 15:02:26,747:INFO:Pegasus.db.dashboard_loader.DashboardLoader(344): Executing final flush
+2018-07-09 15:02:26,748:INFO:pegasus-monitord(197): DB flushing ended

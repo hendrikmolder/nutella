@@ -1,0 +1,427 @@
+000 (777.000.000) 07/05 11:38:01 Job submitted from host: <127.0.0.1:45328?addrs=127.0.0.1-45328>
+    DAG Node: create_dir_wrangling_0_local
+    pool:local
+...
+001 (777.000.000) 07/05 11:38:01 Job executing on host: <127.0.0.1:8592?addrs=127.0.0.1-8592>
+...
+005 (777.000.000) 07/05 11:38:03 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	0  -  Total Bytes Sent By Job
+	0  -  Total Bytes Received By Job
+...
+000 (778.000.000) 07/05 11:38:16 Job submitted from host: <127.0.0.1:45328?addrs=127.0.0.1-45328>
+    DAG Node: svn0_ID0000000
+    pool:condorpool
+...
+001 (778.000.000) 07/05 11:38:17 Job executing on host: <127.0.0.1:23661?addrs=127.0.0.1-23661>
+...
+006 (778.000.000) 07/05 11:38:20 Image size of job updated: 2
+	0  -  MemoryUsage of job (MB)
+	0  -  ResidentSetSize of job (KB)
+...
+005 (778.000.000) 07/05 11:38:20 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	463339  -  Run Bytes Sent By Job
+	10854752  -  Run Bytes Received By Job
+	463339  -  Total Bytes Sent By Job
+	10854752  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated
+	   Cpus                 :                 1         1
+	   Disk (KB)            :    46711    12500   6346314
+	   Memory (MB)          :        0        1       982
+...
+000 (779.000.000) 07/05 11:38:31 Job submitted from host: <127.0.0.1:45328?addrs=127.0.0.1-45328>
+    DAG Node: filter1_ID0000002
+    pool:condorpool
+...
+000 (780.000.000) 07/05 11:38:32 Job submitted from host: <127.0.0.1:45328?addrs=127.0.0.1-45328>
+    DAG Node: stage_out_local_local_0_0
+    pool:local
+...
+001 (780.000.000) 07/05 11:38:32 Job executing on host: <127.0.0.1:7795?addrs=127.0.0.1-7795>
+...
+000 (781.000.000) 07/05 11:38:32 Job submitted from host: <127.0.0.1:45328?addrs=127.0.0.1-45328>
+    DAG Node: filter1_ID0000001
+    pool:condorpool
+...
+001 (779.000.000) 07/05 11:38:32 Job executing on host: <127.0.0.1:23661?addrs=127.0.0.1-23661>
+...
+006 (779.000.000) 07/05 11:38:33 Image size of job updated: 2
+	0  -  MemoryUsage of job (MB)
+	0  -  ResidentSetSize of job (KB)
+...
+005 (779.000.000) 07/05 11:38:33 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	119811  -  Run Bytes Sent By Job
+	11012849  -  Run Bytes Received By Job
+	119811  -  Total Bytes Sent By Job
+	11012849  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated
+	   Cpus                 :                 1         1
+	   Disk (KB)            :    45601    12500   6346314
+	   Memory (MB)          :        0        1       982
+...
+001 (781.000.000) 07/05 11:38:34 Job executing on host: <127.0.0.1:23661?addrs=127.0.0.1-23661>
+...
+006 (781.000.000) 07/05 11:38:35 Image size of job updated: 2
+	0  -  MemoryUsage of job (MB)
+	0  -  ResidentSetSize of job (KB)
+...
+005 (781.000.000) 07/05 11:38:35 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	168329  -  Run Bytes Sent By Job
+	11154213  -  Run Bytes Received By Job
+	168329  -  Total Bytes Sent By Job
+	11154213  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated
+	   Cpus                 :                 1         1
+	   Disk (KB)            :    45786    12500   6346314
+	   Memory (MB)          :        0        1       982
+...
+005 (780.000.000) 07/05 11:38:36 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	0  -  Total Bytes Sent By Job
+	0  -  Total Bytes Received By Job
+...
+000 (782.000.000) 07/05 11:38:47 Job submitted from host: <127.0.0.1:45328?addrs=127.0.0.1-45328>
+    DAG Node: separate2_ID0000003
+    pool:condorpool
+...
+000 (783.000.000) 07/05 11:38:47 Job submitted from host: <127.0.0.1:45328?addrs=127.0.0.1-45328>
+    DAG Node: separate2_ID0000004
+    pool:condorpool
+...
+000 (784.000.000) 07/05 11:38:47 Job submitted from host: <127.0.0.1:45328?addrs=127.0.0.1-45328>
+    DAG Node: register_local_0_0
+    pool:local
+...
+001 (784.000.000) 07/05 11:38:47 Job executing on host: <127.0.0.1:48848?addrs=127.0.0.1-48848>
+...
+001 (782.000.000) 07/05 11:38:47 Job executing on host: <127.0.0.1:23661?addrs=127.0.0.1-23661>
+...
+005 (784.000.000) 07/05 11:38:47 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	0  -  Total Bytes Sent By Job
+	0  -  Total Bytes Received By Job
+...
+006 (782.000.000) 07/05 11:38:48 Image size of job updated: 135808
+	0  -  MemoryUsage of job (MB)
+	0  -  ResidentSetSize of job (KB)
+...
+005 (782.000.000) 07/05 11:38:48 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	181421  -  Run Bytes Sent By Job
+	11017377  -  Run Bytes Received By Job
+	181421  -  Total Bytes Sent By Job
+	11017377  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated
+	   Cpus                 :                 1         1
+	   Disk (KB)            :    45666    12500   6346314
+	   Memory (MB)          :        0        1       982
+...
+001 (783.000.000) 07/05 11:38:49 Job executing on host: <127.0.0.1:23661?addrs=127.0.0.1-23661>
+...
+006 (783.000.000) 07/05 11:38:50 Image size of job updated: 2
+	0  -  MemoryUsage of job (MB)
+	0  -  ResidentSetSize of job (KB)
+...
+005 (783.000.000) 07/05 11:38:50 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	128196  -  Run Bytes Sent By Job
+	10968849  -  Run Bytes Received By Job
+	128196  -  Total Bytes Sent By Job
+	10968849  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated
+	   Cpus                 :                 1         1
+	   Disk (KB)            :    45566    12500   6346314
+	   Memory (MB)          :        0        1       982
+...
+000 (785.000.000) 07/05 11:39:02 Job submitted from host: <127.0.0.1:45328?addrs=127.0.0.1-45328>
+    DAG Node: separate3_ID0000005
+    pool:condorpool
+...
+000 (786.000.000) 07/05 11:39:02 Job submitted from host: <127.0.0.1:45328?addrs=127.0.0.1-45328>
+    DAG Node: separate3_ID0000006
+    pool:condorpool
+...
+001 (785.000.000) 07/05 11:39:02 Job executing on host: <127.0.0.1:23661?addrs=127.0.0.1-23661>
+...
+006 (785.000.000) 07/05 11:39:03 Image size of job updated: 2
+	0  -  MemoryUsage of job (MB)
+	0  -  ResidentSetSize of job (KB)
+...
+005 (785.000.000) 07/05 11:39:03 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	198457  -  Run Bytes Sent By Job
+	11030392  -  Run Bytes Received By Job
+	198457  -  Total Bytes Sent By Job
+	11030392  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated
+	   Cpus                 :                 1         1
+	   Disk (KB)            :    45695    12500   6346314
+	   Memory (MB)          :        0        1       982
+...
+001 (786.000.000) 07/05 11:39:04 Job executing on host: <127.0.0.1:23661?addrs=127.0.0.1-23661>
+...
+006 (786.000.000) 07/05 11:39:05 Image size of job updated: 2
+	0  -  MemoryUsage of job (MB)
+	0  -  ResidentSetSize of job (KB)
+...
+005 (786.000.000) 07/05 11:39:05 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	139184  -  Run Bytes Sent By Job
+	10977160  -  Run Bytes Received By Job
+	139184  -  Total Bytes Sent By Job
+	10977160  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated
+	   Cpus                 :                 1         1
+	   Disk (KB)            :    45585    12500   6346314
+	   Memory (MB)          :        0        1       982
+...
+000 (787.000.000) 07/05 11:39:17 Job submitted from host: <127.0.0.1:45328?addrs=127.0.0.1-45328>
+    DAG Node: filter4_ID0000007
+    pool:condorpool
+...
+000 (788.000.000) 07/05 11:39:17 Job submitted from host: <127.0.0.1:45328?addrs=127.0.0.1-45328>
+    DAG Node: filter4_ID0000008
+    pool:condorpool
+...
+001 (787.000.000) 07/05 11:39:18 Job executing on host: <127.0.0.1:23661?addrs=127.0.0.1-23661>
+...
+006 (787.000.000) 07/05 11:39:18 Image size of job updated: 2
+	0  -  MemoryUsage of job (MB)
+	0  -  ResidentSetSize of job (KB)
+...
+005 (787.000.000) 07/05 11:39:18 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	32237  -  Run Bytes Sent By Job
+	11047445  -  Run Bytes Received By Job
+	32237  -  Total Bytes Sent By Job
+	11047445  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated
+	   Cpus                 :                 1         1
+	   Disk (KB)            :    45549    12500   6346314
+	   Memory (MB)          :        0        1       982
+...
+001 (788.000.000) 07/05 11:39:20 Job executing on host: <127.0.0.1:23661?addrs=127.0.0.1-23661>
+...
+006 (788.000.000) 07/05 11:39:20 Image size of job updated: 100968
+	0  -  MemoryUsage of job (MB)
+	0  -  ResidentSetSize of job (KB)
+...
+005 (788.000.000) 07/05 11:39:20 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	24043  -  Run Bytes Sent By Job
+	10988165  -  Run Bytes Received By Job
+	24043  -  Total Bytes Sent By Job
+	10988165  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated
+	   Cpus                 :                 1         1
+	   Disk (KB)            :    45483    12500   6346314
+	   Memory (MB)          :        0        1       982
+...
+000 (789.000.000) 07/05 11:39:33 Job submitted from host: <127.0.0.1:45328?addrs=127.0.0.1-45328>
+    DAG Node: filter5_ID0000009
+    pool:condorpool
+...
+000 (790.000.000) 07/05 11:39:33 Job submitted from host: <127.0.0.1:45328?addrs=127.0.0.1-45328>
+    DAG Node: filter5_ID0000010
+    pool:condorpool
+...
+001 (789.000.000) 07/05 11:39:33 Job executing on host: <127.0.0.1:23661?addrs=127.0.0.1-23661>
+...
+006 (789.000.000) 07/05 11:39:34 Image size of job updated: 2
+	0  -  MemoryUsage of job (MB)
+	0  -  ResidentSetSize of job (KB)
+...
+005 (789.000.000) 07/05 11:39:34 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	8216  -  Run Bytes Sent By Job
+	10881385  -  Run Bytes Received By Job
+	8216  -  Total Bytes Sent By Job
+	10881385  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated
+	   Cpus                 :                 1         1
+	   Disk (KB)            :    45364    12500   6346314
+	   Memory (MB)          :        0        1       982
+...
+001 (790.000.000) 07/05 11:39:35 Job executing on host: <127.0.0.1:23661?addrs=127.0.0.1-23661>
+...
+006 (790.000.000) 07/05 11:39:36 Image size of job updated: 2
+	0  -  MemoryUsage of job (MB)
+	0  -  ResidentSetSize of job (KB)
+...
+005 (790.000.000) 07/05 11:39:36 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	7503  -  Run Bytes Sent By Job
+	10873184  -  Run Bytes Received By Job
+	7503  -  Total Bytes Sent By Job
+	10873184  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated
+	   Cpus                 :                 1         1
+	   Disk (KB)            :    45355    12500   6346314
+	   Memory (MB)          :        0        1       982
+...
+000 (791.000.000) 07/05 11:39:48 Job submitted from host: <127.0.0.1:45328?addrs=127.0.0.1-45328>
+    DAG Node: union6_ID0000011
+    pool:condorpool
+...
+001 (791.000.000) 07/05 11:39:48 Job executing on host: <127.0.0.1:23661?addrs=127.0.0.1-23661>
+...
+006 (791.000.000) 07/05 11:39:49 Image size of job updated: 2
+	0  -  MemoryUsage of job (MB)
+	0  -  ResidentSetSize of job (KB)
+...
+005 (791.000.000) 07/05 11:39:49 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	9707  -  Run Bytes Sent By Job
+	10859124  -  Run Bytes Received By Job
+	9707  -  Total Bytes Sent By Job
+	10859124  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated
+	   Cpus                 :                 1         1
+	   Disk (KB)            :    45343    12500   6346314
+	   Memory (MB)          :        0        1       982
+...
+000 (792.000.000) 07/05 11:40:03 Job submitted from host: <127.0.0.1:45328?addrs=127.0.0.1-45328>
+    DAG Node: stage_out_local_local_6_0
+    pool:local
+...
+000 (793.000.000) 07/05 11:40:04 Job submitted from host: <127.0.0.1:45328?addrs=127.0.0.1-45328>
+    DAG Node: mutate_ID0000012
+    pool:condorpool
+...
+001 (792.000.000) 07/05 11:40:04 Job executing on host: <127.0.0.1:42209?addrs=127.0.0.1-42209>
+...
+001 (793.000.000) 07/05 11:40:04 Job executing on host: <127.0.0.1:23661?addrs=127.0.0.1-23661>
+...
+006 (793.000.000) 07/05 11:40:04 Image size of job updated: 2
+	0  -  MemoryUsage of job (MB)
+	0  -  ResidentSetSize of job (KB)
+...
+005 (793.000.000) 07/05 11:40:04 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	10562  -  Run Bytes Sent By Job
+	10858964  -  Run Bytes Received By Job
+	10562  -  Total Bytes Sent By Job
+	10858964  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated
+	   Cpus                 :                 1         1
+	   Disk (KB)            :    45344    12500   6346314
+	   Memory (MB)          :        0        1       982
+...
+005 (792.000.000) 07/05 11:40:06 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	0  -  Total Bytes Sent By Job
+	0  -  Total Bytes Received By Job
+...
+000 (794.000.000) 07/05 11:40:19 Job submitted from host: <127.0.0.1:45328?addrs=127.0.0.1-45328>
+    DAG Node: stage_out_local_local_7_0
+    pool:local
+...
+001 (794.000.000) 07/05 11:40:19 Job executing on host: <127.0.0.1:65019?addrs=127.0.0.1-65019>
+...
+005 (794.000.000) 07/05 11:40:21 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	0  -  Total Bytes Sent By Job
+	0  -  Total Bytes Received By Job
+...
+000 (795.000.000) 07/05 11:40:34 Job submitted from host: <127.0.0.1:45328?addrs=127.0.0.1-45328>
+    DAG Node: cleanup_wrangling_0_local
+    pool:local
+...
+001 (795.000.000) 07/05 11:40:34 Job executing on host: <127.0.0.1:60470?addrs=127.0.0.1-60470>
+...
+005 (795.000.000) 07/05 11:40:36 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	0  -  Total Bytes Sent By Job
+	0  -  Total Bytes Received By Job
+...

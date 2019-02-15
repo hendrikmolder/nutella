@@ -1,0 +1,118 @@
+######################################################################
+# PEGASUS WMS GENERATED DAG FILE
+# DAG wrangling
+# Index = 0, Count = 1
+######################################################################
+MAXJOBS stagein 10
+MAXJOBS cleanup 4
+MAXJOBS stageout 10
+
+JOB create_dir_wrangling_0_local 00/00/create_dir_wrangling_0_local.sub
+SCRIPT POST create_dir_wrangling_0_local /usr/bin/pegasus-exitcode  -l wrangling-0.exitcode.log -r $RETURN .//00/00/create_dir_wrangling_0_local.out
+RETRY create_dir_wrangling_0_local 1
+VARS create_dir_wrangling_0_local +DAGNodeRetry="$(RETRY)"
+
+JOB svn_ID0000000 00/00/svn_ID0000000.sub
+SCRIPT POST svn_ID0000000 /usr/bin/pegasus-exitcode  -s PegasusLite:+exitcode+0 -l wrangling-0.exitcode.log  .//00/00/svn_ID0000000.out
+RETRY svn_ID0000000 1
+VARS svn_ID0000000 +DAGNodeRetry="$(RETRY)"
+
+JOB deselect_ID0000001 00/00/deselect_ID0000001.sub
+SCRIPT POST deselect_ID0000001 /usr/bin/pegasus-exitcode  -s PegasusLite:+exitcode+0 -l wrangling-0.exitcode.log  .//00/00/deselect_ID0000001.out
+RETRY deselect_ID0000001 1
+VARS deselect_ID0000001 +DAGNodeRetry="$(RETRY)"
+
+JOB stage_out_local_local_0_0 00/00/stage_out_local_local_0_0.sub
+SCRIPT POST stage_out_local_local_0_0 /usr/bin/pegasus-exitcode  -l wrangling-0.exitcode.log  .//00/00/stage_out_local_local_0_0.out
+RETRY stage_out_local_local_0_0 1
+CATEGORY stage_out_local_local_0_0 stageout
+VARS stage_out_local_local_0_0 +DAGNodeRetry="$(RETRY)"
+
+JOB filterin_ID0000002 00/00/filterin_ID0000002.sub
+SCRIPT POST filterin_ID0000002 /usr/bin/pegasus-exitcode  -s PegasusLite:+exitcode+0 -l wrangling-0.exitcode.log  .//00/00/filterin_ID0000002.out
+RETRY filterin_ID0000002 1
+VARS filterin_ID0000002 +DAGNodeRetry="$(RETRY)"
+
+JOB register_local_0_0 00/00/register_local_0_0.sub
+SCRIPT POST register_local_0_0 /usr/bin/pegasus-exitcode  -l wrangling-0.exitcode.log  .//00/00/register_local_0_0.out
+RETRY register_local_0_0 1
+CATEGORY register_local_0_0 registration
+VARS register_local_0_0 +DAGNodeRetry="$(RETRY)"
+
+JOB separate2_ID0000003 00/00/separate2_ID0000003.sub
+SCRIPT POST separate2_ID0000003 /usr/bin/pegasus-exitcode  -s PegasusLite:+exitcode+0 -l wrangling-0.exitcode.log  .//00/00/separate2_ID0000003.out
+RETRY separate2_ID0000003 1
+VARS separate2_ID0000003 +DAGNodeRetry="$(RETRY)"
+
+JOB separate3_ID0000004 00/00/separate3_ID0000004.sub
+SCRIPT POST separate3_ID0000004 /usr/bin/pegasus-exitcode  -s PegasusLite:+exitcode+0 -l wrangling-0.exitcode.log  .//00/00/separate3_ID0000004.out
+RETRY separate3_ID0000004 1
+VARS separate3_ID0000004 +DAGNodeRetry="$(RETRY)"
+
+JOB defilter_ID0000005 00/00/defilter_ID0000005.sub
+SCRIPT POST defilter_ID0000005 /usr/bin/pegasus-exitcode  -s PegasusLite:+exitcode+0 -l wrangling-0.exitcode.log  .//00/00/defilter_ID0000005.out
+RETRY defilter_ID0000005 1
+VARS defilter_ID0000005 +DAGNodeRetry="$(RETRY)"
+
+JOB summarise_ID0000006 00/00/summarise_ID0000006.sub
+SCRIPT POST summarise_ID0000006 /usr/bin/pegasus-exitcode  -s PegasusLite:+exitcode+0 -l wrangling-0.exitcode.log  .//00/00/summarise_ID0000006.out
+RETRY summarise_ID0000006 1
+VARS summarise_ID0000006 +DAGNodeRetry="$(RETRY)"
+
+JOB filteris_ID0000007 00/00/filteris_ID0000007.sub
+SCRIPT POST filteris_ID0000007 /usr/bin/pegasus-exitcode  -s PegasusLite:+exitcode+0 -l wrangling-0.exitcode.log  .//00/00/filteris_ID0000007.out
+RETRY filteris_ID0000007 1
+VARS filteris_ID0000007 +DAGNodeRetry="$(RETRY)"
+
+JOB unite1_ID0000008 00/00/unite1_ID0000008.sub
+SCRIPT POST unite1_ID0000008 /usr/bin/pegasus-exitcode  -s PegasusLite:+exitcode+0 -l wrangling-0.exitcode.log  .//00/00/unite1_ID0000008.out
+RETRY unite1_ID0000008 1
+VARS unite1_ID0000008 +DAGNodeRetry="$(RETRY)"
+
+JOB unite2_ID0000009 00/00/unite2_ID0000009.sub
+SCRIPT POST unite2_ID0000009 /usr/bin/pegasus-exitcode  -s PegasusLite:+exitcode+0 -l wrangling-0.exitcode.log  .//00/00/unite2_ID0000009.out
+RETRY unite2_ID0000009 1
+VARS unite2_ID0000009 +DAGNodeRetry="$(RETRY)"
+
+JOB line_ID0000010 00/00/line_ID0000010.sub
+SCRIPT POST line_ID0000010 /usr/bin/pegasus-exitcode  -s PegasusLite:+exitcode+0 -l wrangling-0.exitcode.log  .//00/00/line_ID0000010.out
+RETRY line_ID0000010 1
+VARS line_ID0000010 +DAGNodeRetry="$(RETRY)"
+
+JOB stage_out_local_local_9_0 00/00/stage_out_local_local_9_0.sub
+SCRIPT POST stage_out_local_local_9_0 /usr/bin/pegasus-exitcode  -l wrangling-0.exitcode.log  .//00/00/stage_out_local_local_9_0.out
+RETRY stage_out_local_local_9_0 1
+CATEGORY stage_out_local_local_9_0 stageout
+VARS stage_out_local_local_9_0 +DAGNodeRetry="$(RETRY)"
+
+JOB stage_out_local_local_10_0 00/00/stage_out_local_local_10_0.sub
+SCRIPT POST stage_out_local_local_10_0 /usr/bin/pegasus-exitcode  -l wrangling-0.exitcode.log  .//00/00/stage_out_local_local_10_0.out
+RETRY stage_out_local_local_10_0 1
+CATEGORY stage_out_local_local_10_0 stageout
+VARS stage_out_local_local_10_0 +DAGNodeRetry="$(RETRY)"
+
+JOB cleanup_wrangling_0_local 00/00/cleanup_wrangling_0_local.sub
+RETRY cleanup_wrangling_0_local 1
+VARS cleanup_wrangling_0_local +DAGNodeRetry="$(RETRY)"
+
+PARENT  deselect_ID0000001 CHILD filterin_ID0000002
+PARENT  unite1_ID0000008 CHILD unite2_ID0000009
+PARENT  svn_ID0000000 CHILD deselect_ID0000001
+PARENT  svn_ID0000000 CHILD stage_out_local_local_0_0
+PARENT  filteris_ID0000007 CHILD unite1_ID0000008
+PARENT  line_ID0000010 CHILD stage_out_local_local_10_0
+PARENT  stage_out_local_local_0_0 CHILD cleanup_wrangling_0_local
+PARENT  stage_out_local_local_0_0 CHILD register_local_0_0
+PARENT  defilter_ID0000005 CHILD summarise_ID0000006
+PARENT  stage_out_local_local_10_0 CHILD cleanup_wrangling_0_local
+PARENT  summarise_ID0000006 CHILD filteris_ID0000007
+PARENT  create_dir_wrangling_0_local CHILD svn_ID0000000
+PARENT  filterin_ID0000002 CHILD separate2_ID0000003
+PARENT  separate2_ID0000003 CHILD separate3_ID0000004
+PARENT  unite2_ID0000009 CHILD line_ID0000010
+PARENT  unite2_ID0000009 CHILD stage_out_local_local_9_0
+PARENT  separate3_ID0000004 CHILD defilter_ID0000005
+PARENT  stage_out_local_local_9_0 CHILD cleanup_wrangling_0_local
+######################################################################
+# End of DAG
+######################################################################

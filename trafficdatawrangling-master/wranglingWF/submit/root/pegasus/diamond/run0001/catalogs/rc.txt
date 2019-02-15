@@ -1,0 +1,8 @@
+# file-based replica catalog: 2018-06-07T14:48:08.848+01:00
+pegasus.html file:///home/qh/split/input/pegasus.html site="local"
+count.txt.b file:///home/qh/split/output/count.txt.b site="local"
+count.txt.a file:///home/qh/split/output/count.txt.a site="local"
+count.txt.d file:///home/qh/split/output/count.txt.d site="local"
+count.txt.c file:///home/qh/split/output/count.txt.c site="local"
+f.a file:///home/qh/Diamond/input/f.a site="local"
+ha.R file:///home/qh/Diamond/input/ha.R site="local"

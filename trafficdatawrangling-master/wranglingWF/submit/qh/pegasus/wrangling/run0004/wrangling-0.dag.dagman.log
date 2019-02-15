@@ -1,0 +1,24 @@
+000 (773.000.000) 07/05 11:33:51 Job submitted from host: <127.0.0.1:45328?addrs=127.0.0.1-45328>
+...
+001 (773.000.000) 07/05 11:33:51 Job executing on host: <127.0.0.1:45328?addrs=127.0.0.1-45328>
+...
+004 (773.000.000) 07/05 12:15:36 Job was evicted.
+	(0) Job was not checkpointed.
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+...
+001 (773.000.000) 07/09 14:57:24 Job executing on host: <127.0.0.1:19045?addrs=127.0.0.1-19045>
+...
+005 (773.000.000) 07/09 15:02:40 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	0  -  Total Bytes Sent By Job
+	0  -  Total Bytes Received By Job
+...

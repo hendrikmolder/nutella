@@ -1,0 +1,46 @@
+
+# Job            - name of the job
+# Try            - number representing the job instance run count
+# Site           - site where the job ran
+# Kickstart      - actual duration of the job instance in seconds on the
+#                  remote compute node
+# Mult           - multiplier factor specified by the user
+# Kickstart-Mult - Kickstart time multiplied by the multiplier factor
+# CPU-Time       - remote cpu time computed as the stime + utime
+# Post           - postscript time as reported by DAGMan
+# CondorQTime    - time between submission by DAGMan and the remote Grid
+#                  submission. It is an estimate of the time spent in the
+#                  condor q on the submit node
+# Resource       - time between the remote Grid submission and start of
+#                  remote execution. It is an estimate of the time job
+#                  spent in the remote queue
+# Runtime        - time spent on the resource as seen by Condor DAGMan.
+#                  Is always >= Kickstart
+# Seqexec        - time taken for the completion of a clustered job
+# Seqexec-Delay  - time difference between the time for the completion
+#                  of a clustered job and sum of all the individual
+#                  tasks Kickstart time
+# Exitcode       - exitcode for this job
+# Hostname       - name of the host where the job ran, as reported by
+#                  Kickstart
+# c8389675-ec2b-42be-9468-9d40bef67207 (wrangling)
+Job                          Try Site       Kickstart Mult Kickstart-Mult CPU-Time Post CondorQTime Resource Runtime Seqexec Seqexec-Delay Exitcode Hostname              
+create_dir_wrangling_0_local 1   local      0.0       1    0.0            -        5.0  5.0         -        0.0     -       -             0        None                  
+svn0_ID0000000               1   condorpool 1.783     1    1.783          0.076    5.0  5.0         -        0.0     -       -             0        qh-Lenovo-R720-15IKBN 
+filter1_ID0000002            1   condorpool 0.522     1    0.522          0.004    5.0  5.0         -        0.0     -       -             0        qh-Lenovo-R720-15IKBN 
+stage_out_local_local_0_0    1   local      4.089     1    4.089          0.084    5.0  0.0         -        5.0     -       -             0        qh-Lenovo-R720-15IKBN 
+filter1_ID0000001            1   condorpool 0.393     1    0.393          0.004    5.0  5.0         -        0.0     -       -             0        qh-Lenovo-R720-15IKBN 
+separate2_ID0000003          1   condorpool 0.468     1    0.468          0.004    5.0  5.0         -        0.0     -       -             0        qh-Lenovo-R720-15IKBN 
+separate2_ID0000004          1   condorpool 0.388     1    0.388          0.004    5.0  5.0         -        0.0     -       -             0        qh-Lenovo-R720-15IKBN 
+register_local_0_0           1   local      0.428     1    0.428          0.544    5.0  5.0         -        0.0     -       -             0        qh-Lenovo-R720-15IKBN 
+separate3_ID0000005          1   condorpool 0.391     1    0.391          0.004    5.0  5.0         -        0.0     -       -             0        qh-Lenovo-R720-15IKBN 
+separate3_ID0000006          1   condorpool 0.378     1    0.378          0.004    5.0  5.0         -        0.0     -       -             0        qh-Lenovo-R720-15IKBN 
+filter4_ID0000007            1   condorpool 0.392     1    0.392          0.004    5.0  5.0         -        0.0     -       -             0        qh-Lenovo-R720-15IKBN 
+filter4_ID0000008            1   condorpool 0.396     1    0.396          0.004    5.0  5.0         -        0.0     -       -             0        qh-Lenovo-R720-15IKBN 
+filter5_ID0000009            1   condorpool 0.38      1    0.38           0.004    5.0  5.0         -        0.0     -       -             0        qh-Lenovo-R720-15IKBN 
+filter5_ID0000010            1   condorpool 0.38      1    0.38           0.004    5.0  5.0         -        0.0     -       -             0        qh-Lenovo-R720-15IKBN 
+union6_ID0000011             1   condorpool 0.376     1    0.376          0.004    5.0  5.0         -        0.0     -       -             0        qh-Lenovo-R720-15IKBN 
+stage_out_local_local_6_0    1   local      2.091     1    2.091          0.076    5.0  5.0         -        0.0     -       -             0        qh-Lenovo-R720-15IKBN 
+mutate_ID0000012             1   condorpool 0.396     1    0.396          0.004    5.0  5.0         -        0.0     -       -             0        qh-Lenovo-R720-15IKBN 
+stage_out_local_local_7_0    1   local      2.089     1    2.089          0.076    5.0  5.0         -        0.0     -       -             0        qh-Lenovo-R720-15IKBN 
+cleanup_wrangling_0_local    1   local      0.0       1    0.0            -        -    5.0         -        0.0     -       -             0        None                  

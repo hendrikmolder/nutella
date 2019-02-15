@@ -1,0 +1,158 @@
+
+tr preprocess {
+    site condorpool {
+        pfn "/home/qh/Diamond/bin/preprocess"
+        arch "x86_64"
+        os "LINUX"
+        type "INSTALLED"
+
+    }
+}
+
+tr findrange {
+    site condorpool {
+        pfn "/home/qh/Diamond/bin/curl_wrapper.sh"
+        arch "x86_64"
+        os "LINUX"
+        type "INSTALLED"
+
+    }
+}
+
+tr analyze {
+    site condorpool {
+        pfn "/home/qh/Diamond/bin/analyze"
+        arch "x86_64"
+        os "LINUX"
+        type "INSTALLED"
+    }
+}
+tr filter1 {
+    site condorpool {
+        pfn "/home/qh/wranglingWF/bin/filter.sh"
+        arch "x86_64"
+        os "LINUX"
+        type "INSTALLED"
+    }
+}
+tr separate2 {
+    site condorpool {
+        pfn "/home/qh/wranglingWF/bin/separate2.sh"
+        arch "x86_64"
+        os "LINUX"
+        type "INSTALLED"
+    }
+}
+tr separate3 {
+    site condorpool {
+        pfn "/home/qh/wranglingWF/bin/separate3.sh"
+        arch "x86_64"
+        os "LINUX"
+        type "INSTALLED"
+    }
+}
+tr filter4 {
+    site condorpool {
+        pfn "/home/qh/wranglingWF/bin/filter4.sh"
+        arch "x86_64"
+        os "LINUX"
+        type "INSTALLED"
+    }
+}
+tr filter5 {
+    site condorpool {
+        pfn "/home/qh/wranglingWF/bin/filter5.sh"
+        arch "x86_64"
+        os "LINUX"
+        type "INSTALLED"
+    }
+}
+tr union6 {
+    site condorpool {
+        pfn "/home/qh/wranglingWF/bin/union6.sh"
+        arch "x86_64"
+        os "LINUX"
+        type "INSTALLED"
+    }
+}
+tr svn0 {
+    site condorpool {
+        pfn "/home/qh/wranglingWF/bin/svn0.sh"
+        arch "x86_64"
+        os "LINUX"
+        type "INSTALLED"
+    }
+}
+tr svn {
+    site condorpool {
+        pfn "/home/qh/wranglingWF2/bin/svn.sh"
+        arch "x86_64"
+        os "LINUX"
+        type "INSTALLED"
+    }
+}
+tr deselect {
+    site condorpool {
+        pfn "/home/qh/wranglingWF2/bin/deselect.sh"
+        arch "x86_64"
+        os "LINUX"
+        type "INSTALLED"
+    }
+}
+tr filterin {
+    site condorpool {
+        pfn "/home/qh/wranglingWF2/bin/filter.sh"
+        arch "x86_64"
+        os "LINUX"
+        type "INSTALLED"
+    }
+}
+tr defilter {
+    site condorpool {
+        pfn "/home/qh/wranglingWF2/bin/defilter.sh"
+        arch "x86_64"
+        os "LINUX"
+        type "INSTALLED"
+    }
+}
+tr summarise {
+    site condorpool {
+        pfn "/home/qh/wranglingWF2/bin/summarise.sh"
+        arch "x86_64"
+        os "LINUX"
+        type "INSTALLED"
+    }
+}
+tr filteris {
+    site condorpool {
+        pfn "/home/qh/wranglingWF2/bin/filteris.sh"
+        arch "x86_64"
+        os "LINUX"
+        type "INSTALLED"
+    }
+}
+tr unite1 {
+    site condorpool {
+        pfn "/home/qh/wranglingWF2/bin/unite2.sh"
+        arch "x86_64"
+        os "LINUX"
+        type "INSTALLED"
+    }
+}
+tr unite2 {
+    site condorpool {
+        pfn "/home/qh/wranglingWF2/bin/unite3.sh"
+        arch "x86_64"
+        os "LINUX"
+        type "INSTALLED"
+    }
+}
+tr line {
+    site condorpool {
+        pfn "/home/qh/wranglingWF2/bin/line.sh"
+        arch "x86_64"
+        os "LINUX"
+        type "INSTALLED"
+    }
+}
+

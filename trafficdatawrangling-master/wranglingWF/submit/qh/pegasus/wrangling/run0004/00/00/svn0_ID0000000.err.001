@@ -1,0 +1,12 @@
+2018-07-05 12:12:31: PegasusLite: version 4.8.2
+2018-07-05 12:12:31: Executing on host qh-Lenovo-R720-15IKBN
+
+########################[Pegasus Lite] Setting up workdir ########################
+2018-07-05 12:12:31: Not creating a new work directory as it is already set to /var/lib/condor/execute/dir_18665
+
+##############[Pegasus Lite] Figuring out the worker package to use ##############
+2018-07-05 12:12:31: The job contained a Pegasus worker package
+
+######################[Pegasus Lite] Executing the user task ######################
+2018-07-05 12:12:31: User task failed with exitcode 1
+PegasusLite: exitcode 1

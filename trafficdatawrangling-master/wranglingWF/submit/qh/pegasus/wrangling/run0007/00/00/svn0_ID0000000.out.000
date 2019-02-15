@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<invocation xmlns="http://pegasus.isi.edu/schema/invocation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pegasus.isi.edu/schema/invocation http://pegasus.isi.edu/schema/iv-2.3.xsd" version="2.3" start="2018-09-07T13:45:46.940+01:00" duration="2.032" transformation="svn0" derivation="ID0000000" resource="condorpool" wf-label="wrangling" wf-stamp="2018-07-02T20:00:17+01:00" interface="enx025701513834" hostaddr="192.168.42.114" hostname="qh-Lenovo-R720-15IKBN" pid="14551" uid="1000" user="qh" gid="1000" group="qh" umask="0022">
+  <mainjob start="2018-09-07T13:45:46.976+01:00" duration="1.996" pid="14553">
+    <usage utime="0.060" stime="0.008" maxrss="13084" minflt="1529" majflt="2" nswap="0" inblock="192" outblock="2968" msgsnd="0" msgrcv="0" nsignals="0" nvcsw="94" nivcsw="4"/>
+    <status raw="0"><regular exitcode="0"/></status>
+    <statcall error="0">
+      <file name="/home/qh/wranglingWF/bin/svn0.sh">23212F62696E2F626173680A0A232066</file>
+      <statinfo mode="0100777" size="636" inode="2102541" nlink="1" blksize="4096" blocks="8" mtime="2018-06-29T05:01:26+01:00" atime="2018-08-03T05:40:13+01:00" ctime="2018-06-29T05:10:03+01:00" uid="1000" user="qh" gid="1000" group="qh"/>
+    </statcall>
+    <argument-vector>
+      <arg nr="1">a.csv</arg>
+      <arg nr="2">a2.csv</arg>
+    </argument-vector>
+  </mainjob>
+  <jobids condor="837.0"/>
+  <cwd>/var/lib/condor/execute/dir_14467</cwd>
+  <usage utime="0.008" stime="0.012" maxrss="1948" minflt="122" majflt="0" nswap="0" inblock="8" outblock="0" msgsnd="0" msgrcv="0" nsignals="0" nvcsw="2" nivcsw="0"/>
+  <machine page-size="4096">
+    <stamp>2018-09-07T13:45:46.940+01:00</stamp>
+    <uname system="linux" nodename="qh-lenovo-r720-15ikbn" release="4.4.0-124-generic" machine="x86_64">#148-Ubuntu SMP Wed May 2 13:00:18 UTC 2018</uname>
+    <linux>
+      <ram total="8046892" free="2241532" shared="493840" buffer="187120"/>
+      <swap total="3000316" free="3000316"/>
+      <boot idle="86229.260">2018-09-07T10:34:56.511+01:00</boot>
+      <cpu count="8" speed="1066" vendor="GenuineIntel">Intel(R) Core(TM) i7-7700HQ CPU @ 2.80GHz</cpu>
+      <load min1="0.82" min5="0.55" min15="0.47"/>
+      <procs total="282" running="1" sleeping="281" vmsize="78502520" rss="6107956"/>
+      <task total="778" running="1" sleeping="777"/>
+    </linux>
+  </machine>
+  <statcall error="0" id="final" lfn="a.csv">
+    <file name="/var/lib/condor/execute/dir_14467/a.csv">53646174652C436F7369742C4C616E65</file>
+    <statinfo mode="0100755" size="299489" inode="1849944" nlink="1" blksize="4096" blocks="592" mtime="2018-09-07T13:45:48+01:00" atime="2018-09-07T13:45:48+01:00" ctime="2018-09-07T13:45:48+01:00" uid="1000" user="qh" gid="1000" group="qh"/>
+    <checksum type="sha256" value="0c8a05e2fe7adb3fdfba55e2c1fc722f49617753608e77c56fd45bfb24917add" timing="0.218"/>
+  </statcall>
+  <statcall error="0" id="final" lfn="a2.csv">
+    <file name="/var/lib/condor/execute/dir_14467/a2.csv">53646174652C436F7369742C4C616E65</file>
+    <statinfo mode="0100755" size="158123" inode="1849945" nlink="1" blksize="4096" blocks="312" mtime="2018-09-07T13:45:48+01:00" atime="2018-09-07T13:45:48+01:00" ctime="2018-09-07T13:45:48+01:00" uid="1000" user="qh" gid="1000" group="qh"/>
+    <checksum type="sha256" value="1f4ddb54c529f3155568e44d3709a55faad4c461121eb1c10013dfb413a1e17b" timing="0.033"/>
+  </statcall>
+  <statcall error="0" id="stdin">
+    <file name="/dev/null"/>
+    <statinfo mode="020666" size="0" inode="6" nlink="1" blksize="4096" blocks="0" mtime="2018-09-07T18:35:08+01:00" atime="2018-09-07T18:35:08+01:00" ctime="2018-09-07T18:35:08+01:00" uid="0" user="root" gid="0" group="root"/>
+  </statcall>
+  <statcall error="0" id="stdout">
+    <temporary name="/var/lib/condor/execute/dir_14467/ks.out.snvfy1" descriptor="3"/>
+    <statinfo mode="0100600" size="55" inode="1849941" nlink="1" blksize="4096" blocks="8" mtime="2018-09-07T13:45:48+01:00" atime="2018-09-07T13:45:46+01:00" ctime="2018-09-07T13:45:48+01:00" uid="1000" user="qh" gid="1000" group="qh"/>
+    <data>A    tmp/a.csv
+A    tmp/a2.csv
+Checked out revision 7.
+</data>
+  </statcall>
+  <statcall error="0" id="stderr">
+    <temporary name="/var/lib/condor/execute/dir_14467/ks.err.GhzFWK" descriptor="4"/>
+    <statinfo mode="0100600" size="166" inode="1849942" nlink="1" blksize="4096" blocks="8" mtime="2018-09-07T13:45:48+01:00" atime="2018-09-07T13:45:46+01:00" ctime="2018-09-07T13:45:48+01:00" uid="1000" user="qh" gid="1000" group="qh"/>
+    <data>+ &apos;[&apos; 2 -lt 2 &apos;]&apos;
++ output1=a.csv
++ output2=a2.csv
++ svn checkout https://github.com/qwqaijingjing/test/trunk/tmp
++ cp ./tmp/a.csv ./a.csv
++ cp ./tmp/a2.csv ./a2.csv
+</data>
+  </statcall>
+  <statcall error="0" id="metadata">
+    <temporary name="/var/lib/condor/execute/dir_14467/ks.meta.7wG5ku" descriptor="5"/>
+    <statinfo mode="0100600" size="0" inode="1849943" nlink="1" blksize="4096" blocks="0" mtime="2018-09-07T13:45:46+01:00" atime="2018-09-07T13:45:46+01:00" ctime="2018-09-07T13:45:46+01:00" uid="1000" user="qh" gid="1000" group="qh"/>
+  </statcall>
+</invocation>

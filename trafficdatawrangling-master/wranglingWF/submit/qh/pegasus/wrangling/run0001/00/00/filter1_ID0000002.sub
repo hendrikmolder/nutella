@@ -1,0 +1,43 @@
+######################################################################
+# PEGASUS WMS GENERATED SUBMIT FILE
+# DAG : wrangling, Index = 0, Count = 1
+# SUBMIT FILE NAME : filter1_ID0000002.sub
+######################################################################
+stream_error  = false
+stream_output = false
+environment = "CONDOR_JOBID=$(cluster).$(process) PEGASUS_WF_UUID=e9760f8a-5527-4e0d-a162-9576cc459686 PEGASUS_WF_LABEL=wrangling PEGASUS_DAG_JOB_ID=filter1_ID0000002 PEGASUS_SITE=condorpool"
+copy_to_spool = false
+error = /home/qh/wranglingWF/submit/qh/pegasus/wrangling/run0001//00/00/filter1_ID0000002.err
+executable = /home/qh/wranglingWF/submit/qh/pegasus/wrangling/run0001/00/00/filter1_ID0000002.sh
+initialdir = /home/qh/scratch/qh/pegasus/wrangling/run0001
+log = /home/qh/wranglingWF/submit/qh/pegasus/wrangling/run0001/wrangling-0.log
+notification = NEVER
+output = /home/qh/wranglingWF/submit/qh/pegasus/wrangling/run0001//00/00/filter1_ID0000002.out
+periodic_release = False
+periodic_remove = (JobStatus == 5) && ((CurrentTime - EnteredCurrentStatus) > 1800)
+priority = 20
+should_transfer_files = YES
+submit_event_user_notes = pool:condorpool
+transfer_executable = true
+transfer_input_files = a2.csv,/usr/share/pegasus/sh/pegasus-lite-common.sh,/home/qh/wranglingWF/submit/qh/pegasus/wrangling/run0001/pegasus-worker-4.8.2-x86_64_ubuntu_16.tar.gz
+transfer_output_files = b2.csv,
+universe = vanilla
+when_to_transfer_output = ON_EXIT
++pegasus_generator = "Pegasus"
++pegasus_root_wf_uuid = "e9760f8a-5527-4e0d-a162-9576cc459686"
++pegasus_wf_uuid = "e9760f8a-5527-4e0d-a162-9576cc459686"
++pegasus_version = "4.8.2"
++pegasus_wf_name = "wrangling-0"
++pegasus_wf_time = "20180702T200255+0100"
++pegasus_wf_xformation = "filter1"
++pegasus_wf_dax_job_id = "ID0000002"
++pegasus_wf_dag_job_id = "filter1_ID0000002"
++pegasus_job_class = 1
++pegasus_site = "condorpool"
++pegasus_job_runtime = 0
++pegasus_cores = 1
++pegasus_cluster_size = 1
+queue
+######################################################################
+# END OF SUBMIT FILE
+######################################################################

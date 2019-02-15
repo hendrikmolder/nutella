@@ -1,0 +1,11 @@
+[
+ { "type": "transfer",
+   "lfn": "a.csv",
+   "id": 1,
+   "src_urls": [
+     { "site_label": "local", "url": "file:///home/qh/scratch/qh/pegasus/wrangling/run0001/./a.csv" }
+   ],
+   "dest_urls": [
+     { "site_label": "local", "url": "file:///home/qh/output/a.csv" }
+   ] }
+]

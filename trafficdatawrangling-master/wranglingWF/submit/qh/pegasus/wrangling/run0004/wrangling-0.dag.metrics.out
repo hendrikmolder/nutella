@@ -1,0 +1,13 @@
+Executing: "/usr/lib/condor/libexec/condor_dagman_metrics_reporter" "-f" "wrangling-0.dag.metrics" "-t" "100"
+
+Will attempt to contact the following metrics servers:
+	http://metrics.pegasus.isi.edu/metrics
+
+Data to send: <{"client":"condor_dagman","version":"8.4.2","planner":"/usr/bin/pegasus-plan","planner_version":"4.8.2","type":"metrics","wf_uuid":"c544b353-ffd8-4a24-bba5-6169fc460fc8","root_wf_uuid":"c544b353-ffd8-4a24-bba5-6169fc460fc8","start_time":1531144645.082,"end_time":1531144944.764,"duration":299.682,"exitcode":1,"dagman_id":"773","parent_dagman_id":"","rescue_dag_number":0,"jobs":19,"jobs_failed":1,"jobs_succeeded":1,"dag_jobs":0,"dag_jobs_failed":0,"dag_jobs_succeeded":0,"total_jobs":19,"total_jobs_run":2,"total_job_time":0.000,"dag_status":2}>
+
+Setting the POST option... Success!
+Setting the data to send... Success!
+Set the content length... Success!
+Telling server we are sending json... Success!
+Initializing the error buffer... Success!
+Successfully sent data to server http://metrics.pegasus.isi.edu/metrics

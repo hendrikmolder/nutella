@@ -1,0 +1,3 @@
+{"std_err": "", "retry": 0, "std_out": "", "timestamp": "2018-07-05T11:34:00.995079", "name": ".//00/00/create_dir_wrangling_0_local.out", "exitcode": 0, "app_exitcode": 0}
+{"std_err": "Success message missing from output\n", "retry": 0, "std_out": "", "timestamp": "2018-07-05T12:12:21.113397", "name": ".//00/00/svn0_ID0000000.out", "exitcode": 1, "app_exitcode": null}
+{"std_err": "Success message missing from output\n", "retry": 1, "std_out": "", "timestamp": "2018-07-09T15:02:19.657162", "name": ".//00/00/svn0_ID0000000.out", "exitcode": 1, "app_exitcode": null}

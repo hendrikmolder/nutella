@@ -1,0 +1,233 @@
+
+
+<html>
+<head>
+<title>c3929164-eabc-4e98-b041-b37e0864bead</title>
+<style type ='text/css'>
+#breakdown_chart{
+border:2px solid orange;
+}
+#breakdown_chart_footer_div{
+border:2px solid  #C35617;
+border-top-style:none;
+}
+#breakdown_chart_legend_div{
+color:#0066CC;
+}
+.header_level1{
+font-family:"Times New Roman", Times, serif; 
+font-size:36px;
+}
+.header_level2{
+font-family:"Times New Roman", Times, serif; 
+font-size:30px;
+padding-top:25px;
+}
+</style>
+</head>
+<body>
+<script type='text/javascript' src='js/protovis-r3.2.js'>
+</script>
+
+<a href="../index.html" target="_self"><img src="images/home.png" width =72 height =72 border =0 title ="Home" alt ="Home"></a>
+	
+<center>
+	
+<div class ='header_level1'>Invocation breakdown chart </div>
+	
+<a href ='#chart_div'>Invocation breakdown chart</a><br/>
+<a href ='#env_div'> Workflow environment</a><br/>
+	<div id ='chart_div' class ='header_level2'> Invocation breakdown chart </div>
+<script type='text/javascript' src='bc_action.js'>
+</script>
+<script type='text/javascript' src='bc_c3929164-eabc-4e98-b041-b37e0864bead_data.js'>
+</script>
+
+<script type='text/javascript'>
+var bc_w = 860;
+var bc_h = 400;
+var bc_radius = 120;
+var bc_centerX = bc_w/2;
+var bc_centerY = bc_h/2;
+var bc_headerPanelWidth =  bc_w;
+var bc_headerPanelHeight  = 100 ;
+var bc_total_count  = 15;
+var bc_total_runtime =  12.324;
+var bc_footerPanelWidth =  bc_w;
+var bc_footerPanelHeight  =75;
+var bc_label_padding = 30
+var bc_xLabelPos = bc_label_padding;
+var bc_yLabelPos = 30;
+var bc_labelWidth =200;
+var breakdownByCount = true;
+</script>
+	
+<div id ='breakdown_chart' style='width: 860px; margin : 0 auto;' >
+	
+<script type="text/javascript+protovis">
+var bc_headerPanel = new pv.Panel()
+.width(bc_headerPanelWidth)
+.height(bc_headerPanelHeight)
+.fillStyle('white');
+bc_headerPanel.add(pv.Label)
+.top(40)
+.left( bc_label_padding)
+.font(function() {return 24 +'px sans-serif';})
+.textAlign('left')
+.textBaseline('bottom')
+.text(function(){ return setBCChartTitle();});
+
+bc_headerPanel.add(pv.Label)
+	.top(80)
+	.left(bc_label_padding)
+	.font(function() {return 16 +'px sans-serif';})
+	.textAlign('left')
+	.textBaseline('bottom')
+	.text('wrangling');
+
+bc_headerPanel.render();
+
+</script>	
+
+<script type="text/javascript+protovis">
+var bc_chartPanel = new pv.Panel()
+.width(bc_w)
+.height(bc_h);
+
+bc_chartPanel.def("o", -1); 
+
+var outerWedge = bc_chartPanel.add(pv.Wedge)
+.left(bc_centerX)
+.bottom(bc_centerY);
+
+outerWedge.data(bc_data)
+.outerRadius(bc_radius)
+.angle(function(d){return getOuterAngle(d);})
+.left(function() bc_centerX
+	+ Math.cos(this.startAngle() + this.angle() / 2)
+	* ((this.parent.o() == this.index) ? 10 : 0))
+.bottom(function() bc_centerY
+	- Math.sin(this.startAngle() + this.angle() / 2)
+	* ((this.parent.o() == this.index) ? 10 : 0))
+.event("mouseover", function() this.parent.o(this.index))
+.event("click", function(d) printTransformationDetails(d))
+.fillStyle(function(d)d.color);
+
+
+var innerWedge = bc_chartPanel.add(pv.Wedge)
+.data(bc_data)
+.left(bc_centerX)
+.bottom(bc_centerY)
+.outerRadius( function(d){return getInnerRadius(d);})
+.angle(function(d) {return getOuterAngle(d);})
+.left(function() bc_centerX
++ Math.cos(this.startAngle() + this.angle() / 2)
+* ((this.parent.o() == this.index) ? 10 : 0))
+.bottom(function() bc_centerY
+- Math.sin(this.startAngle() + this.angle() / 2)
+* ((this.parent.o() == this.index) ? 10 : 0))
+.event("mouseover", function() this.parent.o(this.index))
+ .event("click", function(d) printTransformationDetails(d))   
+.fillStyle("red");
+bc_chartPanel.render();
+</script>
+	
+<script type="text/javascript+protovis">
+var bc_footerPanel = new pv.Panel()
+.width(bc_footerPanelWidth)
+.height(bc_footerPanelHeight)
+.fillStyle('white');
+bc_footerPanel.add(pv.Dot)
+.data(bc_data)
+.left( function(d){
+	if(this.index == 0){
+		bc_xLabelPos = bc_label_padding;
+		bc_yLabelPos = bc_footerPanelHeight - 15 ;
+	}else{
+		if(bc_xLabelPos + bc_labelWidth > bc_w - (bc_label_padding + bc_labelWidth)){
+			bc_xLabelPos =  bc_label_padding;
+			bc_yLabelPos -=15;
+		}
+		else{
+			bc_xLabelPos += bc_labelWidth;
+		}
+	}
+	return bc_xLabelPos;}
+)
+.bottom(function(d){
+	return bc_yLabelPos;}
+)
+.fillStyle(function(d) d.color)
+.strokeStyle(null)
+.size(49)
+.event("click", function(d) printTransformationDetails(d))
+.anchor('right').add(pv.Label)
+.textMargin(6)
+.textAlign('left')
+.text(function(d) d.name);
+
+bc_footerPanel.render();
+</script>
+
+</div>
+
+<div id ='breakdown_chart_footer_div' style='width: 860px; margin : 0 auto;' >
+	<div>
+		<div>Breakdown  by</div>
+		<input type='radio' name='by_filter' value='by count' onclick="setBreakdownBy(true);" checked/> count<br />
+		<input type='radio' name='by_filter' value='by runtime' onclick="setBreakdownBy(false);"/> runtime<br />
+	</div>
+	<div id = 'breakdown_chart_legend_div'>
+	<p><b>Note</b>: Legends can be clicked to find information corresponding to the transformation name.</p>
+	</div>
+</div>
+	<div id ='env_div' class ='header_level2'> Workflow environment </div>
+<table style='color:#600000;'>
+<tr>
+<th align ='left' style ='color:#600000'>dag_file_name</th>
+<td style ='color:#888888'> : wrangling-0.dag</td>
+</tr>
+<tr>
+<th align ='left' style ='color:#600000'>wf_uuid</th>
+<td style ='color:#888888'> : c3929164-eabc-4e98-b041-b37e0864bead</td>
+</tr>
+<tr>
+<th align ='left' style ='color:#600000'>submit_hostname</th>
+<td style ='color:#888888'> : qh-Lenovo-R720-15IKBN</td>
+</tr>
+<tr>
+<th align ='left' style ='color:#600000'>dax_label</th>
+<td style ='color:#888888'> : wrangling</td>
+</tr>
+<tr>
+<th align ='left' style ='color:#600000'>planner_version</th>
+<td style ='color:#888888'> : 4.8.2</td>
+</tr>
+<tr>
+<th align ='left' style ='color:#600000'>planner_arguments</th>
+<td style ='color:#888888'> : --conf pegasus.properties --dax wrangling2.dax --dir /home/qh/wranglingWF2/submit --output-dir /home/qh/output --cleanup leaf --force --sites condorpool --submit</td>
+</tr>
+<tr>
+<th align ='left' style ='color:#600000'>grid_dn</th>
+<td style ='color:#888888'> : -</td>
+</tr>
+<tr>
+<th align ='left' style ='color:#600000'>user</th>
+<td style ='color:#888888'> : qh</td>
+</tr>
+<tr>
+<th align ='left' style ='color:#600000'>submit_dir</th>
+<td style ='color:#888888'> : /home/qh/wranglingWF2/submit/qh/pegasus/wrangling/run0002</td>
+</tr>
+<tr>
+<th align ='left' style ='color:#600000'>dax_version</th>
+<td style ='color:#888888'> : 3.6</td>
+</tr>
+</table>
+</center>
+	
+<div style='clear: left'>
+</div>
+</body>
+</html>
+	

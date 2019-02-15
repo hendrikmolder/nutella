@@ -1,0 +1,26 @@
+2018-07-02 20:02:57,616:INFO:pegasus-monitord(68): pegasus-monitord starting - pid 18538 
+2018-07-02 20:02:57,619:INFO:pegasus-monitord(320): Final Command line options are: ['-N', 'wrangling-0.dag.dagman.out']
+Created Pegasus database in: sqlite:////home/qh/wranglingWF/submit/qh/pegasus/wrangling/run0001/wrangling-0.stampede.db
+2018-07-02 20:02:58,179:INFO:Pegasus.monitoring.event_output(315): output type=DB namespace=stampede. name=sqlite:////home/qh/wranglingWF/submit/qh/pegasus/wrangling/run0001/wrangling-0.stampede.db
+2018-07-02 20:02:58,204:INFO:Pegasus.monitoring.event_output(315): output type=DB namespace=dashboard. name=sqlite:////home/qh/.pegasus/workflow.db
+2018-07-02 20:02:58,204:INFO:pegasus-monitord(1010): monitord started in fast start mode
+2018-07-02 20:02:58,216:INFO:Pegasus.monitoring.workflow(362): cannot open state file /home/qh/wranglingWF/submit/qh/pegasus/wrangling/run0001/monitord.info, continuing without state...
+2018-07-02 20:02:58,216:INFO:Pegasus.monitoring.workflow(943): creating new file /home/qh/wranglingWF/submit/qh/pegasus/wrangling/run0001/jobstate.log
+2018-07-02 20:02:58,216:INFO:Pegasus.monitoring.workflow(951): Appending to existing jobstate.log replay_mode 0 previous_processed_line 0
+2018-07-02 20:02:58,216:INFO:Pegasus.monitoring.notifications(394): loading notifications from /home/qh/wranglingWF/submit/qh/pegasus/wrangling/run0001/wrangling-0.notify
+2018-07-02 20:02:58,331:INFO:pegasus-monitord(777): Using DAGMan version 8.4.2 80402
+2018-07-02 20:02:58,331:INFO:pegasus-monitord(757): DAGMan runs at pid 18537
+2018-07-02 20:02:58,333:INFO:pegasus-monitord(763): using dag wrangling-0.dag
+2018-07-02 20:02:58,333:INFO:Pegasus.monitoring.workflow(169): Parsing DAG file /home/qh/wranglingWF/submit/qh/pegasus/wrangling/run0001/wrangling-0.dag
+2018-07-02 20:02:58,334:INFO:Pegasus.monitoring.workflow(679): DAGMan starting with condor id 714.0
+2018-07-02 20:03:57,876:INFO:Pegasus.monitoring.workflow(1963): Populating locations corresponding to succeeded registration job  /home/qh/wranglingWF/submit/qh/pegasus/wrangling/run0001/00/00/register_local_0_0.in 
+2018-07-02 20:05:39,287:INFO:pegasus-monitord(737): DAGMan wrangling-0.dag finished with exit code 0
+2018-07-02 20:05:40,294:INFO:pegasus-monitord(1169): workflow /home/qh/wranglingWF/submit/qh/pegasus/wrangling/run0001/wrangling-0.dag.dagman.out ended
+2018-07-02 20:05:40,295:INFO:Pegasus.monitoring.workflow(1117): recovery file deleted: /home/qh/wranglingWF/submit/qh/pegasus/wrangling/run0001/monitord.recover
+2018-07-02 20:05:40,295:INFO:pegasus-monitord(1343): finishing workflow: /home/qh/wranglingWF/submit/qh/pegasus/wrangling/run0001/wrangling-0.dag.dagman.out
+2018-07-02 20:05:40,295:INFO:pegasus-monitord(1395): finishing notifications...
+2018-07-02 20:05:40,296:INFO:pegasus-monitord(1400): monitord process 18538 exiting with 0
+2018-07-02 20:05:40,296:INFO:pegasus-monitord(183): DB flushing beginning
+2018-07-02 20:05:40,297:INFO:Pegasus.db.workflow_loader.WorkflowLoader(1053): Executing final flush
+2018-07-02 20:05:40,310:INFO:Pegasus.db.dashboard_loader.DashboardLoader(344): Executing final flush
+2018-07-02 20:05:40,310:INFO:pegasus-monitord(197): DB flushing ended

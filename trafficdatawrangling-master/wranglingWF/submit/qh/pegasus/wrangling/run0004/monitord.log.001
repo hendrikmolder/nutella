@@ -1,0 +1,34 @@
+2018-07-09 14:57:26,124:INFO:pegasus-monitord(68): pegasus-monitord starting - pid 10220 
+2018-07-09 14:57:26,139:INFO:pegasus-monitord(320): Final Command line options are: ['-N', 'wrangling-0.dag.dagman.out']
+2018-07-09 14:57:26,139:INFO:Pegasus.tools.utils(529): pid 13947 not running anymore...
+2018-07-09 14:57:26,140:WARNING:pegasus-monitord(939): monitord entering it's own recovery mode. Population will start again for the workflow..
+2018-07-09 14:57:26,140:INFO:Pegasus.db.connection(564): Rotating sqlite db file /home/qh/wranglingWF/submit/qh/pegasus/wrangling/run0004/wrangling-0.stampede.db
+Created Pegasus database in: sqlite:////home/qh/wranglingWF/submit/qh/pegasus/wrangling/run0004/wrangling-0.stampede.db
+2018-07-09 14:57:26,377:INFO:Pegasus.monitoring.event_output(315): output type=DB namespace=stampede. name=sqlite:////home/qh/wranglingWF/submit/qh/pegasus/wrangling/run0004/wrangling-0.stampede.db
+2018-07-09 14:57:26,587:INFO:Pegasus.monitoring.event_output(315): output type=DB namespace=dashboard. name=sqlite:////home/qh/.pegasus/workflow.db
+2018-07-09 14:57:26,587:INFO:Pegasus.db.expunge(88): Expunging c544b353-ffd8-4a24-bba5-6169fc460fc8 from dashboard database
+2018-07-09 14:57:26,628:INFO:Pegasus.db.expunge(104): Flush took: 0.004093 seconds
+2018-07-09 14:57:26,628:INFO:pegasus-monitord(1010): monitord started in fast start mode
+2018-07-09 14:57:26,813:INFO:Pegasus.monitoring.workflow(460): monitord last processed line: 236
+2018-07-09 14:57:26,813:INFO:Pegasus.monitoring.workflow(927): Setting last processed line to 0 in recovery mode to ensure population starts afresh
+2018-07-09 14:57:26,813:INFO:Pegasus.monitoring.workflow(959):  Rotating jobstate.log replay_mode 0 previous_processed_line 236
+2018-07-09 14:57:26,813:INFO:Pegasus.monitoring.notifications(394): loading notifications from /home/qh/wranglingWF/submit/qh/pegasus/wrangling/run0004/wrangling-0.notify
+2018-07-09 14:57:26,980:INFO:pegasus-monitord(777): Using DAGMan version 8.4.2 80402
+2018-07-09 14:57:26,981:INFO:pegasus-monitord(757): DAGMan runs at pid 13946
+2018-07-09 14:57:26,984:INFO:pegasus-monitord(763): using dag wrangling-0.dag
+2018-07-09 14:57:26,985:INFO:Pegasus.monitoring.workflow(169): Parsing DAG file /home/qh/wranglingWF/submit/qh/pegasus/wrangling/run0004/wrangling-0.dag
+2018-07-09 14:57:26,985:INFO:Pegasus.monitoring.workflow(679): DAGMan starting with condor id 773.0
+2018-07-09 14:57:27,084:INFO:pegasus-monitord(737): DAGMan wrangling-0.dag finished with exit code 3
+2018-07-09 14:57:27,088:INFO:pegasus-monitord(777): Using DAGMan version 8.4.2 80402
+2018-07-09 14:57:27,089:INFO:pegasus-monitord(757): DAGMan runs at pid 10219
+2018-07-09 14:57:27,090:INFO:pegasus-monitord(763): using dag wrangling-0.dag
+2018-07-09 14:57:27,090:INFO:Pegasus.monitoring.workflow(679): DAGMan starting with condor id 773.0
+2018-07-09 14:57:28,096:INFO:pegasus-monitord(1169): workflow /home/qh/wranglingWF/submit/qh/pegasus/wrangling/run0004/wrangling-0.dag.dagman.out ended
+2018-07-09 14:57:28,097:INFO:Pegasus.monitoring.workflow(1117): recovery file deleted: /home/qh/wranglingWF/submit/qh/pegasus/wrangling/run0004/monitord.recover
+2018-07-09 14:57:28,097:INFO:pegasus-monitord(1343): finishing workflow: /home/qh/wranglingWF/submit/qh/pegasus/wrangling/run0004/wrangling-0.dag.dagman.out
+2018-07-09 14:57:28,097:INFO:pegasus-monitord(1395): finishing notifications...
+2018-07-09 14:57:28,097:INFO:pegasus-monitord(1400): monitord process 10220 exiting with 0
+2018-07-09 14:57:28,098:INFO:pegasus-monitord(183): DB flushing beginning
+2018-07-09 14:57:28,100:INFO:Pegasus.db.workflow_loader.WorkflowLoader(1053): Executing final flush
+2018-07-09 14:57:28,245:INFO:Pegasus.db.dashboard_loader.DashboardLoader(344): Executing final flush
+2018-07-09 14:57:28,246:INFO:pegasus-monitord(197): DB flushing ended

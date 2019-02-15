@@ -1,0 +1,778 @@
+07/02/18 19:39:21 ******************************************************
+07/02/18 19:39:21 ** condor_scheduniv_exec.696.0 (CONDOR_DAGMAN) STARTING UP
+07/02/18 19:39:21 ** /usr/bin/condor_dagman
+07/02/18 19:39:21 ** SubsystemInfo: name=DAGMAN type=DAGMAN(10) class=DAEMON(1)
+07/02/18 19:39:21 ** Configuration: subsystem:DAGMAN local:<NONE> class:DAEMON
+07/02/18 19:39:21 ** $CondorVersion: 8.4.2 Feb 22 2016 BuildID: Debian-8.4.2~dfsg.1-1build1 Debian-8.4.2~dfsg.1-1build1 $
+07/02/18 19:39:21 ** $CondorPlatform: X86_64-Ubuntu_ $
+07/02/18 19:39:21 ** PID = 16207
+07/02/18 19:39:21 ** Log last touched time unavailable (No such file or directory)
+07/02/18 19:39:21 ******************************************************
+07/02/18 19:39:21 Using config source: /etc/condor/condor_config
+07/02/18 19:39:21 Using local config sources: 
+07/02/18 19:39:21    /etc/condor/config.d/00debconf
+07/02/18 19:39:21    /etc/condor/condor_config.local
+07/02/18 19:39:21 config Macros = 69, Sorted = 69, StringBytes = 2036, TablesBytes = 2540
+07/02/18 19:39:21 CLASSAD_CACHING is ENABLED
+07/02/18 19:39:21 Daemon Log is logging: D_ALWAYS D_ERROR
+07/02/18 19:39:21 DaemonCore: No command port requested.
+07/02/18 19:39:21 DAGMAN_USE_STRICT setting: 1
+07/02/18 19:39:21 DAGMAN_VERBOSITY setting: 3
+07/02/18 19:39:21 DAGMAN_DEBUG_CACHE_SIZE setting: 5242880
+07/02/18 19:39:21 DAGMAN_DEBUG_CACHE_ENABLE setting: False
+07/02/18 19:39:21 DAGMAN_SUBMIT_DELAY setting: 0
+07/02/18 19:39:21 DAGMAN_MAX_SUBMIT_ATTEMPTS setting: 6
+07/02/18 19:39:21 DAGMAN_STARTUP_CYCLE_DETECT setting: False
+07/02/18 19:39:21 DAGMAN_MAX_SUBMITS_PER_INTERVAL setting: 5
+07/02/18 19:39:21 DAGMAN_USER_LOG_SCAN_INTERVAL setting: 5
+07/02/18 19:39:21 DAGMAN_DEFAULT_PRIORITY setting: 0
+07/02/18 19:39:21 DAGMAN_SUPPRESS_NOTIFICATION setting: True
+07/02/18 19:39:21 allow_events (DAGMAN_ALLOW_EVENTS) setting: 114
+07/02/18 19:39:21 DAGMAN_RETRY_SUBMIT_FIRST setting: True
+07/02/18 19:39:21 DAGMAN_RETRY_NODE_FIRST setting: False
+07/02/18 19:39:21 DAGMAN_MAX_JOBS_IDLE setting: 1000
+07/02/18 19:39:21 DAGMAN_MAX_JOBS_SUBMITTED setting: 0
+07/02/18 19:39:21 DAGMAN_MAX_PRE_SCRIPTS setting: 20
+07/02/18 19:39:21 DAGMAN_MAX_POST_SCRIPTS setting: 20
+07/02/18 19:39:21 DAGMAN_ALLOW_LOG_ERROR setting: False
+07/02/18 19:39:21 DAGMAN_MUNGE_NODE_NAMES setting: True
+07/02/18 19:39:21 DAGMAN_PROHIBIT_MULTI_JOBS setting: False
+07/02/18 19:39:21 DAGMAN_SUBMIT_DEPTH_FIRST setting: False
+07/02/18 19:39:21 DAGMAN_ALWAYS_RUN_POST setting: True
+07/02/18 19:39:21 DAGMAN_ABORT_DUPLICATES setting: True
+07/02/18 19:39:21 DAGMAN_ABORT_ON_SCARY_SUBMIT setting: True
+07/02/18 19:39:21 DAGMAN_PENDING_REPORT_INTERVAL setting: 600
+07/02/18 19:39:21 DAGMAN_AUTO_RESCUE setting: True
+07/02/18 19:39:21 DAGMAN_MAX_RESCUE_NUM setting: 100
+07/02/18 19:39:21 DAGMAN_WRITE_PARTIAL_RESCUE setting: True
+07/02/18 19:39:21 DAGMAN_DEFAULT_NODE_LOG setting: @(DAG_DIR)/@(DAG_FILE).nodes.log
+07/02/18 19:39:21 DAGMAN_GENERATE_SUBDAG_SUBMITS setting: True
+07/02/18 19:39:21 DAGMAN_MAX_JOB_HOLDS setting: 100
+07/02/18 19:39:21 DAGMAN_HOLD_CLAIM_TIME setting: 20
+07/02/18 19:39:21 ALL_DEBUG setting: 
+07/02/18 19:39:21 DAGMAN_DEBUG setting: 
+07/02/18 19:39:21 DAGMAN_SUPPRESS_JOB_LOGS setting: False
+07/02/18 19:39:21 argv[0] == "condor_scheduniv_exec.696.0"
+07/02/18 19:39:21 argv[1] == "-Lockfile"
+07/02/18 19:39:21 argv[2] == "wrangling-0.dag.lock"
+07/02/18 19:39:21 argv[3] == "-AutoRescue"
+07/02/18 19:39:21 argv[4] == "1"
+07/02/18 19:39:21 argv[5] == "-DoRescueFrom"
+07/02/18 19:39:21 argv[6] == "0"
+07/02/18 19:39:21 argv[7] == "-Dag"
+07/02/18 19:39:21 argv[8] == "wrangling-0.dag"
+07/02/18 19:39:21 argv[9] == "-MaxPost"
+07/02/18 19:39:21 argv[10] == "20"
+07/02/18 19:39:21 argv[11] == "-Suppress_notification"
+07/02/18 19:39:21 argv[12] == "-CsdVersion"
+07/02/18 19:39:21 argv[13] == "$CondorVersion: 8.4.2 Feb 22 2016 BuildID: Debian-8.4.2~dfsg.1-1build1 Debian-8.4.2~dfsg.1-1build1 $"
+07/02/18 19:39:21 argv[14] == "-Dagman"
+07/02/18 19:39:21 argv[15] == "/usr/bin/condor_dagman"
+07/02/18 19:39:21 Warning: failed to get attribute DAGNodeName
+07/02/18 19:39:21 Default node log file is: </home/qh/wranglingWF2/submit/qh/pegasus/wrangling/run0001/./wrangling-0.dag.nodes.log>
+07/02/18 19:39:21 DAG Lockfile will be written to wrangling-0.dag.lock
+07/02/18 19:39:21 DAG Input file is wrangling-0.dag
+07/02/18 19:39:21 Parsing 1 dagfiles
+07/02/18 19:39:21 Parsing wrangling-0.dag ...
+07/02/18 19:39:21 Warning: category registration has no throttle value set
+07/02/18 19:39:21 Warning: category stagein has no assigned nodes, so the throttle setting (10) will have no effect
+07/02/18 19:39:21 Warning: category cleanup has no assigned nodes, so the throttle setting (4) will have no effect
+07/02/18 19:39:21 Dag contains 17 total jobs
+07/02/18 19:39:21 Sleeping for 3 seconds to ensure ProcessId uniqueness
+07/02/18 19:39:24 Bootstrapping...
+07/02/18 19:39:24 Number of pre-completed nodes: 0
+07/02/18 19:39:24 MultiLogFiles: truncating log file /home/qh/wranglingWF2/submit/qh/pegasus/wrangling/run0001/./wrangling-0.dag.nodes.log
+07/02/18 19:39:24 DAG status: 0 (DAG_STATUS_OK)
+07/02/18 19:39:24 Of 17 nodes total:
+07/02/18 19:39:24  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+07/02/18 19:39:24   ===     ===      ===     ===     ===        ===      ===
+07/02/18 19:39:24     0       0        0       0       1         16        0
+07/02/18 19:39:24 0 job proc(s) currently held
+07/02/18 19:39:24 Registering condor_event_timer...
+07/02/18 19:39:25 Submitting Condor Node create_dir_wrangling_0_local job(s)...
+07/02/18 19:39:25 Adding a DAGMan workflow log /home/qh/wranglingWF2/submit/qh/pegasus/wrangling/run0001/./wrangling-0.dag.nodes.log
+07/02/18 19:39:25 Masking the events recorded in the DAGMAN workflow log
+07/02/18 19:39:25 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+07/02/18 19:39:25 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'create_dir_wrangling_0_local -a +DAGManJobId' '=' '696 -a DAGManJobId' '=' '696 -a submit_event_notes' '=' 'DAG' 'Node:' 'create_dir_wrangling_0_local -a dagman_log' '=' '/home/qh/wranglingWF2/submit/qh/pegasus/wrangling/run0001/./wrangling-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a +DAGNodeRetry' '=' '0 -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/00/create_dir_wrangling_0_local.sub
+07/02/18 19:39:25 From submit: Submitting job(s).
+07/02/18 19:39:25 From submit: 1 job(s) submitted to cluster 697.
+07/02/18 19:39:25 	assigned Condor ID (697.0.0)
+07/02/18 19:39:25 Just submitted 1 job this cycle...
+07/02/18 19:39:25 Currently monitoring 1 Condor log file(s)
+07/02/18 19:39:25 Reassigning the id of job create_dir_wrangling_0_local from (697.0.0) to (697.0.0)
+07/02/18 19:39:25 Event: ULOG_SUBMIT for Condor Node create_dir_wrangling_0_local (697.0.0)
+07/02/18 19:39:25 Number of idle job procs: 1
+07/02/18 19:39:25 DAG status: 0 (DAG_STATUS_OK)
+07/02/18 19:39:25 Of 17 nodes total:
+07/02/18 19:39:25  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+07/02/18 19:39:25   ===     ===      ===     ===     ===        ===      ===
+07/02/18 19:39:25     0       0        1       0       0         16        0
+07/02/18 19:39:25 0 job proc(s) currently held
+07/02/18 19:39:30 Currently monitoring 1 Condor log file(s)
+07/02/18 19:39:30 Event: ULOG_EXECUTE for Condor Node create_dir_wrangling_0_local (697.0.0)
+07/02/18 19:39:30 Number of idle job procs: 0
+07/02/18 19:39:30 Event: ULOG_JOB_TERMINATED for Condor Node create_dir_wrangling_0_local (697.0.0)
+07/02/18 19:39:30 Number of idle job procs: 0
+07/02/18 19:39:30 Node create_dir_wrangling_0_local job proc (697.0.0) completed successfully.
+07/02/18 19:39:30 Node create_dir_wrangling_0_local job completed
+07/02/18 19:39:30 Running POST script of Node create_dir_wrangling_0_local...
+07/02/18 19:39:30 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+07/02/18 19:39:30 DAG status: 0 (DAG_STATUS_OK)
+07/02/18 19:39:30 Of 17 nodes total:
+07/02/18 19:39:30  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+07/02/18 19:39:30   ===     ===      ===     ===     ===        ===      ===
+07/02/18 19:39:30     0       0        0       1       0         16        0
+07/02/18 19:39:30 0 job proc(s) currently held
+07/02/18 19:39:30 Initializing user log writer for /home/qh/wranglingWF2/submit/qh/pegasus/wrangling/run0001/./wrangling-0.dag.nodes.log, (697.0.0)
+07/02/18 19:39:35 Currently monitoring 1 Condor log file(s)
+07/02/18 19:39:35 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node create_dir_wrangling_0_local (697.0.0)
+07/02/18 19:39:35 POST Script of Node create_dir_wrangling_0_local completed successfully.
+07/02/18 19:39:35 DAG status: 0 (DAG_STATUS_OK)
+07/02/18 19:39:35 Of 17 nodes total:
+07/02/18 19:39:35  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+07/02/18 19:39:35   ===     ===      ===     ===     ===        ===      ===
+07/02/18 19:39:35     1       0        0       0       1         15        0
+07/02/18 19:39:35 0 job proc(s) currently held
+07/02/18 19:39:40 Submitting Condor Node svn_ID0000000 job(s)...
+07/02/18 19:39:40 Adding a DAGMan workflow log /home/qh/wranglingWF2/submit/qh/pegasus/wrangling/run0001/./wrangling-0.dag.nodes.log
+07/02/18 19:39:40 Masking the events recorded in the DAGMAN workflow log
+07/02/18 19:39:40 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+07/02/18 19:39:40 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'svn_ID0000000 -a +DAGManJobId' '=' '696 -a DAGManJobId' '=' '696 -a submit_event_notes' '=' 'DAG' 'Node:' 'svn_ID0000000 -a dagman_log' '=' '/home/qh/wranglingWF2/submit/qh/pegasus/wrangling/run0001/./wrangling-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a +DAGNodeRetry' '=' '0 -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"create_dir_wrangling_0_local" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/00/svn_ID0000000.sub
+07/02/18 19:39:41 From submit: Submitting job(s).
+07/02/18 19:39:41 From submit: 1 job(s) submitted to cluster 698.
+07/02/18 19:39:41 	assigned Condor ID (698.0.0)
+07/02/18 19:39:41 Just submitted 1 job this cycle...
+07/02/18 19:39:41 Currently monitoring 1 Condor log file(s)
+07/02/18 19:39:41 Reassigning the id of job svn_ID0000000 from (698.0.0) to (698.0.0)
+07/02/18 19:39:41 Event: ULOG_SUBMIT for Condor Node svn_ID0000000 (698.0.0)
+07/02/18 19:39:41 Number of idle job procs: 1
+07/02/18 19:39:41 DAG status: 0 (DAG_STATUS_OK)
+07/02/18 19:39:41 Of 17 nodes total:
+07/02/18 19:39:41  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+07/02/18 19:39:41   ===     ===      ===     ===     ===        ===      ===
+07/02/18 19:39:41     1       0        1       0       0         15        0
+07/02/18 19:39:41 0 job proc(s) currently held
+07/02/18 19:39:46 Currently monitoring 1 Condor log file(s)
+07/02/18 19:39:46 Event: ULOG_EXECUTE for Condor Node svn_ID0000000 (698.0.0)
+07/02/18 19:39:46 Number of idle job procs: 0
+07/02/18 19:39:46 Event: ULOG_JOB_TERMINATED for Condor Node svn_ID0000000 (698.0.0)
+07/02/18 19:39:46 Number of idle job procs: 0
+07/02/18 19:39:46 Node svn_ID0000000 job proc (698.0.0) completed successfully.
+07/02/18 19:39:46 Node svn_ID0000000 job completed
+07/02/18 19:39:46 Running POST script of Node svn_ID0000000...
+07/02/18 19:39:46 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+07/02/18 19:39:46 DAG status: 0 (DAG_STATUS_OK)
+07/02/18 19:39:46 Of 17 nodes total:
+07/02/18 19:39:46  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+07/02/18 19:39:46   ===     ===      ===     ===     ===        ===      ===
+07/02/18 19:39:46     1       0        0       1       0         15        0
+07/02/18 19:39:46 0 job proc(s) currently held
+07/02/18 19:39:46 Initializing user log writer for /home/qh/wranglingWF2/submit/qh/pegasus/wrangling/run0001/./wrangling-0.dag.nodes.log, (698.0.0)
+07/02/18 19:39:51 Currently monitoring 1 Condor log file(s)
+07/02/18 19:39:51 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node svn_ID0000000 (698.0.0)
+07/02/18 19:39:51 POST Script of Node svn_ID0000000 completed successfully.
+07/02/18 19:39:51 DAG status: 0 (DAG_STATUS_OK)
+07/02/18 19:39:51 Of 17 nodes total:
+07/02/18 19:39:51  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+07/02/18 19:39:51   ===     ===      ===     ===     ===        ===      ===
+07/02/18 19:39:51     2       0        0       0       2         13        0
+07/02/18 19:39:51 0 job proc(s) currently held
+07/02/18 19:39:56 Submitting Condor Node deselect_ID0000001 job(s)...
+07/02/18 19:39:56 Adding a DAGMan workflow log /home/qh/wranglingWF2/submit/qh/pegasus/wrangling/run0001/./wrangling-0.dag.nodes.log
+07/02/18 19:39:56 Masking the events recorded in the DAGMAN workflow log
+07/02/18 19:39:56 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+07/02/18 19:39:56 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'deselect_ID0000001 -a +DAGManJobId' '=' '696 -a DAGManJobId' '=' '696 -a submit_event_notes' '=' 'DAG' 'Node:' 'deselect_ID0000001 -a dagman_log' '=' '/home/qh/wranglingWF2/submit/qh/pegasus/wrangling/run0001/./wrangling-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a +DAGNodeRetry' '=' '0 -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"svn_ID0000000" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/00/deselect_ID0000001.sub
+07/02/18 19:39:56 From submit: Submitting job(s).
+07/02/18 19:39:56 From submit: 1 job(s) submitted to cluster 699.
+07/02/18 19:39:56 	assigned Condor ID (699.0.0)
+07/02/18 19:39:56 Submitting Condor Node stage_out_local_local_0_0 job(s)...
+07/02/18 19:39:56 Adding a DAGMan workflow log /home/qh/wranglingWF2/submit/qh/pegasus/wrangling/run0001/./wrangling-0.dag.nodes.log
+07/02/18 19:39:56 Masking the events recorded in the DAGMAN workflow log
+07/02/18 19:39:56 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+07/02/18 19:39:56 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'stage_out_local_local_0_0 -a +DAGManJobId' '=' '696 -a DAGManJobId' '=' '696 -a submit_event_notes' '=' 'DAG' 'Node:' 'stage_out_local_local_0_0 -a dagman_log' '=' '/home/qh/wranglingWF2/submit/qh/pegasus/wrangling/run0001/./wrangling-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a +DAGNodeRetry' '=' '0 -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"svn_ID0000000" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/00/stage_out_local_local_0_0.sub
+07/02/18 19:39:56 From submit: Submitting job(s).
+07/02/18 19:39:56 From submit: 1 job(s) submitted to cluster 700.
+07/02/18 19:39:56 	assigned Condor ID (700.0.0)
+07/02/18 19:39:56 Just submitted 2 jobs this cycle...
+07/02/18 19:39:56 Currently monitoring 1 Condor log file(s)
+07/02/18 19:39:56 Reassigning the id of job deselect_ID0000001 from (699.0.0) to (699.0.0)
+07/02/18 19:39:56 Event: ULOG_SUBMIT for Condor Node deselect_ID0000001 (699.0.0)
+07/02/18 19:39:56 Number of idle job procs: 1
+07/02/18 19:39:56 Reassigning the id of job stage_out_local_local_0_0 from (700.0.0) to (700.0.0)
+07/02/18 19:39:56 Event: ULOG_SUBMIT for Condor Node stage_out_local_local_0_0 (700.0.0)
+07/02/18 19:39:56 Number of idle job procs: 2
+07/02/18 19:39:56 DAG status: 0 (DAG_STATUS_OK)
+07/02/18 19:39:56 Of 17 nodes total:
+07/02/18 19:39:56  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+07/02/18 19:39:56   ===     ===      ===     ===     ===        ===      ===
+07/02/18 19:39:56     2       0        2       0       0         13        0
+07/02/18 19:39:56 0 job proc(s) currently held
+07/02/18 19:40:01 Currently monitoring 1 Condor log file(s)
+07/02/18 19:40:01 Event: ULOG_EXECUTE for Condor Node stage_out_local_local_0_0 (700.0.0)
+07/02/18 19:40:01 Number of idle job procs: 1
+07/02/18 19:40:01 Event: ULOG_EXECUTE for Condor Node deselect_ID0000001 (699.0.0)
+07/02/18 19:40:01 Number of idle job procs: 0
+07/02/18 19:40:01 Event: ULOG_JOB_TERMINATED for Condor Node deselect_ID0000001 (699.0.0)
+07/02/18 19:40:01 Number of idle job procs: 0
+07/02/18 19:40:01 Node deselect_ID0000001 job proc (699.0.0) completed successfully.
+07/02/18 19:40:01 Node deselect_ID0000001 job completed
+07/02/18 19:40:01 Running POST script of Node deselect_ID0000001...
+07/02/18 19:40:01 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+07/02/18 19:40:01 Event: ULOG_JOB_TERMINATED for Condor Node stage_out_local_local_0_0 (700.0.0)
+07/02/18 19:40:01 Number of idle job procs: 0
+07/02/18 19:40:01 Node stage_out_local_local_0_0 job proc (700.0.0) completed successfully.
+07/02/18 19:40:01 Node stage_out_local_local_0_0 job completed
+07/02/18 19:40:01 Running POST script of Node stage_out_local_local_0_0...
+07/02/18 19:40:01 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+07/02/18 19:40:01 DAG status: 0 (DAG_STATUS_OK)
+07/02/18 19:40:01 Of 17 nodes total:
+07/02/18 19:40:01  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+07/02/18 19:40:01   ===     ===      ===     ===     ===        ===      ===
+07/02/18 19:40:01     2       0        0       2       0         13        0
+07/02/18 19:40:01 0 job proc(s) currently held
+07/02/18 19:40:01 Initializing user log writer for /home/qh/wranglingWF2/submit/qh/pegasus/wrangling/run0001/./wrangling-0.dag.nodes.log, (699.0.0)
+07/02/18 19:40:01 Initializing user log writer for /home/qh/wranglingWF2/submit/qh/pegasus/wrangling/run0001/./wrangling-0.dag.nodes.log, (700.0.0)
+07/02/18 19:40:06 Currently monitoring 1 Condor log file(s)
+07/02/18 19:40:06 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node deselect_ID0000001 (699.0.0)
+07/02/18 19:40:06 POST Script of Node deselect_ID0000001 completed successfully.
+07/02/18 19:40:06 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node stage_out_local_local_0_0 (700.0.0)
+07/02/18 19:40:06 POST Script of Node stage_out_local_local_0_0 completed successfully.
+07/02/18 19:40:06 DAG status: 0 (DAG_STATUS_OK)
+07/02/18 19:40:06 Of 17 nodes total:
+07/02/18 19:40:06  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+07/02/18 19:40:06   ===     ===      ===     ===     ===        ===      ===
+07/02/18 19:40:06     4       0        0       0       2         11        0
+07/02/18 19:40:06 0 job proc(s) currently held
+07/02/18 19:40:11 Submitting Condor Node filterin_ID0000002 job(s)...
+07/02/18 19:40:11 Adding a DAGMan workflow log /home/qh/wranglingWF2/submit/qh/pegasus/wrangling/run0001/./wrangling-0.dag.nodes.log
+07/02/18 19:40:11 Masking the events recorded in the DAGMAN workflow log
+07/02/18 19:40:11 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+07/02/18 19:40:11 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'filterin_ID0000002 -a +DAGManJobId' '=' '696 -a DAGManJobId' '=' '696 -a submit_event_notes' '=' 'DAG' 'Node:' 'filterin_ID0000002 -a dagman_log' '=' '/home/qh/wranglingWF2/submit/qh/pegasus/wrangling/run0001/./wrangling-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a +DAGNodeRetry' '=' '0 -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"deselect_ID0000001" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/00/filterin_ID0000002.sub
+07/02/18 19:40:11 From submit: Submitting job(s).
+07/02/18 19:40:11 From submit: 1 job(s) submitted to cluster 701.
+07/02/18 19:40:11 	assigned Condor ID (701.0.0)
+07/02/18 19:40:11 Submitting Condor Node register_local_0_0 job(s)...
+07/02/18 19:40:11 Adding a DAGMan workflow log /home/qh/wranglingWF2/submit/qh/pegasus/wrangling/run0001/./wrangling-0.dag.nodes.log
+07/02/18 19:40:11 Masking the events recorded in the DAGMAN workflow log
+07/02/18 19:40:11 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+07/02/18 19:40:11 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'register_local_0_0 -a +DAGManJobId' '=' '696 -a DAGManJobId' '=' '696 -a submit_event_notes' '=' 'DAG' 'Node:' 'register_local_0_0 -a dagman_log' '=' '/home/qh/wranglingWF2/submit/qh/pegasus/wrangling/run0001/./wrangling-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a +DAGNodeRetry' '=' '0 -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"stage_out_local_local_0_0" -a notification' '=' 'never 00/00/register_local_0_0.sub
+07/02/18 19:40:11 From submit: Submitting job(s).
+07/02/18 19:40:11 From submit: 1 job(s) submitted to cluster 702.
+07/02/18 19:40:11 	assigned Condor ID (702.0.0)
+07/02/18 19:40:11 Just submitted 2 jobs this cycle...
+07/02/18 19:40:11 Currently monitoring 1 Condor log file(s)
+07/02/18 19:40:11 Reassigning the id of job filterin_ID0000002 from (701.0.0) to (701.0.0)
+07/02/18 19:40:11 Event: ULOG_SUBMIT for Condor Node filterin_ID0000002 (701.0.0)
+07/02/18 19:40:11 Number of idle job procs: 1
+07/02/18 19:40:11 Reassigning the id of job register_local_0_0 from (702.0.0) to (702.0.0)
+07/02/18 19:40:11 Event: ULOG_SUBMIT for Condor Node register_local_0_0 (702.0.0)
+07/02/18 19:40:11 Number of idle job procs: 2
+07/02/18 19:40:11 DAG status: 0 (DAG_STATUS_OK)
+07/02/18 19:40:11 Of 17 nodes total:
+07/02/18 19:40:11  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+07/02/18 19:40:11   ===     ===      ===     ===     ===        ===      ===
+07/02/18 19:40:11     4       0        2       0       0         11        0
+07/02/18 19:40:11 0 job proc(s) currently held
+07/02/18 19:40:16 Currently monitoring 1 Condor log file(s)
+07/02/18 19:40:16 Event: ULOG_EXECUTE for Condor Node register_local_0_0 (702.0.0)
+07/02/18 19:40:16 Number of idle job procs: 1
+07/02/18 19:40:16 Event: ULOG_EXECUTE for Condor Node filterin_ID0000002 (701.0.0)
+07/02/18 19:40:16 Number of idle job procs: 0
+07/02/18 19:40:16 Event: ULOG_JOB_TERMINATED for Condor Node register_local_0_0 (702.0.0)
+07/02/18 19:40:16 Number of idle job procs: 0
+07/02/18 19:40:16 Node register_local_0_0 job proc (702.0.0) completed successfully.
+07/02/18 19:40:16 Node register_local_0_0 job completed
+07/02/18 19:40:16 Running POST script of Node register_local_0_0...
+07/02/18 19:40:16 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+07/02/18 19:40:16 Event: ULOG_JOB_TERMINATED for Condor Node filterin_ID0000002 (701.0.0)
+07/02/18 19:40:16 Number of idle job procs: 0
+07/02/18 19:40:16 Node filterin_ID0000002 job proc (701.0.0) completed successfully.
+07/02/18 19:40:16 Node filterin_ID0000002 job completed
+07/02/18 19:40:16 Running POST script of Node filterin_ID0000002...
+07/02/18 19:40:16 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+07/02/18 19:40:16 DAG status: 0 (DAG_STATUS_OK)
+07/02/18 19:40:16 Of 17 nodes total:
+07/02/18 19:40:16  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+07/02/18 19:40:16   ===     ===      ===     ===     ===        ===      ===
+07/02/18 19:40:16     4       0        0       2       0         11        0
+07/02/18 19:40:16 0 job proc(s) currently held
+07/02/18 19:40:16 Initializing user log writer for /home/qh/wranglingWF2/submit/qh/pegasus/wrangling/run0001/./wrangling-0.dag.nodes.log, (702.0.0)
+07/02/18 19:40:16 Initializing user log writer for /home/qh/wranglingWF2/submit/qh/pegasus/wrangling/run0001/./wrangling-0.dag.nodes.log, (701.0.0)
+07/02/18 19:40:21 Currently monitoring 1 Condor log file(s)
+07/02/18 19:40:21 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node register_local_0_0 (702.0.0)
+07/02/18 19:40:21 POST Script of Node register_local_0_0 completed successfully.
+07/02/18 19:40:21 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node filterin_ID0000002 (701.0.0)
+07/02/18 19:40:21 POST Script of Node filterin_ID0000002 completed successfully.
+07/02/18 19:40:21 DAG status: 0 (DAG_STATUS_OK)
+07/02/18 19:40:21 Of 17 nodes total:
+07/02/18 19:40:21  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+07/02/18 19:40:21   ===     ===      ===     ===     ===        ===      ===
+07/02/18 19:40:21     6       0        0       0       1         10        0
+07/02/18 19:40:21 0 job proc(s) currently held
+07/02/18 19:40:26 Submitting Condor Node separate2_ID0000003 job(s)...
+07/02/18 19:40:26 Adding a DAGMan workflow log /home/qh/wranglingWF2/submit/qh/pegasus/wrangling/run0001/./wrangling-0.dag.nodes.log
+07/02/18 19:40:26 Masking the events recorded in the DAGMAN workflow log
+07/02/18 19:40:26 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+07/02/18 19:40:26 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'separate2_ID0000003 -a +DAGManJobId' '=' '696 -a DAGManJobId' '=' '696 -a submit_event_notes' '=' 'DAG' 'Node:' 'separate2_ID0000003 -a dagman_log' '=' '/home/qh/wranglingWF2/submit/qh/pegasus/wrangling/run0001/./wrangling-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a +DAGNodeRetry' '=' '0 -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"filterin_ID0000002" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/00/separate2_ID0000003.sub
+07/02/18 19:40:26 From submit: Submitting job(s).
+07/02/18 19:40:26 From submit: 1 job(s) submitted to cluster 703.
+07/02/18 19:40:26 	assigned Condor ID (703.0.0)
+07/02/18 19:40:26 Just submitted 1 job this cycle...
+07/02/18 19:40:26 Currently monitoring 1 Condor log file(s)
+07/02/18 19:40:26 Reassigning the id of job separate2_ID0000003 from (703.0.0) to (703.0.0)
+07/02/18 19:40:26 Event: ULOG_SUBMIT for Condor Node separate2_ID0000003 (703.0.0)
+07/02/18 19:40:26 Number of idle job procs: 1
+07/02/18 19:40:26 DAG status: 0 (DAG_STATUS_OK)
+07/02/18 19:40:26 Of 17 nodes total:
+07/02/18 19:40:26  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+07/02/18 19:40:26   ===     ===      ===     ===     ===        ===      ===
+07/02/18 19:40:26     6       0        1       0       0         10        0
+07/02/18 19:40:26 0 job proc(s) currently held
+07/02/18 19:40:32 Currently monitoring 1 Condor log file(s)
+07/02/18 19:40:32 Event: ULOG_EXECUTE for Condor Node separate2_ID0000003 (703.0.0)
+07/02/18 19:40:32 Number of idle job procs: 0
+07/02/18 19:40:32 Event: ULOG_JOB_TERMINATED for Condor Node separate2_ID0000003 (703.0.0)
+07/02/18 19:40:32 Number of idle job procs: 0
+07/02/18 19:40:32 Node separate2_ID0000003 job proc (703.0.0) completed successfully.
+07/02/18 19:40:32 Node separate2_ID0000003 job completed
+07/02/18 19:40:32 Running POST script of Node separate2_ID0000003...
+07/02/18 19:40:32 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+07/02/18 19:40:32 DAG status: 0 (DAG_STATUS_OK)
+07/02/18 19:40:32 Of 17 nodes total:
+07/02/18 19:40:32  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+07/02/18 19:40:32   ===     ===      ===     ===     ===        ===      ===
+07/02/18 19:40:32     6       0        0       1       0         10        0
+07/02/18 19:40:32 0 job proc(s) currently held
+07/02/18 19:40:32 Initializing user log writer for /home/qh/wranglingWF2/submit/qh/pegasus/wrangling/run0001/./wrangling-0.dag.nodes.log, (703.0.0)
+07/02/18 19:40:37 Currently monitoring 1 Condor log file(s)
+07/02/18 19:40:37 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node separate2_ID0000003 (703.0.0)
+07/02/18 19:40:37 POST Script of Node separate2_ID0000003 completed successfully.
+07/02/18 19:40:37 DAG status: 0 (DAG_STATUS_OK)
+07/02/18 19:40:37 Of 17 nodes total:
+07/02/18 19:40:37  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+07/02/18 19:40:37   ===     ===      ===     ===     ===        ===      ===
+07/02/18 19:40:37     7       0        0       0       1          9        0
+07/02/18 19:40:37 0 job proc(s) currently held
+07/02/18 19:40:42 Submitting Condor Node separate3_ID0000004 job(s)...
+07/02/18 19:40:42 Adding a DAGMan workflow log /home/qh/wranglingWF2/submit/qh/pegasus/wrangling/run0001/./wrangling-0.dag.nodes.log
+07/02/18 19:40:42 Masking the events recorded in the DAGMAN workflow log
+07/02/18 19:40:42 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+07/02/18 19:40:42 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'separate3_ID0000004 -a +DAGManJobId' '=' '696 -a DAGManJobId' '=' '696 -a submit_event_notes' '=' 'DAG' 'Node:' 'separate3_ID0000004 -a dagman_log' '=' '/home/qh/wranglingWF2/submit/qh/pegasus/wrangling/run0001/./wrangling-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a +DAGNodeRetry' '=' '0 -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"separate2_ID0000003" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/00/separate3_ID0000004.sub
+07/02/18 19:40:42 From submit: Submitting job(s).
+07/02/18 19:40:42 From submit: 1 job(s) submitted to cluster 704.
+07/02/18 19:40:42 	assigned Condor ID (704.0.0)
+07/02/18 19:40:42 Just submitted 1 job this cycle...
+07/02/18 19:40:42 Currently monitoring 1 Condor log file(s)
+07/02/18 19:40:42 Reassigning the id of job separate3_ID0000004 from (704.0.0) to (704.0.0)
+07/02/18 19:40:42 Event: ULOG_SUBMIT for Condor Node separate3_ID0000004 (704.0.0)
+07/02/18 19:40:42 Number of idle job procs: 1
+07/02/18 19:40:42 DAG status: 0 (DAG_STATUS_OK)
+07/02/18 19:40:42 Of 17 nodes total:
+07/02/18 19:40:42  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+07/02/18 19:40:42   ===     ===      ===     ===     ===        ===      ===
+07/02/18 19:40:42     7       0        1       0       0          9        0
+07/02/18 19:40:42 0 job proc(s) currently held
+07/02/18 19:40:47 Currently monitoring 1 Condor log file(s)
+07/02/18 19:40:47 Event: ULOG_EXECUTE for Condor Node separate3_ID0000004 (704.0.0)
+07/02/18 19:40:47 Number of idle job procs: 0
+07/02/18 19:40:47 Event: ULOG_JOB_TERMINATED for Condor Node separate3_ID0000004 (704.0.0)
+07/02/18 19:40:47 Number of idle job procs: 0
+07/02/18 19:40:47 Node separate3_ID0000004 job proc (704.0.0) completed successfully.
+07/02/18 19:40:47 Node separate3_ID0000004 job completed
+07/02/18 19:40:47 Running POST script of Node separate3_ID0000004...
+07/02/18 19:40:47 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+07/02/18 19:40:47 DAG status: 0 (DAG_STATUS_OK)
+07/02/18 19:40:47 Of 17 nodes total:
+07/02/18 19:40:47  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+07/02/18 19:40:47   ===     ===      ===     ===     ===        ===      ===
+07/02/18 19:40:47     7       0        0       1       0          9        0
+07/02/18 19:40:47 0 job proc(s) currently held
+07/02/18 19:40:47 Initializing user log writer for /home/qh/wranglingWF2/submit/qh/pegasus/wrangling/run0001/./wrangling-0.dag.nodes.log, (704.0.0)
+07/02/18 19:40:52 Currently monitoring 1 Condor log file(s)
+07/02/18 19:40:52 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node separate3_ID0000004 (704.0.0)
+07/02/18 19:40:52 POST Script of Node separate3_ID0000004 completed successfully.
+07/02/18 19:40:52 DAG status: 0 (DAG_STATUS_OK)
+07/02/18 19:40:52 Of 17 nodes total:
+07/02/18 19:40:52  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+07/02/18 19:40:52   ===     ===      ===     ===     ===        ===      ===
+07/02/18 19:40:52     8       0        0       0       1          8        0
+07/02/18 19:40:52 0 job proc(s) currently held
+07/02/18 19:40:57 Submitting Condor Node defilter_ID0000005 job(s)...
+07/02/18 19:40:57 Adding a DAGMan workflow log /home/qh/wranglingWF2/submit/qh/pegasus/wrangling/run0001/./wrangling-0.dag.nodes.log
+07/02/18 19:40:57 Masking the events recorded in the DAGMAN workflow log
+07/02/18 19:40:57 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+07/02/18 19:40:57 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'defilter_ID0000005 -a +DAGManJobId' '=' '696 -a DAGManJobId' '=' '696 -a submit_event_notes' '=' 'DAG' 'Node:' 'defilter_ID0000005 -a dagman_log' '=' '/home/qh/wranglingWF2/submit/qh/pegasus/wrangling/run0001/./wrangling-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a +DAGNodeRetry' '=' '0 -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"separate3_ID0000004" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/00/defilter_ID0000005.sub
+07/02/18 19:40:57 From submit: Submitting job(s).
+07/02/18 19:40:57 From submit: 1 job(s) submitted to cluster 705.
+07/02/18 19:40:57 	assigned Condor ID (705.0.0)
+07/02/18 19:40:57 Just submitted 1 job this cycle...
+07/02/18 19:40:57 Currently monitoring 1 Condor log file(s)
+07/02/18 19:40:57 Reassigning the id of job defilter_ID0000005 from (705.0.0) to (705.0.0)
+07/02/18 19:40:57 Event: ULOG_SUBMIT for Condor Node defilter_ID0000005 (705.0.0)
+07/02/18 19:40:57 Number of idle job procs: 1
+07/02/18 19:40:57 DAG status: 0 (DAG_STATUS_OK)
+07/02/18 19:40:57 Of 17 nodes total:
+07/02/18 19:40:57  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+07/02/18 19:40:57   ===     ===      ===     ===     ===        ===      ===
+07/02/18 19:40:57     8       0        1       0       0          8        0
+07/02/18 19:40:57 0 job proc(s) currently held
+07/02/18 19:41:02 Currently monitoring 1 Condor log file(s)
+07/02/18 19:41:02 Event: ULOG_EXECUTE for Condor Node defilter_ID0000005 (705.0.0)
+07/02/18 19:41:02 Number of idle job procs: 0
+07/02/18 19:41:02 Event: ULOG_JOB_TERMINATED for Condor Node defilter_ID0000005 (705.0.0)
+07/02/18 19:41:02 Number of idle job procs: 0
+07/02/18 19:41:02 Node defilter_ID0000005 job proc (705.0.0) completed successfully.
+07/02/18 19:41:02 Node defilter_ID0000005 job completed
+07/02/18 19:41:02 Running POST script of Node defilter_ID0000005...
+07/02/18 19:41:02 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+07/02/18 19:41:02 DAG status: 0 (DAG_STATUS_OK)
+07/02/18 19:41:02 Of 17 nodes total:
+07/02/18 19:41:02  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+07/02/18 19:41:02   ===     ===      ===     ===     ===        ===      ===
+07/02/18 19:41:02     8       0        0       1       0          8        0
+07/02/18 19:41:02 0 job proc(s) currently held
+07/02/18 19:41:02 Initializing user log writer for /home/qh/wranglingWF2/submit/qh/pegasus/wrangling/run0001/./wrangling-0.dag.nodes.log, (705.0.0)
+07/02/18 19:41:07 Currently monitoring 1 Condor log file(s)
+07/02/18 19:41:07 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node defilter_ID0000005 (705.0.0)
+07/02/18 19:41:07 POST Script of Node defilter_ID0000005 completed successfully.
+07/02/18 19:41:07 DAG status: 0 (DAG_STATUS_OK)
+07/02/18 19:41:07 Of 17 nodes total:
+07/02/18 19:41:07  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+07/02/18 19:41:07   ===     ===      ===     ===     ===        ===      ===
+07/02/18 19:41:07     9       0        0       0       1          7        0
+07/02/18 19:41:07 0 job proc(s) currently held
+07/02/18 19:41:12 Submitting Condor Node summarise_ID0000006 job(s)...
+07/02/18 19:41:12 Adding a DAGMan workflow log /home/qh/wranglingWF2/submit/qh/pegasus/wrangling/run0001/./wrangling-0.dag.nodes.log
+07/02/18 19:41:12 Masking the events recorded in the DAGMAN workflow log
+07/02/18 19:41:12 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+07/02/18 19:41:12 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'summarise_ID0000006 -a +DAGManJobId' '=' '696 -a DAGManJobId' '=' '696 -a submit_event_notes' '=' 'DAG' 'Node:' 'summarise_ID0000006 -a dagman_log' '=' '/home/qh/wranglingWF2/submit/qh/pegasus/wrangling/run0001/./wrangling-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a +DAGNodeRetry' '=' '0 -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"defilter_ID0000005" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/00/summarise_ID0000006.sub
+07/02/18 19:41:12 From submit: Submitting job(s).
+07/02/18 19:41:12 From submit: 1 job(s) submitted to cluster 706.
+07/02/18 19:41:12 	assigned Condor ID (706.0.0)
+07/02/18 19:41:12 Just submitted 1 job this cycle...
+07/02/18 19:41:12 Currently monitoring 1 Condor log file(s)
+07/02/18 19:41:12 Reassigning the id of job summarise_ID0000006 from (706.0.0) to (706.0.0)
+07/02/18 19:41:12 Event: ULOG_SUBMIT for Condor Node summarise_ID0000006 (706.0.0)
+07/02/18 19:41:12 Number of idle job procs: 1
+07/02/18 19:41:12 DAG status: 0 (DAG_STATUS_OK)
+07/02/18 19:41:12 Of 17 nodes total:
+07/02/18 19:41:12  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+07/02/18 19:41:12   ===     ===      ===     ===     ===        ===      ===
+07/02/18 19:41:12     9       0        1       0       0          7        0
+07/02/18 19:41:12 0 job proc(s) currently held
+07/02/18 19:41:17 Currently monitoring 1 Condor log file(s)
+07/02/18 19:41:17 Event: ULOG_EXECUTE for Condor Node summarise_ID0000006 (706.0.0)
+07/02/18 19:41:17 Number of idle job procs: 0
+07/02/18 19:41:17 Event: ULOG_JOB_TERMINATED for Condor Node summarise_ID0000006 (706.0.0)
+07/02/18 19:41:17 Number of idle job procs: 0
+07/02/18 19:41:17 Node summarise_ID0000006 job proc (706.0.0) completed successfully.
+07/02/18 19:41:17 Node summarise_ID0000006 job completed
+07/02/18 19:41:17 Running POST script of Node summarise_ID0000006...
+07/02/18 19:41:17 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+07/02/18 19:41:17 DAG status: 0 (DAG_STATUS_OK)
+07/02/18 19:41:17 Of 17 nodes total:
+07/02/18 19:41:17  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+07/02/18 19:41:17   ===     ===      ===     ===     ===        ===      ===
+07/02/18 19:41:17     9       0        0       1       0          7        0
+07/02/18 19:41:17 0 job proc(s) currently held
+07/02/18 19:41:17 Initializing user log writer for /home/qh/wranglingWF2/submit/qh/pegasus/wrangling/run0001/./wrangling-0.dag.nodes.log, (706.0.0)
+07/02/18 19:41:22 Currently monitoring 1 Condor log file(s)
+07/02/18 19:41:22 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node summarise_ID0000006 (706.0.0)
+07/02/18 19:41:22 POST Script of Node summarise_ID0000006 completed successfully.
+07/02/18 19:41:22 DAG status: 0 (DAG_STATUS_OK)
+07/02/18 19:41:22 Of 17 nodes total:
+07/02/18 19:41:22  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+07/02/18 19:41:22   ===     ===      ===     ===     ===        ===      ===
+07/02/18 19:41:22    10       0        0       0       1          6        0
+07/02/18 19:41:22 0 job proc(s) currently held
+07/02/18 19:41:27 Submitting Condor Node filteris_ID0000007 job(s)...
+07/02/18 19:41:27 Adding a DAGMan workflow log /home/qh/wranglingWF2/submit/qh/pegasus/wrangling/run0001/./wrangling-0.dag.nodes.log
+07/02/18 19:41:27 Masking the events recorded in the DAGMAN workflow log
+07/02/18 19:41:27 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+07/02/18 19:41:27 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'filteris_ID0000007 -a +DAGManJobId' '=' '696 -a DAGManJobId' '=' '696 -a submit_event_notes' '=' 'DAG' 'Node:' 'filteris_ID0000007 -a dagman_log' '=' '/home/qh/wranglingWF2/submit/qh/pegasus/wrangling/run0001/./wrangling-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a +DAGNodeRetry' '=' '0 -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"summarise_ID0000006" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/00/filteris_ID0000007.sub
+07/02/18 19:41:28 From submit: Submitting job(s).
+07/02/18 19:41:28 From submit: 1 job(s) submitted to cluster 707.
+07/02/18 19:41:28 	assigned Condor ID (707.0.0)
+07/02/18 19:41:28 Just submitted 1 job this cycle...
+07/02/18 19:41:28 Currently monitoring 1 Condor log file(s)
+07/02/18 19:41:28 Reassigning the id of job filteris_ID0000007 from (707.0.0) to (707.0.0)
+07/02/18 19:41:28 Event: ULOG_SUBMIT for Condor Node filteris_ID0000007 (707.0.0)
+07/02/18 19:41:28 Number of idle job procs: 1
+07/02/18 19:41:28 DAG status: 0 (DAG_STATUS_OK)
+07/02/18 19:41:28 Of 17 nodes total:
+07/02/18 19:41:28  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+07/02/18 19:41:28   ===     ===      ===     ===     ===        ===      ===
+07/02/18 19:41:28    10       0        1       0       0          6        0
+07/02/18 19:41:28 0 job proc(s) currently held
+07/02/18 19:41:33 Currently monitoring 1 Condor log file(s)
+07/02/18 19:41:33 Event: ULOG_EXECUTE for Condor Node filteris_ID0000007 (707.0.0)
+07/02/18 19:41:33 Number of idle job procs: 0
+07/02/18 19:41:33 Event: ULOG_JOB_TERMINATED for Condor Node filteris_ID0000007 (707.0.0)
+07/02/18 19:41:33 Number of idle job procs: 0
+07/02/18 19:41:33 Node filteris_ID0000007 job proc (707.0.0) completed successfully.
+07/02/18 19:41:33 Node filteris_ID0000007 job completed
+07/02/18 19:41:33 Running POST script of Node filteris_ID0000007...
+07/02/18 19:41:33 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+07/02/18 19:41:33 DAG status: 0 (DAG_STATUS_OK)
+07/02/18 19:41:33 Of 17 nodes total:
+07/02/18 19:41:33  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+07/02/18 19:41:33   ===     ===      ===     ===     ===        ===      ===
+07/02/18 19:41:33    10       0        0       1       0          6        0
+07/02/18 19:41:33 0 job proc(s) currently held
+07/02/18 19:41:33 Initializing user log writer for /home/qh/wranglingWF2/submit/qh/pegasus/wrangling/run0001/./wrangling-0.dag.nodes.log, (707.0.0)
+07/02/18 19:41:38 Currently monitoring 1 Condor log file(s)
+07/02/18 19:41:38 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node filteris_ID0000007 (707.0.0)
+07/02/18 19:41:38 POST Script of Node filteris_ID0000007 completed successfully.
+07/02/18 19:41:38 DAG status: 0 (DAG_STATUS_OK)
+07/02/18 19:41:38 Of 17 nodes total:
+07/02/18 19:41:38  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+07/02/18 19:41:38   ===     ===      ===     ===     ===        ===      ===
+07/02/18 19:41:38    11       0        0       0       1          5        0
+07/02/18 19:41:38 0 job proc(s) currently held
+07/02/18 19:41:43 Submitting Condor Node unite1_ID0000008 job(s)...
+07/02/18 19:41:43 Adding a DAGMan workflow log /home/qh/wranglingWF2/submit/qh/pegasus/wrangling/run0001/./wrangling-0.dag.nodes.log
+07/02/18 19:41:43 Masking the events recorded in the DAGMAN workflow log
+07/02/18 19:41:43 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+07/02/18 19:41:43 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'unite1_ID0000008 -a +DAGManJobId' '=' '696 -a DAGManJobId' '=' '696 -a submit_event_notes' '=' 'DAG' 'Node:' 'unite1_ID0000008 -a dagman_log' '=' '/home/qh/wranglingWF2/submit/qh/pegasus/wrangling/run0001/./wrangling-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a +DAGNodeRetry' '=' '0 -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"filteris_ID0000007" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/00/unite1_ID0000008.sub
+07/02/18 19:41:43 From submit: Submitting job(s).
+07/02/18 19:41:43 From submit: 1 job(s) submitted to cluster 708.
+07/02/18 19:41:43 	assigned Condor ID (708.0.0)
+07/02/18 19:41:43 Just submitted 1 job this cycle...
+07/02/18 19:41:43 Currently monitoring 1 Condor log file(s)
+07/02/18 19:41:43 Reassigning the id of job unite1_ID0000008 from (708.0.0) to (708.0.0)
+07/02/18 19:41:43 Event: ULOG_SUBMIT for Condor Node unite1_ID0000008 (708.0.0)
+07/02/18 19:41:43 Number of idle job procs: 1
+07/02/18 19:41:43 DAG status: 0 (DAG_STATUS_OK)
+07/02/18 19:41:43 Of 17 nodes total:
+07/02/18 19:41:43  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+07/02/18 19:41:43   ===     ===      ===     ===     ===        ===      ===
+07/02/18 19:41:43    11       0        1       0       0          5        0
+07/02/18 19:41:43 0 job proc(s) currently held
+07/02/18 19:41:48 Currently monitoring 1 Condor log file(s)
+07/02/18 19:41:48 Event: ULOG_EXECUTE for Condor Node unite1_ID0000008 (708.0.0)
+07/02/18 19:41:48 Number of idle job procs: 0
+07/02/18 19:41:48 Event: ULOG_JOB_TERMINATED for Condor Node unite1_ID0000008 (708.0.0)
+07/02/18 19:41:48 Number of idle job procs: 0
+07/02/18 19:41:48 Node unite1_ID0000008 job proc (708.0.0) completed successfully.
+07/02/18 19:41:48 Node unite1_ID0000008 job completed
+07/02/18 19:41:48 Running POST script of Node unite1_ID0000008...
+07/02/18 19:41:48 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+07/02/18 19:41:48 DAG status: 0 (DAG_STATUS_OK)
+07/02/18 19:41:48 Of 17 nodes total:
+07/02/18 19:41:48  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+07/02/18 19:41:48   ===     ===      ===     ===     ===        ===      ===
+07/02/18 19:41:48    11       0        0       1       0          5        0
+07/02/18 19:41:48 0 job proc(s) currently held
+07/02/18 19:41:48 Initializing user log writer for /home/qh/wranglingWF2/submit/qh/pegasus/wrangling/run0001/./wrangling-0.dag.nodes.log, (708.0.0)
+07/02/18 19:41:53 Currently monitoring 1 Condor log file(s)
+07/02/18 19:41:53 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node unite1_ID0000008 (708.0.0)
+07/02/18 19:41:53 POST Script of Node unite1_ID0000008 completed successfully.
+07/02/18 19:41:53 DAG status: 0 (DAG_STATUS_OK)
+07/02/18 19:41:53 Of 17 nodes total:
+07/02/18 19:41:53  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+07/02/18 19:41:53   ===     ===      ===     ===     ===        ===      ===
+07/02/18 19:41:53    12       0        0       0       1          4        0
+07/02/18 19:41:53 0 job proc(s) currently held
+07/02/18 19:41:58 Submitting Condor Node unite2_ID0000009 job(s)...
+07/02/18 19:41:58 Adding a DAGMan workflow log /home/qh/wranglingWF2/submit/qh/pegasus/wrangling/run0001/./wrangling-0.dag.nodes.log
+07/02/18 19:41:58 Masking the events recorded in the DAGMAN workflow log
+07/02/18 19:41:58 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+07/02/18 19:41:58 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'unite2_ID0000009 -a +DAGManJobId' '=' '696 -a DAGManJobId' '=' '696 -a submit_event_notes' '=' 'DAG' 'Node:' 'unite2_ID0000009 -a dagman_log' '=' '/home/qh/wranglingWF2/submit/qh/pegasus/wrangling/run0001/./wrangling-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a +DAGNodeRetry' '=' '0 -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"unite1_ID0000008" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/00/unite2_ID0000009.sub
+07/02/18 19:41:58 From submit: Submitting job(s).
+07/02/18 19:41:58 From submit: 1 job(s) submitted to cluster 709.
+07/02/18 19:41:58 	assigned Condor ID (709.0.0)
+07/02/18 19:41:58 Just submitted 1 job this cycle...
+07/02/18 19:41:58 Currently monitoring 1 Condor log file(s)
+07/02/18 19:41:58 Reassigning the id of job unite2_ID0000009 from (709.0.0) to (709.0.0)
+07/02/18 19:41:58 Event: ULOG_SUBMIT for Condor Node unite2_ID0000009 (709.0.0)
+07/02/18 19:41:58 Number of idle job procs: 1
+07/02/18 19:41:58 DAG status: 0 (DAG_STATUS_OK)
+07/02/18 19:41:58 Of 17 nodes total:
+07/02/18 19:41:58  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+07/02/18 19:41:58   ===     ===      ===     ===     ===        ===      ===
+07/02/18 19:41:58    12       0        1       0       0          4        0
+07/02/18 19:41:58 0 job proc(s) currently held
+07/02/18 19:42:03 Currently monitoring 1 Condor log file(s)
+07/02/18 19:42:03 Event: ULOG_EXECUTE for Condor Node unite2_ID0000009 (709.0.0)
+07/02/18 19:42:03 Number of idle job procs: 0
+07/02/18 19:42:03 Event: ULOG_JOB_TERMINATED for Condor Node unite2_ID0000009 (709.0.0)
+07/02/18 19:42:03 Number of idle job procs: 0
+07/02/18 19:42:03 Node unite2_ID0000009 job proc (709.0.0) completed successfully.
+07/02/18 19:42:03 Node unite2_ID0000009 job completed
+07/02/18 19:42:03 Running POST script of Node unite2_ID0000009...
+07/02/18 19:42:03 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+07/02/18 19:42:03 DAG status: 0 (DAG_STATUS_OK)
+07/02/18 19:42:03 Of 17 nodes total:
+07/02/18 19:42:03  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+07/02/18 19:42:03   ===     ===      ===     ===     ===        ===      ===
+07/02/18 19:42:03    12       0        0       1       0          4        0
+07/02/18 19:42:03 0 job proc(s) currently held
+07/02/18 19:42:03 Initializing user log writer for /home/qh/wranglingWF2/submit/qh/pegasus/wrangling/run0001/./wrangling-0.dag.nodes.log, (709.0.0)
+07/02/18 19:42:08 Currently monitoring 1 Condor log file(s)
+07/02/18 19:42:08 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node unite2_ID0000009 (709.0.0)
+07/02/18 19:42:08 POST Script of Node unite2_ID0000009 completed successfully.
+07/02/18 19:42:08 DAG status: 0 (DAG_STATUS_OK)
+07/02/18 19:42:08 Of 17 nodes total:
+07/02/18 19:42:08  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+07/02/18 19:42:08   ===     ===      ===     ===     ===        ===      ===
+07/02/18 19:42:08    13       0        0       0       2          2        0
+07/02/18 19:42:08 0 job proc(s) currently held
+07/02/18 19:42:13 Submitting Condor Node line_ID0000010 job(s)...
+07/02/18 19:42:13 Adding a DAGMan workflow log /home/qh/wranglingWF2/submit/qh/pegasus/wrangling/run0001/./wrangling-0.dag.nodes.log
+07/02/18 19:42:13 Masking the events recorded in the DAGMAN workflow log
+07/02/18 19:42:13 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+07/02/18 19:42:13 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'line_ID0000010 -a +DAGManJobId' '=' '696 -a DAGManJobId' '=' '696 -a submit_event_notes' '=' 'DAG' 'Node:' 'line_ID0000010 -a dagman_log' '=' '/home/qh/wranglingWF2/submit/qh/pegasus/wrangling/run0001/./wrangling-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a +DAGNodeRetry' '=' '0 -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"unite2_ID0000009" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/00/line_ID0000010.sub
+07/02/18 19:42:13 From submit: Submitting job(s).
+07/02/18 19:42:13 From submit: 1 job(s) submitted to cluster 710.
+07/02/18 19:42:13 	assigned Condor ID (710.0.0)
+07/02/18 19:42:13 Submitting Condor Node stage_out_local_local_9_0 job(s)...
+07/02/18 19:42:13 Adding a DAGMan workflow log /home/qh/wranglingWF2/submit/qh/pegasus/wrangling/run0001/./wrangling-0.dag.nodes.log
+07/02/18 19:42:13 Masking the events recorded in the DAGMAN workflow log
+07/02/18 19:42:13 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+07/02/18 19:42:13 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'stage_out_local_local_9_0 -a +DAGManJobId' '=' '696 -a DAGManJobId' '=' '696 -a submit_event_notes' '=' 'DAG' 'Node:' 'stage_out_local_local_9_0 -a dagman_log' '=' '/home/qh/wranglingWF2/submit/qh/pegasus/wrangling/run0001/./wrangling-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a +DAGNodeRetry' '=' '0 -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"unite2_ID0000009" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/00/stage_out_local_local_9_0.sub
+07/02/18 19:42:13 From submit: Submitting job(s).
+07/02/18 19:42:13 From submit: 1 job(s) submitted to cluster 711.
+07/02/18 19:42:13 	assigned Condor ID (711.0.0)
+07/02/18 19:42:13 Just submitted 2 jobs this cycle...
+07/02/18 19:42:13 Currently monitoring 1 Condor log file(s)
+07/02/18 19:42:13 Reassigning the id of job line_ID0000010 from (710.0.0) to (710.0.0)
+07/02/18 19:42:13 Event: ULOG_SUBMIT for Condor Node line_ID0000010 (710.0.0)
+07/02/18 19:42:13 Number of idle job procs: 1
+07/02/18 19:42:13 Reassigning the id of job stage_out_local_local_9_0 from (711.0.0) to (711.0.0)
+07/02/18 19:42:13 Event: ULOG_SUBMIT for Condor Node stage_out_local_local_9_0 (711.0.0)
+07/02/18 19:42:13 Number of idle job procs: 2
+07/02/18 19:42:13 DAG status: 0 (DAG_STATUS_OK)
+07/02/18 19:42:13 Of 17 nodes total:
+07/02/18 19:42:13  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+07/02/18 19:42:13   ===     ===      ===     ===     ===        ===      ===
+07/02/18 19:42:13    13       0        2       0       0          2        0
+07/02/18 19:42:13 0 job proc(s) currently held
+07/02/18 19:42:18 Currently monitoring 1 Condor log file(s)
+07/02/18 19:42:18 Event: ULOG_EXECUTE for Condor Node stage_out_local_local_9_0 (711.0.0)
+07/02/18 19:42:18 Number of idle job procs: 1
+07/02/18 19:42:18 Event: ULOG_EXECUTE for Condor Node line_ID0000010 (710.0.0)
+07/02/18 19:42:18 Number of idle job procs: 0
+07/02/18 19:42:18 Event: ULOG_JOB_TERMINATED for Condor Node line_ID0000010 (710.0.0)
+07/02/18 19:42:18 Number of idle job procs: 0
+07/02/18 19:42:18 Node line_ID0000010 job proc (710.0.0) completed successfully.
+07/02/18 19:42:18 Node line_ID0000010 job completed
+07/02/18 19:42:18 Running POST script of Node line_ID0000010...
+07/02/18 19:42:18 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+07/02/18 19:42:18 Event: ULOG_JOB_TERMINATED for Condor Node stage_out_local_local_9_0 (711.0.0)
+07/02/18 19:42:18 Number of idle job procs: 0
+07/02/18 19:42:18 Node stage_out_local_local_9_0 job proc (711.0.0) completed successfully.
+07/02/18 19:42:18 Node stage_out_local_local_9_0 job completed
+07/02/18 19:42:18 Running POST script of Node stage_out_local_local_9_0...
+07/02/18 19:42:18 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+07/02/18 19:42:18 DAG status: 0 (DAG_STATUS_OK)
+07/02/18 19:42:18 Of 17 nodes total:
+07/02/18 19:42:18  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+07/02/18 19:42:18   ===     ===      ===     ===     ===        ===      ===
+07/02/18 19:42:18    13       0        0       2       0          2        0
+07/02/18 19:42:18 0 job proc(s) currently held
+07/02/18 19:42:18 Initializing user log writer for /home/qh/wranglingWF2/submit/qh/pegasus/wrangling/run0001/./wrangling-0.dag.nodes.log, (710.0.0)
+07/02/18 19:42:18 Initializing user log writer for /home/qh/wranglingWF2/submit/qh/pegasus/wrangling/run0001/./wrangling-0.dag.nodes.log, (711.0.0)
+07/02/18 19:42:23 Currently monitoring 1 Condor log file(s)
+07/02/18 19:42:23 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node line_ID0000010 (710.0.0)
+07/02/18 19:42:23 POST Script of Node line_ID0000010 completed successfully.
+07/02/18 19:42:23 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node stage_out_local_local_9_0 (711.0.0)
+07/02/18 19:42:23 POST Script of Node stage_out_local_local_9_0 completed successfully.
+07/02/18 19:42:23 DAG status: 0 (DAG_STATUS_OK)
+07/02/18 19:42:23 Of 17 nodes total:
+07/02/18 19:42:23  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+07/02/18 19:42:23   ===     ===      ===     ===     ===        ===      ===
+07/02/18 19:42:23    15       0        0       0       1          1        0
+07/02/18 19:42:23 0 job proc(s) currently held
+07/02/18 19:42:28 Submitting Condor Node stage_out_local_local_10_0 job(s)...
+07/02/18 19:42:28 Adding a DAGMan workflow log /home/qh/wranglingWF2/submit/qh/pegasus/wrangling/run0001/./wrangling-0.dag.nodes.log
+07/02/18 19:42:28 Masking the events recorded in the DAGMAN workflow log
+07/02/18 19:42:28 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+07/02/18 19:42:28 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'stage_out_local_local_10_0 -a +DAGManJobId' '=' '696 -a DAGManJobId' '=' '696 -a submit_event_notes' '=' 'DAG' 'Node:' 'stage_out_local_local_10_0 -a dagman_log' '=' '/home/qh/wranglingWF2/submit/qh/pegasus/wrangling/run0001/./wrangling-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a +DAGNodeRetry' '=' '0 -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"line_ID0000010" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/00/stage_out_local_local_10_0.sub
+07/02/18 19:42:28 From submit: Submitting job(s).
+07/02/18 19:42:28 From submit: 1 job(s) submitted to cluster 712.
+07/02/18 19:42:28 	assigned Condor ID (712.0.0)
+07/02/18 19:42:28 Just submitted 1 job this cycle...
+07/02/18 19:42:28 Currently monitoring 1 Condor log file(s)
+07/02/18 19:42:28 Reassigning the id of job stage_out_local_local_10_0 from (712.0.0) to (712.0.0)
+07/02/18 19:42:28 Event: ULOG_SUBMIT for Condor Node stage_out_local_local_10_0 (712.0.0)
+07/02/18 19:42:28 Number of idle job procs: 1
+07/02/18 19:42:28 DAG status: 0 (DAG_STATUS_OK)
+07/02/18 19:42:28 Of 17 nodes total:
+07/02/18 19:42:28  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+07/02/18 19:42:28   ===     ===      ===     ===     ===        ===      ===
+07/02/18 19:42:28    15       0        1       0       0          1        0
+07/02/18 19:42:28 0 job proc(s) currently held
+07/02/18 19:42:33 Currently monitoring 1 Condor log file(s)
+07/02/18 19:42:33 Event: ULOG_EXECUTE for Condor Node stage_out_local_local_10_0 (712.0.0)
+07/02/18 19:42:33 Number of idle job procs: 0
+07/02/18 19:42:33 Event: ULOG_JOB_TERMINATED for Condor Node stage_out_local_local_10_0 (712.0.0)
+07/02/18 19:42:33 Number of idle job procs: 0
+07/02/18 19:42:33 Node stage_out_local_local_10_0 job proc (712.0.0) completed successfully.
+07/02/18 19:42:33 Node stage_out_local_local_10_0 job completed
+07/02/18 19:42:33 Running POST script of Node stage_out_local_local_10_0...
+07/02/18 19:42:33 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+07/02/18 19:42:33 DAG status: 0 (DAG_STATUS_OK)
+07/02/18 19:42:33 Of 17 nodes total:
+07/02/18 19:42:33  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+07/02/18 19:42:33   ===     ===      ===     ===     ===        ===      ===
+07/02/18 19:42:33    15       0        0       1       0          1        0
+07/02/18 19:42:33 0 job proc(s) currently held
+07/02/18 19:42:33 Initializing user log writer for /home/qh/wranglingWF2/submit/qh/pegasus/wrangling/run0001/./wrangling-0.dag.nodes.log, (712.0.0)
+07/02/18 19:42:38 Currently monitoring 1 Condor log file(s)
+07/02/18 19:42:38 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node stage_out_local_local_10_0 (712.0.0)
+07/02/18 19:42:38 POST Script of Node stage_out_local_local_10_0 completed successfully.
+07/02/18 19:42:38 DAG status: 0 (DAG_STATUS_OK)
+07/02/18 19:42:38 Of 17 nodes total:
+07/02/18 19:42:38  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+07/02/18 19:42:38   ===     ===      ===     ===     ===        ===      ===
+07/02/18 19:42:38    16       0        0       0       1          0        0
+07/02/18 19:42:38 0 job proc(s) currently held
+07/02/18 19:42:44 Submitting Condor Node cleanup_wrangling_0_local job(s)...
+07/02/18 19:42:44 Adding a DAGMan workflow log /home/qh/wranglingWF2/submit/qh/pegasus/wrangling/run0001/./wrangling-0.dag.nodes.log
+07/02/18 19:42:44 Masking the events recorded in the DAGMAN workflow log
+07/02/18 19:42:44 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+07/02/18 19:42:44 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'cleanup_wrangling_0_local -a +DAGManJobId' '=' '696 -a DAGManJobId' '=' '696 -a submit_event_notes' '=' 'DAG' 'Node:' 'cleanup_wrangling_0_local -a dagman_log' '=' '/home/qh/wranglingWF2/submit/qh/pegasus/wrangling/run0001/./wrangling-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a +DAGNodeRetry' '=' '0 -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"stage_out_local_local_0_0,stage_out_local_local_9_0,stage_out_local_local_10_0" -a notification' '=' 'never 00/00/cleanup_wrangling_0_local.sub
+07/02/18 19:42:44 From submit: Submitting job(s).
+07/02/18 19:42:44 From submit: 1 job(s) submitted to cluster 713.
+07/02/18 19:42:44 	assigned Condor ID (713.0.0)
+07/02/18 19:42:44 Just submitted 1 job this cycle...
+07/02/18 19:42:44 Currently monitoring 1 Condor log file(s)
+07/02/18 19:42:44 Reassigning the id of job cleanup_wrangling_0_local from (713.0.0) to (713.0.0)
+07/02/18 19:42:44 Event: ULOG_SUBMIT for Condor Node cleanup_wrangling_0_local (713.0.0)
+07/02/18 19:42:44 Number of idle job procs: 1
+07/02/18 19:42:44 DAG status: 0 (DAG_STATUS_OK)
+07/02/18 19:42:44 Of 17 nodes total:
+07/02/18 19:42:44  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+07/02/18 19:42:44   ===     ===      ===     ===     ===        ===      ===
+07/02/18 19:42:44    16       0        1       0       0          0        0
+07/02/18 19:42:44 0 job proc(s) currently held
+07/02/18 19:42:49 Currently monitoring 1 Condor log file(s)
+07/02/18 19:42:49 Event: ULOG_EXECUTE for Condor Node cleanup_wrangling_0_local (713.0.0)
+07/02/18 19:42:49 Number of idle job procs: 0
+07/02/18 19:42:49 Event: ULOG_JOB_TERMINATED for Condor Node cleanup_wrangling_0_local (713.0.0)
+07/02/18 19:42:49 Number of idle job procs: 0
+07/02/18 19:42:49 Node cleanup_wrangling_0_local job proc (713.0.0) completed successfully.
+07/02/18 19:42:49 Node cleanup_wrangling_0_local job completed
+07/02/18 19:42:49 DAG status: 0 (DAG_STATUS_OK)
+07/02/18 19:42:49 Of 17 nodes total:
+07/02/18 19:42:49  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+07/02/18 19:42:49   ===     ===      ===     ===     ===        ===      ===
+07/02/18 19:42:49    17       0        0       0       0          0        0
+07/02/18 19:42:49 0 job proc(s) currently held
+07/02/18 19:42:49 All jobs Completed!
+07/02/18 19:42:49 Note: 0 total job deferrals because of -MaxJobs limit (0)
+07/02/18 19:42:49 Note: 0 total job deferrals because of -MaxIdle limit (1000)
+07/02/18 19:42:49 Note: 0 total job deferrals because of node category throttles
+07/02/18 19:42:49 Note: 0 total PRE script deferrals because of -MaxPre limit (20) or DEFER
+07/02/18 19:42:49 Note: 0 total POST script deferrals because of -MaxPost limit (20) or DEFER
+07/02/18 19:42:49 DAG status: 0 (DAG_STATUS_OK)
+07/02/18 19:42:49 Of 17 nodes total:
+07/02/18 19:42:49  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+07/02/18 19:42:49   ===     ===      ===     ===     ===        ===      ===
+07/02/18 19:42:49    17       0        0       0       0          0        0
+07/02/18 19:42:49 0 job proc(s) currently held
+07/02/18 19:42:49 Wrote metrics file wrangling-0.dag.metrics.
+07/02/18 19:42:49 Reporting metrics to Pegasus metrics server(s); output is in wrangling-0.dag.metrics.out.
+07/02/18 19:42:49 Running command </usr/lib/condor/libexec/condor_dagman_metrics_reporter -f wrangling-0.dag.metrics -t 100>
+07/02/18 19:42:49 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+07/02/18 19:42:49 **** condor_scheduniv_exec.696.0 (condor_DAGMAN) pid 16207 EXITING WITH STATUS 0

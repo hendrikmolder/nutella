@@ -1,0 +1,15 @@
+2018-07-05 11:33:51,925:INFO:pegasus-monitord(68): pegasus-monitord starting - pid 13947 
+2018-07-05 11:33:51,928:INFO:pegasus-monitord(320): Final Command line options are: ['-N', 'wrangling-0.dag.dagman.out']
+Created Pegasus database in: sqlite:////home/qh/wranglingWF/submit/qh/pegasus/wrangling/run0004/wrangling-0.stampede.db
+2018-07-05 11:33:52,322:INFO:Pegasus.monitoring.event_output(315): output type=DB namespace=stampede. name=sqlite:////home/qh/wranglingWF/submit/qh/pegasus/wrangling/run0004/wrangling-0.stampede.db
+2018-07-05 11:33:52,340:INFO:Pegasus.monitoring.event_output(315): output type=DB namespace=dashboard. name=sqlite:////home/qh/.pegasus/workflow.db
+2018-07-05 11:33:52,340:INFO:pegasus-monitord(1010): monitord started in fast start mode
+2018-07-05 11:33:52,351:INFO:Pegasus.monitoring.workflow(362): cannot open state file /home/qh/wranglingWF/submit/qh/pegasus/wrangling/run0004/monitord.info, continuing without state...
+2018-07-05 11:33:52,351:INFO:Pegasus.monitoring.workflow(943): creating new file /home/qh/wranglingWF/submit/qh/pegasus/wrangling/run0004/jobstate.log
+2018-07-05 11:33:52,351:INFO:Pegasus.monitoring.workflow(951): Appending to existing jobstate.log replay_mode 0 previous_processed_line 0
+2018-07-05 11:33:52,351:INFO:Pegasus.monitoring.notifications(394): loading notifications from /home/qh/wranglingWF/submit/qh/pegasus/wrangling/run0004/wrangling-0.notify
+2018-07-05 11:33:52,469:INFO:pegasus-monitord(777): Using DAGMan version 8.4.2 80402
+2018-07-05 11:33:52,469:INFO:pegasus-monitord(757): DAGMan runs at pid 13946
+2018-07-05 11:33:52,471:INFO:pegasus-monitord(763): using dag wrangling-0.dag
+2018-07-05 11:33:52,471:INFO:Pegasus.monitoring.workflow(169): Parsing DAG file /home/qh/wranglingWF/submit/qh/pegasus/wrangling/run0004/wrangling-0.dag
+2018-07-05 11:33:52,471:INFO:Pegasus.monitoring.workflow(679): DAGMan starting with condor id 773.0

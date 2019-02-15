@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<invocation xmlns="http://pegasus.isi.edu/schema/invocation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pegasus.isi.edu/schema/invocation http://pegasus.isi.edu/schema/iv-2.3.xsd" version="2.3" start="2018-09-07T13:47:18.207+01:00" duration="0.582" transformation="union6" derivation="ID0000011" resource="condorpool" wf-label="wrangling" wf-stamp="2018-07-02T20:00:17+01:00" interface="enx025701513834" hostaddr="192.168.42.114" hostname="qh-Lenovo-R720-15IKBN" pid="15854" uid="1000" user="qh" gid="1000" group="qh" umask="0022">
+  <mainjob start="2018-09-07T13:47:18.325+01:00" duration="0.464" pid="15855">
+    <usage utime="0.012" stime="0.004" maxrss="7120" minflt="762" majflt="0" nswap="0" inblock="0" outblock="32" msgsnd="0" msgrcv="0" nsignals="0" nvcsw="7" nivcsw="3"/>
+    <status raw="0"><regular exitcode="0"/></status>
+    <statcall error="0">
+      <file name="/home/qh/wranglingWF/bin/union6.sh">23212F62696E2F626173680A0A232066</file>
+      <statinfo mode="0100777" size="719" inode="2101933" nlink="1" blksize="4096" blocks="8" mtime="2018-06-29T11:42:35+01:00" atime="2018-08-03T05:40:13+01:00" ctime="2018-06-29T11:42:35+01:00" uid="1000" user="qh" gid="1000" group="qh"/>
+    </statcall>
+    <argument-vector>
+      <arg nr="1">f.csv</arg>
+      <arg nr="2">f2.csv</arg>
+      <arg nr="3">g.csv</arg>
+    </argument-vector>
+  </mainjob>
+  <jobids condor="850.0"/>
+  <cwd>/var/lib/condor/execute/dir_15770</cwd>
+  <usage utime="0.000" stime="0.016" maxrss="1928" minflt="123" majflt="0" nswap="0" inblock="8" outblock="0" msgsnd="0" msgrcv="0" nsignals="0" nvcsw="2" nivcsw="1"/>
+  <machine page-size="4096">
+    <stamp>2018-09-07T13:47:18.207+01:00</stamp>
+    <uname system="linux" nodename="qh-lenovo-r720-15ikbn" release="4.4.0-124-generic" machine="x86_64">#148-Ubuntu SMP Wed May 2 13:00:18 UTC 2018</uname>
+    <linux>
+      <ram total="8046892" free="2227140" shared="501196" buffer="190680"/>
+      <swap total="3000316" free="3000316"/>
+      <boot idle="86870.770">2018-09-07T10:34:56.508+01:00</boot>
+      <cpu count="8" speed="3488" vendor="GenuineIntel">Intel(R) Core(TM) i7-7700HQ CPU @ 2.80GHz</cpu>
+      <load min1="0.94" min5="0.66" min15="0.52"/>
+      <procs total="281" running="1" sleeping="280" vmsize="77310696" rss="6041888"/>
+      <task total="769" running="1" sleeping="768"/>
+    </linux>
+  </machine>
+  <statcall error="0" id="stdin">
+    <file name="/dev/null"/>
+    <statinfo mode="020666" size="0" inode="6" nlink="1" blksize="4096" blocks="0" mtime="2018-09-07T18:35:08+01:00" atime="2018-09-07T18:35:08+01:00" ctime="2018-09-07T18:35:08+01:00" uid="0" user="root" gid="0" group="root"/>
+  </statcall>
+  <statcall error="0" id="stdout">
+    <temporary name="/var/lib/condor/execute/dir_15770/ks.out.dgt1cE" descriptor="3"/>
+    <statinfo mode="0100600" size="250" inode="1849938" nlink="1" blksize="4096" blocks="8" mtime="2018-09-07T13:47:18+01:00" atime="2018-09-07T13:47:18+01:00" ctime="2018-09-07T13:47:18+01:00" uid="1000" user="qh" gid="1000" group="qh"/>
+    <data>/ocpu/tmp/x003bb76e0b/R/join_row
+/ocpu/tmp/x003bb76e0b/R/.val
+/ocpu/tmp/x003bb76e0b/messages
+/ocpu/tmp/x003bb76e0b/warnings
+/ocpu/tmp/x003bb76e0b/source
+/ocpu/tmp/x003bb76e0b/console
+/ocpu/tmp/x003bb76e0b/info
+/ocpu/tmp/x003bb76e0b/files/DESCRIPTION
+</data>
+  </statcall>
+  <statcall error="0" id="stderr">
+    <temporary name="/var/lib/condor/execute/dir_15770/ks.err.Toq9jT" descriptor="4"/>
+    <statinfo mode="0100600" size="689" inode="1849939" nlink="1" blksize="4096" blocks="8" mtime="2018-09-07T13:47:18+01:00" atime="2018-09-07T13:47:18+01:00" ctime="2018-09-07T13:47:18+01:00" uid="1000" user="qh" gid="1000" group="qh"/>
+    <data>+ &apos;[&apos; 3 -lt 3 &apos;]&apos;
++ input1=f.csv
++ input2=f2.csv
++ output1=g.csv
++ /usr/bin/curl http://192.168.42.114/ocpu/library/wranglingA/R/join_row -d &apos;x1=&apos;\&apos;&apos;/home/qh/opencputmp/f.csv&apos;\&apos;&apos;&amp;x2=&apos;\&apos;&apos;/home/qh/opencputmp/f2.csv&apos;\&apos;&apos;&amp;o=&apos;\&apos;&apos;/home/qh/opencputmp/g.csv&apos;\&apos;&apos;&apos;
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    92    0     0  100    92      0    458 --:--:-- --:--:-- --:--:--   457100   342    0   250  100    92    561    206 --:--:-- --:--:-- --:--:--   560
++ cp /home/qh/opencputmp/g.csv ./g.csv
+</data>
+  </statcall>
+  <statcall error="0" id="metadata">
+    <temporary name="/var/lib/condor/execute/dir_15770/ks.meta.fPqhr8" descriptor="5"/>
+    <statinfo mode="0100600" size="0" inode="1849940" nlink="1" blksize="4096" blocks="0" mtime="2018-09-07T13:47:18+01:00" atime="2018-09-07T13:47:18+01:00" ctime="2018-09-07T13:47:18+01:00" uid="1000" user="qh" gid="1000" group="qh"/>
+  </statcall>
+</invocation>

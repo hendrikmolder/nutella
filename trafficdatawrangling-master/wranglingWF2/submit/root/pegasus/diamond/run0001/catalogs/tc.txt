@@ -1,0 +1,46 @@
+tr wc {
+    site condorpool {
+        pfn "/usr/bin/wc"
+        arch "x86_64"
+        os "LINUX"
+        type "INSTALLED"
+    }
+}
+
+tr split {
+    site condorpool {
+        pfn "/usr/bin/split"
+        arch "x86_64"
+        os "LINUX"
+        type "INSTALLED"
+    }
+}
+tr preprocess {
+    site condorpool {
+        pfn "/home/qh/Diamond/bin/preprocess"
+        arch "x86_64"
+        os "LINUX"
+        type "INSTALLED"
+
+    }
+}
+
+tr findrange {
+    site condorpool {
+        pfn "/usr/bin/curl"
+        arch "x86_64"
+        os "LINUX"
+        type "INSTALLED"
+
+    }
+}
+
+tr analyze {
+    site condorpool {
+        pfn "/home/qh/Diamond/bin/analyze"
+        arch "x86_64"
+        os "LINUX"
+        type "INSTALLED"
+    }
+}
+

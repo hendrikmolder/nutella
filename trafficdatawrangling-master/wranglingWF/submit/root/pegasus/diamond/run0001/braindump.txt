@@ -1,0 +1,27 @@
+user root
+grid_dn null
+submit_hostname qh-Lenovo-R720-15IKBN
+root_wf_uuid a65cbaab-df33-4d87-8175-28225fc16e76
+wf_uuid a65cbaab-df33-4d87-8175-28225fc16e76
+dax /home/qh/Diamond/diamond.dax
+dax_label diamond
+dax_index 0
+dax_version 3.6
+pegasus_wf_name diamond-0
+timestamp 20180615T163838+0100
+basedir /home/qh/Diamond/submit
+submit_dir /home/qh/Diamond/submit/root/pegasus/diamond/run0001
+planner /usr/bin/pegasus-plan
+planner_version 4.8.2
+pegasus_build 20180503172008Z
+planner_arguments "--conf pegasus.properties --dax diamond.dax --dir /home/qh/Diamond/submit --output-dir /home/qh/split/output --cleanup leaf --force --sites condorpool --submit "
+jsd jobstate.log
+rundir run0001
+bindir /usr/bin
+vogroup pegasus
+uses_pmc false
+properties pegasus.4923503871003203054.properties
+condor_log diamond-0.log
+dag diamond-0.dag
+type dag
+notify diamond-0.notify

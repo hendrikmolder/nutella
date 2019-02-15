@@ -1,0 +1,518 @@
+
+
+<html>
+<head>
+<title>c8389675-ec2b-42be-9468-9d40bef67207</title>
+<style type ='text/css'>
+#host_chart{
+border:2px solid orange;
+}
+#host_chart_footer_div{
+border:2px solid #C35617;
+border-top-style:none;
+}
+#host_chart_legend_div{
+color:#0066CC;
+}
+.header_level1{
+font-family:"Times New Roman", Times, serif; 
+font-size:36px;
+}
+.header_level2{
+font-family:"Times New Roman", Times, serif; 
+font-size:30px;
+padding-top:25px;
+}
+</style>
+</head>
+<body>
+<script type='text/javascript' src='js/protovis-r3.2.js'></script>
+	
+<a href="../index.html" target="_self"><img src="images/home.png" width =72 height =72 border =0 title ="Home" alt ="Home"></a>
+	
+<center>
+	
+<div class ='header_level1'>Workflow host over time chart </div>
+	
+<a href ='#chart_div'>Workflow host over time chart</a><br/>
+<a href ='#env_div'> Workflow environment</a><br/>
+	<div id ='chart_div' class ='header_level2'> Host over time chart </div>
+<script type='text/javascript' src='hc_action.js'></script>
+<script type='text/javascript' src='hc_c8389675-ec2b-42be-9468-9d40bef67207_data.js'></script>
+<script type='text/javascript'>
+var hc_initMaxX = 162;
+var hc_bar_spacing = 20;
+var hc_inner_bar_margin = 4;
+var hc_line_width =2;
+var hc_inner_bar_width = hc_bar_spacing-2*hc_inner_bar_margin;
+var hc_nameMargin  = 400;
+var hc_scaleMargin = 15;
+var hc_initMaxY = 2*hc_bar_spacing;
+var hc_color =['yellow','orange' ,'steelblue','#8dd3c7','#8dd3c7','#80b1d3','#fb8072','#fccde5','#ccebc5','#bc80bd','#bebada','#b3de69','#d9d9d9','#4daf4a','#4daf4a'];
+var hc_desc=['condor job','resource delay', 'job runtime as seen by dagman','mutate','pegasus::dirmanager','pegasus::transfer','union6','pegasus::rc-client','filter5','filter4','filter1','separate2','separate3','pegasus::cleanup','svn0'];
+var hc_h = 2*hc_bar_spacing*3 + hc_scaleMargin + hc_bar_spacing;
+var hc_w = 1460;
+var hc_toolbar_width = 550;
+var hc_containerPanelPadding = 20;
+var hc_chartPanelWidth = hc_w+ hc_containerPanelPadding*2;
+var hc_chartPanelHeight  = hc_h + hc_containerPanelPadding*2;
+var hc_curX  = 0;
+var hc_curY = 0;
+var hc_curEndX  = hc_initMaxX;
+var hc_curEndY =  hc_initMaxY;
+var hc_xScale = pv.Scale.linear(hc_curX, hc_curEndX).range(0, hc_w-hc_nameMargin);
+var hc_yScale = pv.Scale.linear(hc_curY, hc_curEndY).range(0, hc_h -hc_scaleMargin);
+var hc_xLabelPos = hc_containerPanelPadding + hc_nameMargin;
+var hc_LabelWidth = 200;
+var hc_yLabelPos = 40;
+var hc_panXFactor = 10;
+var hc_panYFactor  = 10;
+var hc_isNewWindow = false;
+var hc_condorTime = false;
+var hc_kickstart = false;
+var hc_condorRunTime = false;
+var hc_resourceDelay = false;
+var hc_showName = true;
+var hc_headerPanelWidth = hc_w+ hc_containerPanelPadding*2;
+var hc_headerPanelHeight  = 100;
+var hc_footerPanelWidth = hc_w+ hc_containerPanelPadding*2;
+var hc_footerPanelHeight  = 105;
+</script>
+<div id ='host_chart' style='width: 1500px; margin : 0 auto;' >
+<script type="text/javascript+protovis">
+var hc_headerPanel = new pv.Panel()
+.width(hc_headerPanelWidth)
+.height(hc_headerPanelHeight)
+.fillStyle('white');
+
+var hc_panPanel  = hc_headerPanel.add(pv.Panel)
+.left(hc_w + hc_containerPanelPadding -hc_toolbar_width)
+.width(hc_toolbar_width)
+.height(hc_headerPanelHeight);
+
+hc_panPanel.add(pv.Image)
+.left(10)
+.top(34)
+.width(32)
+.height(32)
+.title('Pan left')
+.url('images/left.png').event('click', hc_panLeft);
+
+hc_panPanel.add(pv.Image)
+.left(50)
+.top(34)
+.width(32)
+.height(32)
+.url(hc_fadeRight)
+.title('Pan right')
+.event('click', hc_panRight);
+
+hc_panPanel.add(pv.Image)
+.left(90)
+.top(34)
+.width(32)
+.height(32)
+.url('images/up.png')
+.title('Pan up')
+.event('click', hc_panUp);
+ hc_panPanel.add(pv.Image)
+.left(140)
+.top(34)
+.width(32)
+.height(32)
+.url(hc_fadeDown)
+.title('Pan down')
+.event('click', hc_panDown);
+
+hc_panPanel.add(pv.Image)
+.left(190)
+.top(34)
+.width(32)
+.height(32)
+.url('images/zoom-in.png')
+.title('Zoom in')
+.event('click', hc_zoomIn);
+
+hc_panPanel.add(pv.Image)
+.left(240)
+.top(34)
+.width(32)
+.height(32)
+.url('images/zoom-out.png')
+.title('Zoom out')
+.event('click', hc_zoomOut);
+
+hc_panPanel.add(pv.Image)
+.left(290)
+.top(34)
+.width(32)
+.height(32)
+.url('images/zoom-reset.png')
+.title('Zoom reset')
+.event('click', hc_resetZomming);
+
+hc_panPanel.add(pv.Image)
+.left(340)
+.top(34)
+.width(32)
+.height(32)
+.url(function() {if(hc_isNewWindow){ return 'images/new-window-press.png';}else{ return 'images/new-window.png';}})
+.title('Open sub workflow in new window')
+.event('click', function(){ if(hc_isNewWindow){ hc_isNewWindow = false;hc_headerPanel.render();}else{ hc_isNewWindow = true;hc_headerPanel.render();}});
+
+hc_panPanel.def('active', false);
+
+hc_panPanel.add(pv.Bar)
+.events('all')
+.left(390)
+.top(40)
+.width(100)
+.height(24)
+.event('click', hc_setShowName)
+.fillStyle(function() this.parent.active() ? 'orange' : '#c5b0d5')
+.strokeStyle('black')
+.event('mouseover', function() this.parent.active(true))
+.event('mouseout', function() this.parent.active(false))
+.anchor('left').add(pv.Label)
+	.textAlign('left')
+	.textMargin(5)
+	.textStyle(function() this.parent.active() ? 'white' : 'black')
+	.textBaseline('middle')
+	.text(hc_setShowLabel);
+
+hc_headerPanel.add(pv.Label)
+.top(40)
+.left( hc_containerPanelPadding + hc_nameMargin)
+.font(function() {return 24 +'px sans-serif';})
+.textAlign('left')
+.textBaseline('bottom')
+.text('Host Over Time Chart');
+
+hc_headerPanel.add(pv.Label)
+.top(80)
+.left(hc_containerPanelPadding + hc_nameMargin)
+.font(function() {return 16 +'px sans-serif';})
+.textAlign('left')
+.textBaseline('bottom')
+.text('wrangling');
+hc_headerPanel.render();
+
+</script>
+<script type="text/javascript+protovis">
+var hc_rootPanel = new pv.Panel()
+.width(hc_chartPanelWidth)
+.height(hc_chartPanelHeight)
+.fillStyle('white');
+
+var hc_vis = hc_rootPanel.add(pv.Panel)
+.bottom(hc_containerPanelPadding)
+.top(hc_containerPanelPadding)
+.left(hc_containerPanelPadding)
+.width(hc_w)
+.height(hc_h)
+.fillStyle('white');
+
+var rulePanelH = hc_vis.add(pv.Panel)
+.overflow('hidden')
+.bottom(hc_scaleMargin);
+
+rulePanelH.add(pv.Rule)
+.left(hc_nameMargin)
+.data(hc_data)
+.strokeStyle('#F8F8F8')
+.width(hc_w)
+.bottom( function(){
+return hc_yScale(this.index * hc_bar_spacing);
+})
+.anchor('left').add(pv.Label)
+.textBaseline('bottom')
+.text(function(d) {
+	if(hc_showName){
+	return (this.index +1) +' ' + d.name;
+	}else{
+		return (this.index +1) ;
+	}
+	});
+
+var rulePanelV = hc_vis.add(pv.Panel)
+.overflow('hidden')
+.left(hc_nameMargin)
+.bottom(0);
+
+rulePanelV.add(pv.Rule)
+.bottom(hc_scaleMargin)
+.data(function() hc_xScale.ticks())
+.strokeStyle('#F8F8F8')
+.left(hc_xScale)
+.height(hc_h )
+.anchor('bottom').add(pv.Label)
+.textAlign('left')
+.text(hc_xScale.tickFormat);
+
+var hc_chartPanelContainer = hc_vis.add(pv.Panel)
+.left(hc_nameMargin)
+.bottom(hc_scaleMargin)
+.width(hc_w-hc_nameMargin)
+.strokeStyle('black')
+.overflow('hidden');
+
+var hc_barPanel = hc_chartPanelContainer.add(pv.Panel)
+.data(hc_data)
+.height(function(){return hc_bar_spacing;})
+.bottom(function(d){
+return hc_yScale(this.index * hc_bar_spacing);});
+
+hc_barPanel.add(pv.Bar)
+.events('all')
+.data(function(d) d.jobs)
+.visible(function(d){return hc_barvisibility(d.jobS , this.parent.index);})
+.width(function(d) {
+return hc_getJobTime(d);})
+.left(function(d){
+if(!d.jobS){
+return 0;
+}
+return hc_xScale(d.jobS);} )
+.title(function(d)d.name)
+.event('click', function(d){
+	if(d.sub_wf){
+		hc_openWF(d.sub_wf_name);
+	}
+	else{
+	hc_printJobDetails(d);}
+})
+.fillStyle(function(d) {return 'white';})
+.lineWidth(hc_line_width)
+.strokeStyle(function(d) {return hc_getJobBorder(d);});
+
+hc_barPanel.add(pv.Bar)
+.data(function(d) d.jobs)
+.visible(function(d){return !hc_showState() && hc_barvisibility(d.jobS , this.parent.index);})
+.height(function(){return hc_inner_bar_width;})
+.bottom(hc_inner_bar_margin)
+.width(function(d) {
+return hc_getJobTime(d);})
+.left(function(d){
+if(!d.jobS){
+return 0;
+}
+return hc_xScale(d.jobS);} )
+.title(function(d)d.name)
+.event('click', function(d){
+	if(d.sub_wf){
+		hc_openWF(d.sub_wf_name);
+	}
+	else{
+	hc_printJobDetails(d);}
+})
+.fillStyle(function(d) {return d.color;});
+
+hc_barPanel.add(pv.Bar)
+.data(function(d) d.jobs)
+.visible(function(d){return hc_condorTime && hc_showState() && hc_barvisibility(d.cS , this.parent.index);})
+.height(function(){return hc_inner_bar_width;})
+.bottom(hc_inner_bar_margin)
+.width(function(d) {
+return hc_getCondorTime(d);})
+.left(function(d){
+if(!d.cS){
+return 0;
+}
+return hc_xScale(d.cS);} )
+.title(function(d)d.name)
+.event('click', function(d){
+	if(d.sub_wf){
+		hc_openWF(d.sub_wf_name);
+	}
+	else{
+ 	hc_printJobDetails(d);}
+ 	})
+.fillStyle(function(d) {return hc_color[0];});
+
+hc_barPanel.add(pv.Bar)
+.data(function(d) d.jobs)
+.visible(function(d){return hc_resourceDelay && hc_showState() && hc_barvisibility(d.gS , this.parent.index);})
+.height(function(){return hc_inner_bar_width;})
+.bottom(hc_inner_bar_margin)
+.width(function(d) {
+return hc_getResourceDelay(d);})
+.left(function(d){
+if(!d.gS){
+return 0;
+}
+return hc_xScale(d.gS);} )
+.title(function(d)d.name)
+.event('click', function(d){
+	if(d.sub_wf){
+	hc_openWF(d.sub_wf_name);
+	}
+	else{
+	hc_printJobDetails(d);}
+	})
+.fillStyle(function(d) {return hc_color[1];});
+
+hc_barPanel.add(pv.Bar)
+.data(function(d) d.jobs)
+.visible(function(d){return hc_condorRunTime && hc_showState() && hc_barvisibility(d.eS , this.parent.index);})
+.height(function(){return hc_inner_bar_width;})
+.bottom(hc_inner_bar_margin)
+.width(function(d) {
+return hc_getRunTime(d);})
+.left(function(d){
+if(!d.eS){
+return 0;
+}
+return hc_xScale(d.eS);} )
+.title(function(d)d.name)
+.event('click', function(d){
+	if(d.sub_wf){
+		hc_openWF(d.sub_wf_name);
+	}
+	else{
+ 	hc_printJobDetails(d);}
+ 	})
+.fillStyle(function(d) {return hc_color[2];});
+
+hc_barPanel.add(pv.Bar)
+.data(function(d) d.jobs)
+.visible(function(d){return hc_kickstart && hc_showState() && hc_barvisibility(d.kS , this.parent.index);})
+.height(function(){return hc_inner_bar_width;})
+.bottom(hc_inner_bar_margin)
+.width(function(d) {
+return hc_getKickStartTime(d);})
+.left(function(d){
+if(!d.kS){
+return 0;
+}
+return hc_xScale(d.kS);} )
+.title(function(d)d.name)
+.event('click', function(d){
+	if(d.sub_wf){
+		hc_openWF(d.sub_wf_name);
+	}
+	else{
+ 	hc_printJobDetails(d);}
+ 	})
+.fillStyle(function(d) {return d.color;});
+
+hc_rootPanel.add(pv.Label)
+.bottom(hc_containerPanelPadding)
+.font(function() {return 20 +'px sans-serif';})
+.textAlign('left')
+.textBaseline('top')
+.text('Host count -->')
+.textAngle(-Math.PI / 2);
+
+hc_rootPanel.add(pv.Label)
+.left(hc_containerPanelPadding + hc_nameMargin)
+.bottom(0)
+.font(function() {return 20 +'px sans-serif';})
+.textAlign('left')
+.textBaseline('bottom')
+.text('Timeline in seconds -->');
+
+hc_rootPanel.render();
+</script>
+<script type="text/javascript+protovis">
+var hc_footerpanel = new pv.Panel()
+.width(hc_footerPanelWidth)
+.height(hc_footerPanelHeight)
+.fillStyle('white');
+
+hc_footerpanel.add(pv.Dot)
+.data(hc_desc)
+.left( function(d){
+if(this.index == 0){
+hc_xLabelPos = hc_containerPanelPadding + hc_nameMargin;
+hc_yLabelPos = hc_footerPanelHeight -15;
+}else{
+if(hc_xLabelPos + hc_LabelWidth > hc_w - ( hc_containerPanelPadding + hc_nameMargin )){
+	hc_xLabelPos =  hc_containerPanelPadding + hc_nameMargin;
+	hc_yLabelPos -=15;
+}
+else{
+hc_xLabelPos += hc_LabelWidth;
+}
+}
+return hc_xLabelPos;}
+)
+.bottom(function(d){
+return hc_yLabelPos;})
+.fillStyle(function(d) hc_color[this.index])
+.strokeStyle(null)
+.size(49)
+.anchor('right').add(pv.Label)
+.textMargin(6)
+.textAlign('left')
+.text(function(d) d);
+
+hc_footerpanel.render();
+
+</script>
+</div>
+
+<div id ='host_chart_footer_div' style='width: 1500px; margin : 0 auto;' >
+<img style='float: right' src = 'images/jobstates.png'/>
+<input type='checkbox' name='state' value='show condor job' onclick="hc_setCondorTime();" /> show condor job [JOB_TERMINATED -SUBMIT]<br />
+<input type='checkbox' name='state' value='kickstart' onclick="hc_setKickstart();"/> show kickstart time <br />
+<input type='checkbox' name='state' value='execute'   onclick="hc_setCondorRuntime();"/> show runtime as seen by dagman [JOB_TERMINATED - EXECUTE]<br />
+<input type='checkbox' name='state' value='resource'  onclick="hc_setResourceDelay();"/> show resource delay  [EXECUTE -GRID_SUBMIT/GLOBUS_SUBMIT] <br/>
+<div id = 'host_chart_legend_div'>
+	<p><b>Note</b>: Sub workflow job instances are drawn with orange border and clicking on the sub workflow job instance <br/>
+	      will take you to the sub workflow chart page. Failed job instances are drawn with red border. Clicking on a non <br/>
+	 	  sub workflow job instance will display the job instance information. Mouse over the bars will provided the job <br/>  
+	 	  names. Host names are marked 'Unknown' when the host name cannot be resolved by the pegasus system.
+	 </p>
+</div>
+<div style='clear: right'></div>
+</div><br/>
+	<div id ='env_div' class ='header_level2'> Workflow environment </div>
+<table style='color:#600000;'>
+<tr>
+<th align ='left' style ='color:#600000'>dag_file_name</th>
+<td style ='color:#888888'> : wrangling-0.dag</td>
+</tr>
+<tr>
+<th align ='left' style ='color:#600000'>wf_uuid</th>
+<td style ='color:#888888'> : c8389675-ec2b-42be-9468-9d40bef67207</td>
+</tr>
+<tr>
+<th align ='left' style ='color:#600000'>submit_hostname</th>
+<td style ='color:#888888'> : qh-Lenovo-R720-15IKBN</td>
+</tr>
+<tr>
+<th align ='left' style ='color:#600000'>dax_label</th>
+<td style ='color:#888888'> : wrangling</td>
+</tr>
+<tr>
+<th align ='left' style ='color:#600000'>planner_version</th>
+<td style ='color:#888888'> : 4.8.2</td>
+</tr>
+<tr>
+<th align ='left' style ='color:#600000'>planner_arguments</th>
+<td style ='color:#888888'> : --conf pegasus.properties --dax wrangling.dax --dir /home/qh/wranglingWF/submit --output-dir /home/qh/output --cleanup leaf --force --sites condorpool --submit</td>
+</tr>
+<tr>
+<th align ='left' style ='color:#600000'>grid_dn</th>
+<td style ='color:#888888'> : -</td>
+</tr>
+<tr>
+<th align ='left' style ='color:#600000'>user</th>
+<td style ='color:#888888'> : qh</td>
+</tr>
+<tr>
+<th align ='left' style ='color:#600000'>submit_dir</th>
+<td style ='color:#888888'> : /home/qh/wranglingWF/submit/qh/pegasus/wrangling/run0005</td>
+</tr>
+<tr>
+<th align ='left' style ='color:#600000'>dax_version</th>
+<td style ='color:#888888'> : 3.6</td>
+</tr>
+</table>
+</center>
+	
+<div style='clear: left'>
+</div>
+</body>
+</html>
+	

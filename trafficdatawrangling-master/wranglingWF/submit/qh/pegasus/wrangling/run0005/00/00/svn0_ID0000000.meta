@@ -1,0 +1,24 @@
+[
+  {
+    "_type": "file", 
+    "_id": "a2.csv", 
+    "_attributes": {
+      "checksum.type": "sha256", 
+      "user": "qh", 
+      "checksum.value": "1f4ddb54c529f3155568e44d3709a55faad4c461121eb1c10013dfb413a1e17b", 
+      "ctime": "2018-07-05T11:38:19+01:00", 
+      "size": "158123"
+    }
+  }, 
+  {
+    "_type": "file", 
+    "_id": "a.csv", 
+    "_attributes": {
+      "checksum.type": "sha256", 
+      "user": "qh", 
+      "checksum.value": "0c8a05e2fe7adb3fdfba55e2c1fc722f49617753608e77c56fd45bfb24917add", 
+      "ctime": "2018-07-05T11:38:19+01:00", 
+      "size": "299489"
+    }
+  }
+]

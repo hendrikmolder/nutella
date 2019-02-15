@@ -1,0 +1,47 @@
+digraph E {
+size="8.0,10.0"
+ratio=fill
+node [shape=ellipse]
+edge [arrowhead=normal, arrowsize=1.0]
+	"filter5_ID0000009" [color=blueviolet,style=filled,label="filter5_ID0000009"]
+	"cleanup_wrangling_0_local" [color=deepskyblue,style=filled,label="cleanup_wrangling_0_local"]
+	"stage_out_local_local_7_0" [color=goldenrod,style=filled,label="stage_out_local_local_7_0"]
+	"stage_out_local_local_6_0" [color=goldenrod,style=filled,label="stage_out_local_local_6_0"]
+	"stage_out_local_local_0_0" [color=goldenrod,style=filled,label="stage_out_local_local_0_0"]
+	"filter4_ID0000008" [color=blueviolet,style=filled,label="filter4_ID0000008"]
+	"filter4_ID0000007" [color=blueviolet,style=filled,label="filter4_ID0000007"]
+	"filter5_ID0000010" [color=blueviolet,style=filled,label="filter5_ID0000010"]
+	"union6_ID0000011" [color=blueviolet,style=filled,label="union6_ID0000011"]
+	"create_dir_wrangling_0_local" [color=darkturquoise,style=filled,label="create_dir_wrangling_0_local"]
+	"register_local_0_0" [color=orange,style=filled,label="register_local_0_0"]
+	"filter1_ID0000002" [color=blueviolet,style=filled,label="filter1_ID0000002"]
+	"separate2_ID0000003" [color=blueviolet,style=filled,label="separate2_ID0000003"]
+	"filter1_ID0000001" [color=blueviolet,style=filled,label="filter1_ID0000001"]
+	"separate2_ID0000004" [color=blueviolet,style=filled,label="separate2_ID0000004"]
+	"separate3_ID0000006" [color=blueviolet,style=filled,label="separate3_ID0000006"]
+	"mutate_ID0000012" [color=blueviolet,style=filled,label="mutate_ID0000012"]
+	"svn0_ID0000000" [color=blueviolet,style=filled,label="svn0_ID0000000"]
+	"separate3_ID0000005" [color=blueviolet,style=filled,label="separate3_ID0000005"]
+
+	"filter5_ID0000009" -> "union6_ID0000011"
+	"stage_out_local_local_7_0" -> "cleanup_wrangling_0_local"
+	"stage_out_local_local_6_0" -> "cleanup_wrangling_0_local"
+	"stage_out_local_local_0_0" -> "cleanup_wrangling_0_local"
+	"stage_out_local_local_0_0" -> "register_local_0_0"
+	"filter4_ID0000008" -> "filter5_ID0000010"
+	"filter4_ID0000007" -> "filter5_ID0000009"
+	"filter5_ID0000010" -> "union6_ID0000011"
+	"union6_ID0000011" -> "stage_out_local_local_6_0"
+	"union6_ID0000011" -> "mutate_ID0000012"
+	"create_dir_wrangling_0_local" -> "svn0_ID0000000"
+	"filter1_ID0000002" -> "separate2_ID0000004"
+	"separate2_ID0000003" -> "separate3_ID0000005"
+	"filter1_ID0000001" -> "separate2_ID0000003"
+	"separate2_ID0000004" -> "separate3_ID0000006"
+	"separate3_ID0000006" -> "filter4_ID0000008"
+	"mutate_ID0000012" -> "stage_out_local_local_7_0"
+	"svn0_ID0000000" -> "filter1_ID0000002"
+	"svn0_ID0000000" -> "stage_out_local_local_0_0"
+	"svn0_ID0000000" -> "filter1_ID0000001"
+	"separate3_ID0000005" -> "filter4_ID0000007"
+}

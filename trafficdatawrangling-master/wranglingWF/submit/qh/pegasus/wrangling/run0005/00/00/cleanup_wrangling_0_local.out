@@ -1,0 +1,10 @@
+2018-07-05 11:40:34,635    INFO:  Reading URL pairs from stdin
+2018-07-05 11:40:34,636    INFO:  1 transfers loaded
+2018-07-05 11:40:34,636    INFO:  PATH=/usr/bin:/bin
+2018-07-05 11:40:34,636    INFO:  LD_LIBRARY_PATH=
+2018-07-05 11:40:34,646    INFO:  --------------------------------------------------------------------------------
+2018-07-05 11:40:34,646    INFO:  Starting transfers - attempt 1
+2018-07-05 11:40:36,649    INFO:  /bin/rm -f -r  '/home/qh/scratch/qh/pegasus/wrangling/run0005' 
+2018-07-05 11:40:36,666    INFO:  --------------------------------------------------------------------------------
+2018-07-05 11:40:36,666    INFO:  Stats: no local files in the transfer set
+2018-07-05 11:40:36,666    INFO:  All transfers completed successfully.

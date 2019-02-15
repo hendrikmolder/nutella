@@ -1,0 +1,36 @@
+
+# Workflow summary
+#   Summary of the workflow execution. It shows total
+#   tasks/jobs/sub workflows run, how many succeeded/failed etc.
+#   In case of hierarchical workflow the calculation shows the
+#   statistics of each individual sub workflow.The file also
+#   contains a 'Total' table at the bottom which is the cummulative
+#   of all the individual statistics details.t shows the following
+#   statistics about tasks, jobs and sub workflows.
+#
+#     * WF Retries - number of times a workflow was retried.
+#     * Succeeded - total count of succeeded tasks/jobs/sub workflows.
+#     * Failed - total count of failed tasks/jobs/sub workflows.
+#     * Incomplete - total count of tasks/jobs/sub workflows that are
+#       not in succeeded or failed state. This includes all the jobs
+#       that are not submitted, submitted but not completed etc. This
+#       is calculated as  difference between 'total' count and sum of
+#       'succeeded' and 'failed' count.
+#     * Total - total count of tasks/jobs/sub workflows.
+#     * Retries - total retry count of tasks/jobs/sub workflows.
+#     * Total+Retries - total count of tasks/jobs/sub workflows executed
+#       during workflow run. This is the cumulative of retries,
+#       succeeded and failed count.
+#
+Type           Succeeded  Failed    Incomplete  Total     Retries   Total+Retries  WF Retries
+---------------------------------------------------------------------------------------------
+a3e97551-d595-4f72-a93e-b9cfcf79a810 (wrangling)                                   0         
+Tasks          13         0         0           13        0         13                       
+Jobs           19         0         0           19        0         19                       
+Sub Workflows  0          0         0           0         0         0                        
+
+---------------------------------------------------------------------------------------------
+All Workflows                                                                      0         
+Tasks          13         0         0           13        0         13                       
+Jobs           19         0         0           19        0         19                       
+Sub Workflows  0          0         0           0         0         0                        

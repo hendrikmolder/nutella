@@ -1,0 +1,452 @@
+07/05/18 11:33:51 ******************************************************
+07/05/18 11:33:51 ** condor_scheduniv_exec.773.0 (CONDOR_DAGMAN) STARTING UP
+07/05/18 11:33:51 ** /usr/bin/condor_dagman
+07/05/18 11:33:51 ** SubsystemInfo: name=DAGMAN type=DAGMAN(10) class=DAEMON(1)
+07/05/18 11:33:51 ** Configuration: subsystem:DAGMAN local:<NONE> class:DAEMON
+07/05/18 11:33:51 ** $CondorVersion: 8.4.2 Feb 22 2016 BuildID: Debian-8.4.2~dfsg.1-1build1 Debian-8.4.2~dfsg.1-1build1 $
+07/05/18 11:33:51 ** $CondorPlatform: X86_64-Ubuntu_ $
+07/05/18 11:33:51 ** PID = 13946
+07/05/18 11:33:51 ** Log last touched time unavailable (No such file or directory)
+07/05/18 11:33:51 ******************************************************
+07/05/18 11:33:51 Using config source: /etc/condor/condor_config
+07/05/18 11:33:51 Using local config sources: 
+07/05/18 11:33:51    /etc/condor/config.d/00debconf
+07/05/18 11:33:51    /etc/condor/condor_config.local
+07/05/18 11:33:51 config Macros = 69, Sorted = 69, StringBytes = 2032, TablesBytes = 2540
+07/05/18 11:33:51 CLASSAD_CACHING is ENABLED
+07/05/18 11:33:51 Daemon Log is logging: D_ALWAYS D_ERROR
+07/05/18 11:33:51 DaemonCore: No command port requested.
+07/05/18 11:33:51 DAGMAN_USE_STRICT setting: 1
+07/05/18 11:33:51 DAGMAN_VERBOSITY setting: 3
+07/05/18 11:33:51 DAGMAN_DEBUG_CACHE_SIZE setting: 5242880
+07/05/18 11:33:51 DAGMAN_DEBUG_CACHE_ENABLE setting: False
+07/05/18 11:33:51 DAGMAN_SUBMIT_DELAY setting: 0
+07/05/18 11:33:51 DAGMAN_MAX_SUBMIT_ATTEMPTS setting: 6
+07/05/18 11:33:51 DAGMAN_STARTUP_CYCLE_DETECT setting: False
+07/05/18 11:33:51 DAGMAN_MAX_SUBMITS_PER_INTERVAL setting: 5
+07/05/18 11:33:51 DAGMAN_USER_LOG_SCAN_INTERVAL setting: 5
+07/05/18 11:33:51 DAGMAN_DEFAULT_PRIORITY setting: 0
+07/05/18 11:33:51 DAGMAN_SUPPRESS_NOTIFICATION setting: True
+07/05/18 11:33:51 allow_events (DAGMAN_ALLOW_EVENTS) setting: 114
+07/05/18 11:33:51 DAGMAN_RETRY_SUBMIT_FIRST setting: True
+07/05/18 11:33:51 DAGMAN_RETRY_NODE_FIRST setting: False
+07/05/18 11:33:51 DAGMAN_MAX_JOBS_IDLE setting: 1000
+07/05/18 11:33:51 DAGMAN_MAX_JOBS_SUBMITTED setting: 0
+07/05/18 11:33:51 DAGMAN_MAX_PRE_SCRIPTS setting: 20
+07/05/18 11:33:51 DAGMAN_MAX_POST_SCRIPTS setting: 20
+07/05/18 11:33:51 DAGMAN_ALLOW_LOG_ERROR setting: False
+07/05/18 11:33:51 DAGMAN_MUNGE_NODE_NAMES setting: True
+07/05/18 11:33:51 DAGMAN_PROHIBIT_MULTI_JOBS setting: False
+07/05/18 11:33:51 DAGMAN_SUBMIT_DEPTH_FIRST setting: False
+07/05/18 11:33:51 DAGMAN_ALWAYS_RUN_POST setting: True
+07/05/18 11:33:51 DAGMAN_ABORT_DUPLICATES setting: True
+07/05/18 11:33:51 DAGMAN_ABORT_ON_SCARY_SUBMIT setting: True
+07/05/18 11:33:51 DAGMAN_PENDING_REPORT_INTERVAL setting: 600
+07/05/18 11:33:51 DAGMAN_AUTO_RESCUE setting: True
+07/05/18 11:33:51 DAGMAN_MAX_RESCUE_NUM setting: 100
+07/05/18 11:33:51 DAGMAN_WRITE_PARTIAL_RESCUE setting: True
+07/05/18 11:33:51 DAGMAN_DEFAULT_NODE_LOG setting: @(DAG_DIR)/@(DAG_FILE).nodes.log
+07/05/18 11:33:51 DAGMAN_GENERATE_SUBDAG_SUBMITS setting: True
+07/05/18 11:33:51 DAGMAN_MAX_JOB_HOLDS setting: 100
+07/05/18 11:33:51 DAGMAN_HOLD_CLAIM_TIME setting: 20
+07/05/18 11:33:51 ALL_DEBUG setting: 
+07/05/18 11:33:51 DAGMAN_DEBUG setting: 
+07/05/18 11:33:51 DAGMAN_SUPPRESS_JOB_LOGS setting: False
+07/05/18 11:33:51 argv[0] == "condor_scheduniv_exec.773.0"
+07/05/18 11:33:51 argv[1] == "-Lockfile"
+07/05/18 11:33:51 argv[2] == "wrangling-0.dag.lock"
+07/05/18 11:33:51 argv[3] == "-AutoRescue"
+07/05/18 11:33:51 argv[4] == "1"
+07/05/18 11:33:51 argv[5] == "-DoRescueFrom"
+07/05/18 11:33:51 argv[6] == "0"
+07/05/18 11:33:51 argv[7] == "-Dag"
+07/05/18 11:33:51 argv[8] == "wrangling-0.dag"
+07/05/18 11:33:51 argv[9] == "-MaxPost"
+07/05/18 11:33:51 argv[10] == "20"
+07/05/18 11:33:51 argv[11] == "-Suppress_notification"
+07/05/18 11:33:51 argv[12] == "-CsdVersion"
+07/05/18 11:33:51 argv[13] == "$CondorVersion: 8.4.2 Feb 22 2016 BuildID: Debian-8.4.2~dfsg.1-1build1 Debian-8.4.2~dfsg.1-1build1 $"
+07/05/18 11:33:51 argv[14] == "-Dagman"
+07/05/18 11:33:51 argv[15] == "/usr/bin/condor_dagman"
+07/05/18 11:33:51 Warning: failed to get attribute DAGNodeName
+07/05/18 11:33:51 Default node log file is: </home/qh/wranglingWF/submit/qh/pegasus/wrangling/run0004/./wrangling-0.dag.nodes.log>
+07/05/18 11:33:51 DAG Lockfile will be written to wrangling-0.dag.lock
+07/05/18 11:33:51 DAG Input file is wrangling-0.dag
+07/05/18 11:33:51 Parsing 1 dagfiles
+07/05/18 11:33:51 Parsing wrangling-0.dag ...
+07/05/18 11:33:51 Warning: category registration has no throttle value set
+07/05/18 11:33:51 Warning: category stagein has no assigned nodes, so the throttle setting (10) will have no effect
+07/05/18 11:33:51 Warning: category cleanup has no assigned nodes, so the throttle setting (4) will have no effect
+07/05/18 11:33:51 Dag contains 19 total jobs
+07/05/18 11:33:51 Sleeping for 3 seconds to ensure ProcessId uniqueness
+07/05/18 11:33:54 Bootstrapping...
+07/05/18 11:33:54 Number of pre-completed nodes: 0
+07/05/18 11:33:54 MultiLogFiles: truncating log file /home/qh/wranglingWF/submit/qh/pegasus/wrangling/run0004/./wrangling-0.dag.nodes.log
+07/05/18 11:33:54 DAG status: 0 (DAG_STATUS_OK)
+07/05/18 11:33:54 Of 19 nodes total:
+07/05/18 11:33:54  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+07/05/18 11:33:54   ===     ===      ===     ===     ===        ===      ===
+07/05/18 11:33:54     0       0        0       0       1         18        0
+07/05/18 11:33:54 0 job proc(s) currently held
+07/05/18 11:33:54 Registering condor_event_timer...
+07/05/18 11:33:55 Submitting Condor Node create_dir_wrangling_0_local job(s)...
+07/05/18 11:33:55 Adding a DAGMan workflow log /home/qh/wranglingWF/submit/qh/pegasus/wrangling/run0004/./wrangling-0.dag.nodes.log
+07/05/18 11:33:55 Masking the events recorded in the DAGMAN workflow log
+07/05/18 11:33:55 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+07/05/18 11:33:55 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'create_dir_wrangling_0_local -a +DAGManJobId' '=' '773 -a DAGManJobId' '=' '773 -a submit_event_notes' '=' 'DAG' 'Node:' 'create_dir_wrangling_0_local -a dagman_log' '=' '/home/qh/wranglingWF/submit/qh/pegasus/wrangling/run0004/./wrangling-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a +DAGNodeRetry' '=' '0 -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/00/create_dir_wrangling_0_local.sub
+07/05/18 11:33:55 From submit: Submitting job(s).
+07/05/18 11:33:55 From submit: 1 job(s) submitted to cluster 774.
+07/05/18 11:33:55 	assigned Condor ID (774.0.0)
+07/05/18 11:33:55 Just submitted 1 job this cycle...
+07/05/18 11:33:55 Currently monitoring 1 Condor log file(s)
+07/05/18 11:33:55 Reassigning the id of job create_dir_wrangling_0_local from (774.0.0) to (774.0.0)
+07/05/18 11:33:55 Event: ULOG_SUBMIT for Condor Node create_dir_wrangling_0_local (774.0.0)
+07/05/18 11:33:55 Number of idle job procs: 1
+07/05/18 11:33:55 DAG status: 0 (DAG_STATUS_OK)
+07/05/18 11:33:55 Of 19 nodes total:
+07/05/18 11:33:55  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+07/05/18 11:33:55   ===     ===      ===     ===     ===        ===      ===
+07/05/18 11:33:55     0       0        1       0       0         18        0
+07/05/18 11:33:55 0 job proc(s) currently held
+07/05/18 11:34:00 Currently monitoring 1 Condor log file(s)
+07/05/18 11:34:00 Event: ULOG_EXECUTE for Condor Node create_dir_wrangling_0_local (774.0.0)
+07/05/18 11:34:00 Number of idle job procs: 0
+07/05/18 11:34:00 Event: ULOG_JOB_TERMINATED for Condor Node create_dir_wrangling_0_local (774.0.0)
+07/05/18 11:34:00 Number of idle job procs: 0
+07/05/18 11:34:00 Node create_dir_wrangling_0_local job proc (774.0.0) completed successfully.
+07/05/18 11:34:00 Node create_dir_wrangling_0_local job completed
+07/05/18 11:34:00 Running POST script of Node create_dir_wrangling_0_local...
+07/05/18 11:34:00 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+07/05/18 11:34:00 DAG status: 0 (DAG_STATUS_OK)
+07/05/18 11:34:00 Of 19 nodes total:
+07/05/18 11:34:00  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+07/05/18 11:34:00   ===     ===      ===     ===     ===        ===      ===
+07/05/18 11:34:00     0       0        0       1       0         18        0
+07/05/18 11:34:00 0 job proc(s) currently held
+07/05/18 11:34:00 Initializing user log writer for /home/qh/wranglingWF/submit/qh/pegasus/wrangling/run0004/./wrangling-0.dag.nodes.log, (774.0.0)
+07/05/18 11:34:06 Currently monitoring 1 Condor log file(s)
+07/05/18 11:34:06 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node create_dir_wrangling_0_local (774.0.0)
+07/05/18 11:34:06 POST Script of Node create_dir_wrangling_0_local completed successfully.
+07/05/18 11:34:06 DAG status: 0 (DAG_STATUS_OK)
+07/05/18 11:34:06 Of 19 nodes total:
+07/05/18 11:34:06  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+07/05/18 11:34:06   ===     ===      ===     ===     ===        ===      ===
+07/05/18 11:34:06     1       0        0       0       1         17        0
+07/05/18 11:34:06 0 job proc(s) currently held
+07/05/18 11:34:11 Submitting Condor Node svn0_ID0000000 job(s)...
+07/05/18 11:34:11 Adding a DAGMan workflow log /home/qh/wranglingWF/submit/qh/pegasus/wrangling/run0004/./wrangling-0.dag.nodes.log
+07/05/18 11:34:11 Masking the events recorded in the DAGMAN workflow log
+07/05/18 11:34:11 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+07/05/18 11:34:11 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'svn0_ID0000000 -a +DAGManJobId' '=' '773 -a DAGManJobId' '=' '773 -a submit_event_notes' '=' 'DAG' 'Node:' 'svn0_ID0000000 -a dagman_log' '=' '/home/qh/wranglingWF/submit/qh/pegasus/wrangling/run0004/./wrangling-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a +DAGNodeRetry' '=' '0 -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"create_dir_wrangling_0_local" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/00/svn0_ID0000000.sub
+07/05/18 11:34:11 From submit: Submitting job(s).
+07/05/18 11:34:11 From submit: 1 job(s) submitted to cluster 775.
+07/05/18 11:34:11 	assigned Condor ID (775.0.0)
+07/05/18 11:34:11 Just submitted 1 job this cycle...
+07/05/18 11:34:11 Currently monitoring 1 Condor log file(s)
+07/05/18 11:34:11 Reassigning the id of job svn0_ID0000000 from (775.0.0) to (775.0.0)
+07/05/18 11:34:11 Event: ULOG_SUBMIT for Condor Node svn0_ID0000000 (775.0.0)
+07/05/18 11:34:11 Number of idle job procs: 1
+07/05/18 11:34:11 DAG status: 0 (DAG_STATUS_OK)
+07/05/18 11:34:11 Of 19 nodes total:
+07/05/18 11:34:11  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+07/05/18 11:34:11   ===     ===      ===     ===     ===        ===      ===
+07/05/18 11:34:11     1       0        1       0       0         17        0
+07/05/18 11:34:11 0 job proc(s) currently held
+07/05/18 11:34:21 Currently monitoring 1 Condor log file(s)
+07/05/18 11:34:21 Event: ULOG_EXECUTE for Condor Node svn0_ID0000000 (775.0.0)
+07/05/18 11:34:21 Number of idle job procs: 0
+07/05/18 11:34:41 Currently monitoring 1 Condor log file(s)
+07/05/18 11:34:41 Event: ULOG_SHADOW_EXCEPTION for Condor Node svn0_ID0000000 (775.0.0)
+07/05/18 11:34:41 Number of idle job procs: 1
+07/05/18 11:34:41 Event: ULOG_JOB_HELD for Condor Node svn0_ID0000000 (775.0.0)
+07/05/18 11:34:41   Hold reason: Error from slot1@qh-Lenovo-R720-15IKBN: STARTER at 127.0.0.1 failed to send file(s) to <127.0.0.1:55451>: error reading from /var/lib/condor/execute/dir_13985/a.csv: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <127.0.0.1:62895>
+07/05/18 11:34:41 Number of idle job procs: 1
+07/05/18 11:34:41 DAG status: 0 (DAG_STATUS_OK)
+07/05/18 11:34:41 Of 19 nodes total:
+07/05/18 11:34:41  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+07/05/18 11:34:41   ===     ===      ===     ===     ===        ===      ===
+07/05/18 11:34:41     1       0        1       0       0         17        0
+07/05/18 11:34:41 1 job proc(s) currently held
+07/05/18 11:44:42 601 seconds since last log event
+07/05/18 11:44:42 Pending DAG nodes:
+07/05/18 11:44:42   Node svn0_ID0000000, Condor ID 775, status STATUS_SUBMITTED
+07/05/18 11:54:42 1201 seconds since last log event
+07/05/18 11:54:42 Pending DAG nodes:
+07/05/18 11:54:42   Node svn0_ID0000000, Condor ID 775, status STATUS_SUBMITTED
+07/05/18 12:04:43 1802 seconds since last log event
+07/05/18 12:04:43 Pending DAG nodes:
+07/05/18 12:04:43   Node svn0_ID0000000, Condor ID 775, status STATUS_SUBMITTED
+07/05/18 12:12:21 Currently monitoring 1 Condor log file(s)
+07/05/18 12:12:21 Event: ULOG_JOB_ABORTED for Condor Node svn0_ID0000000 (775.0.0)
+07/05/18 12:12:21 Number of idle job procs: 0
+07/05/18 12:12:21 Node svn0_ID0000000 job completed
+07/05/18 12:12:21 Running POST script of Node svn0_ID0000000...
+07/05/18 12:12:21 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+07/05/18 12:12:21 DAG status: 0 (DAG_STATUS_OK)
+07/05/18 12:12:21 Of 19 nodes total:
+07/05/18 12:12:21  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+07/05/18 12:12:21   ===     ===      ===     ===     ===        ===      ===
+07/05/18 12:12:21     1       0        0       1       0         17        0
+07/05/18 12:12:21 1 job proc(s) currently held
+07/05/18 12:12:21 Initializing user log writer for /home/qh/wranglingWF/submit/qh/pegasus/wrangling/run0004/./wrangling-0.dag.nodes.log, (775.0.0)
+07/05/18 12:12:26 Currently monitoring 1 Condor log file(s)
+07/05/18 12:12:26 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node svn0_ID0000000 (775.0.0)
+07/05/18 12:12:26 POST Script of Node svn0_ID0000000 failed with status 1
+07/05/18 12:12:26 POST for Node svn0_ID0000000 returned 1
+07/05/18 12:12:26 Retrying node svn0_ID0000000 (retry #1 of 1)...
+07/05/18 12:12:26 DAG status: 0 (DAG_STATUS_OK)
+07/05/18 12:12:26 Of 19 nodes total:
+07/05/18 12:12:26  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+07/05/18 12:12:26   ===     ===      ===     ===     ===        ===      ===
+07/05/18 12:12:26     1       0        0       0       1         17        0
+07/05/18 12:12:26 1 job proc(s) currently held
+07/05/18 12:12:31 Reassigning the id of job svn0_ID0000000 from (775.0.0) to (-1.-1.-1)
+07/05/18 12:12:31 Submitting Condor Node svn0_ID0000000 job(s)...
+07/05/18 12:12:31 Adding a DAGMan workflow log /home/qh/wranglingWF/submit/qh/pegasus/wrangling/run0004/./wrangling-0.dag.nodes.log
+07/05/18 12:12:31 Masking the events recorded in the DAGMAN workflow log
+07/05/18 12:12:31 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+07/05/18 12:12:31 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'svn0_ID0000000 -a +DAGManJobId' '=' '773 -a DAGManJobId' '=' '773 -a submit_event_notes' '=' 'DAG' 'Node:' 'svn0_ID0000000 -a dagman_log' '=' '/home/qh/wranglingWF/submit/qh/pegasus/wrangling/run0004/./wrangling-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a +DAGNodeRetry' '=' '1 -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"create_dir_wrangling_0_local" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/00/svn0_ID0000000.sub
+07/05/18 12:12:31 From submit: Submitting job(s).
+07/05/18 12:12:31 From submit: 1 job(s) submitted to cluster 814.
+07/05/18 12:12:31 	assigned Condor ID (814.0.0)
+07/05/18 12:12:31 Just submitted 1 job this cycle...
+07/05/18 12:12:31 Currently monitoring 1 Condor log file(s)
+07/05/18 12:12:31 Reassigning the id of job svn0_ID0000000 from (814.0.0) to (814.0.0)
+07/05/18 12:12:31 Event: ULOG_SUBMIT for Condor Node svn0_ID0000000 (814.0.0)
+07/05/18 12:12:31 Number of idle job procs: 1
+07/05/18 12:12:31 DAG status: 0 (DAG_STATUS_OK)
+07/05/18 12:12:31 Of 19 nodes total:
+07/05/18 12:12:31  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+07/05/18 12:12:31   ===     ===      ===     ===     ===        ===      ===
+07/05/18 12:12:31     1       0        1       0       0         17        0
+07/05/18 12:12:31 1 job proc(s) currently held
+07/05/18 12:12:36 Currently monitoring 1 Condor log file(s)
+07/05/18 12:12:36 Event: ULOG_EXECUTE for Condor Node svn0_ID0000000 (814.0.0)
+07/05/18 12:12:36 Number of idle job procs: 0
+07/05/18 12:12:36 Event: ULOG_SHADOW_EXCEPTION for Condor Node svn0_ID0000000 (814.0.0)
+07/05/18 12:12:36 Number of idle job procs: 1
+07/05/18 12:12:36 Event: ULOG_JOB_HELD for Condor Node svn0_ID0000000 (814.0.0)
+07/05/18 12:12:36   Hold reason: Error from slot2@qh-Lenovo-R720-15IKBN: STARTER at 127.0.0.1 failed to send file(s) to <127.0.0.1:5641>: error reading from /var/lib/condor/execute/dir_18665/a.csv: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <127.0.0.1:55235>
+07/05/18 12:12:36 Number of idle job procs: 1
+07/05/18 12:12:36 DAG status: 0 (DAG_STATUS_OK)
+07/05/18 12:12:36 Of 19 nodes total:
+07/05/18 12:12:36  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+07/05/18 12:12:36   ===     ===      ===     ===     ===        ===      ===
+07/05/18 12:12:36     1       0        1       0       0         17        0
+07/05/18 12:12:36 2 job proc(s) currently held
+07/05/18 12:15:20 Got SIGTERM. Performing graceful shutdown.
+07/05/18 12:15:20 DAG status: 0 (DAG_STATUS_OK)
+07/05/18 12:15:20 Of 19 nodes total:
+07/05/18 12:15:20  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+07/05/18 12:15:20   ===     ===      ===     ===     ===        ===      ===
+07/05/18 12:15:20     1       0        1       0       0         17        0
+07/05/18 12:15:20 2 job proc(s) currently held
+07/05/18 12:15:20 **** condor_scheduniv_exec.773.0 (condor_DAGMAN) pid 13946 EXITING WITH STATUS 3
+07/09/18 14:57:25 ******************************************************
+07/09/18 14:57:25 ** condor_scheduniv_exec.773.0 (CONDOR_DAGMAN) STARTING UP
+07/09/18 14:57:25 ** /usr/bin/condor_dagman
+07/09/18 14:57:25 ** SubsystemInfo: name=DAGMAN type=DAGMAN(10) class=DAEMON(1)
+07/09/18 14:57:25 ** Configuration: subsystem:DAGMAN local:<NONE> class:DAEMON
+07/09/18 14:57:25 ** $CondorVersion: 8.4.2 Feb 22 2016 BuildID: Debian-8.4.2~dfsg.1-1build1 Debian-8.4.2~dfsg.1-1build1 $
+07/09/18 14:57:25 ** $CondorPlatform: X86_64-Ubuntu_ $
+07/09/18 14:57:25 ** PID = 10219
+07/09/18 14:57:25 ** Log last touched 7/5 12:15:20
+07/09/18 14:57:25 ******************************************************
+07/09/18 14:57:25 Using config source: /etc/condor/condor_config
+07/09/18 14:57:25 Using local config sources: 
+07/09/18 14:57:25    /etc/condor/config.d/00debconf
+07/09/18 14:57:25    /etc/condor/condor_config.local
+07/09/18 14:57:25 config Macros = 69, Sorted = 69, StringBytes = 2036, TablesBytes = 2540
+07/09/18 14:57:25 CLASSAD_CACHING is ENABLED
+07/09/18 14:57:25 Daemon Log is logging: D_ALWAYS D_ERROR
+07/09/18 14:57:25 DaemonCore: No command port requested.
+07/09/18 14:57:25 DAGMAN_USE_STRICT setting: 1
+07/09/18 14:57:25 DAGMAN_VERBOSITY setting: 3
+07/09/18 14:57:25 DAGMAN_DEBUG_CACHE_SIZE setting: 5242880
+07/09/18 14:57:25 DAGMAN_DEBUG_CACHE_ENABLE setting: False
+07/09/18 14:57:25 DAGMAN_SUBMIT_DELAY setting: 0
+07/09/18 14:57:25 DAGMAN_MAX_SUBMIT_ATTEMPTS setting: 6
+07/09/18 14:57:25 DAGMAN_STARTUP_CYCLE_DETECT setting: False
+07/09/18 14:57:25 DAGMAN_MAX_SUBMITS_PER_INTERVAL setting: 5
+07/09/18 14:57:25 DAGMAN_USER_LOG_SCAN_INTERVAL setting: 5
+07/09/18 14:57:25 DAGMAN_DEFAULT_PRIORITY setting: 0
+07/09/18 14:57:25 DAGMAN_SUPPRESS_NOTIFICATION setting: True
+07/09/18 14:57:25 allow_events (DAGMAN_ALLOW_EVENTS) setting: 114
+07/09/18 14:57:25 DAGMAN_RETRY_SUBMIT_FIRST setting: True
+07/09/18 14:57:25 DAGMAN_RETRY_NODE_FIRST setting: False
+07/09/18 14:57:25 DAGMAN_MAX_JOBS_IDLE setting: 1000
+07/09/18 14:57:25 DAGMAN_MAX_JOBS_SUBMITTED setting: 0
+07/09/18 14:57:25 DAGMAN_MAX_PRE_SCRIPTS setting: 20
+07/09/18 14:57:25 DAGMAN_MAX_POST_SCRIPTS setting: 20
+07/09/18 14:57:25 DAGMAN_ALLOW_LOG_ERROR setting: False
+07/09/18 14:57:25 DAGMAN_MUNGE_NODE_NAMES setting: True
+07/09/18 14:57:25 DAGMAN_PROHIBIT_MULTI_JOBS setting: False
+07/09/18 14:57:25 DAGMAN_SUBMIT_DEPTH_FIRST setting: False
+07/09/18 14:57:25 DAGMAN_ALWAYS_RUN_POST setting: True
+07/09/18 14:57:25 DAGMAN_ABORT_DUPLICATES setting: True
+07/09/18 14:57:25 DAGMAN_ABORT_ON_SCARY_SUBMIT setting: True
+07/09/18 14:57:25 DAGMAN_PENDING_REPORT_INTERVAL setting: 600
+07/09/18 14:57:25 DAGMAN_AUTO_RESCUE setting: True
+07/09/18 14:57:25 DAGMAN_MAX_RESCUE_NUM setting: 100
+07/09/18 14:57:25 DAGMAN_WRITE_PARTIAL_RESCUE setting: True
+07/09/18 14:57:25 DAGMAN_DEFAULT_NODE_LOG setting: @(DAG_DIR)/@(DAG_FILE).nodes.log
+07/09/18 14:57:25 DAGMAN_GENERATE_SUBDAG_SUBMITS setting: True
+07/09/18 14:57:25 DAGMAN_MAX_JOB_HOLDS setting: 100
+07/09/18 14:57:25 DAGMAN_HOLD_CLAIM_TIME setting: 20
+07/09/18 14:57:25 ALL_DEBUG setting: 
+07/09/18 14:57:25 DAGMAN_DEBUG setting: 
+07/09/18 14:57:25 DAGMAN_SUPPRESS_JOB_LOGS setting: False
+07/09/18 14:57:25 argv[0] == "condor_scheduniv_exec.773.0"
+07/09/18 14:57:25 argv[1] == "-Lockfile"
+07/09/18 14:57:25 argv[2] == "wrangling-0.dag.lock"
+07/09/18 14:57:25 argv[3] == "-AutoRescue"
+07/09/18 14:57:25 argv[4] == "1"
+07/09/18 14:57:25 argv[5] == "-DoRescueFrom"
+07/09/18 14:57:25 argv[6] == "0"
+07/09/18 14:57:25 argv[7] == "-Dag"
+07/09/18 14:57:25 argv[8] == "wrangling-0.dag"
+07/09/18 14:57:25 argv[9] == "-MaxPost"
+07/09/18 14:57:25 argv[10] == "20"
+07/09/18 14:57:25 argv[11] == "-Suppress_notification"
+07/09/18 14:57:25 argv[12] == "-CsdVersion"
+07/09/18 14:57:25 argv[13] == "$CondorVersion: 8.4.2 Feb 22 2016 BuildID: Debian-8.4.2~dfsg.1-1build1 Debian-8.4.2~dfsg.1-1build1 $"
+07/09/18 14:57:25 argv[14] == "-Dagman"
+07/09/18 14:57:25 argv[15] == "/usr/bin/condor_dagman"
+07/09/18 14:57:25 Warning: failed to get attribute DAGNodeName
+07/09/18 14:57:25 Default node log file is: </home/qh/wranglingWF/submit/qh/pegasus/wrangling/run0004/./wrangling-0.dag.nodes.log>
+07/09/18 14:57:25 DAG Lockfile will be written to wrangling-0.dag.lock
+07/09/18 14:57:25 DAG Input file is wrangling-0.dag
+07/09/18 14:57:25 Parsing 1 dagfiles
+07/09/18 14:57:25 Parsing wrangling-0.dag ...
+07/09/18 14:57:25 Warning: category registration has no throttle value set
+07/09/18 14:57:25 Warning: category stagein has no assigned nodes, so the throttle setting (10) will have no effect
+07/09/18 14:57:25 Warning: category cleanup has no assigned nodes, so the throttle setting (4) will have no effect
+07/09/18 14:57:25 Dag contains 19 total jobs
+07/09/18 14:57:25 Lock file wrangling-0.dag.lock detected, 
+07/09/18 14:57:25 Duplicate DAGMan PID 13946 is no longer alive; this DAGMan should continue.
+07/09/18 14:57:25 Using default node job log file
+07/09/18 14:57:25 Sleeping for 3 seconds to ensure ProcessId uniqueness
+07/09/18 14:57:28 Bootstrapping...
+07/09/18 14:57:28 Number of pre-completed nodes: 0
+07/09/18 14:57:28 Running in RECOVERY mode... >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+07/09/18 14:57:28 Currently monitoring 1 Condor log file(s)
+07/09/18 14:57:28 Event: ULOG_SUBMIT for Condor Node create_dir_wrangling_0_local (774.0.0) [recovery mode]
+07/09/18 14:57:28 Number of idle job procs: 1
+07/09/18 14:57:28 Event: ULOG_EXECUTE for Condor Node create_dir_wrangling_0_local (774.0.0) [recovery mode]
+07/09/18 14:57:28 Number of idle job procs: 0
+07/09/18 14:57:28 Event: ULOG_JOB_TERMINATED for Condor Node create_dir_wrangling_0_local (774.0.0) [recovery mode]
+07/09/18 14:57:28 Number of idle job procs: 0
+07/09/18 14:57:28 Node create_dir_wrangling_0_local job proc (774.0.0) completed successfully.
+07/09/18 14:57:28 Node create_dir_wrangling_0_local job completed
+07/09/18 14:57:28 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node create_dir_wrangling_0_local (774.0.0) [recovery mode]
+07/09/18 14:57:28 POST Script of Node create_dir_wrangling_0_local completed successfully.
+07/09/18 14:57:28 Event: ULOG_SUBMIT for Condor Node svn0_ID0000000 (775.0.0) [recovery mode]
+07/09/18 14:57:28 Number of idle job procs: 1
+07/09/18 14:57:28 Event: ULOG_EXECUTE for Condor Node svn0_ID0000000 (775.0.0) [recovery mode]
+07/09/18 14:57:28 Number of idle job procs: 0
+07/09/18 14:57:28 Event: ULOG_SHADOW_EXCEPTION for Condor Node svn0_ID0000000 (775.0.0) [recovery mode]
+07/09/18 14:57:28 Number of idle job procs: 1
+07/09/18 14:57:28 Event: ULOG_JOB_HELD for Condor Node svn0_ID0000000 (775.0.0) [recovery mode]
+07/09/18 14:57:28   Hold reason: Error from slot1@qh-Lenovo-R720-15IKBN: STARTER at 127.0.0.1 failed to send file(s) to <127.0.0.1:55451>: error reading from /var/lib/condor/execute/dir_13985/a.csv: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <127.0.0.1:62895>
+07/09/18 14:57:28 Number of idle job procs: 1
+07/09/18 14:57:28 Event: ULOG_JOB_ABORTED for Condor Node svn0_ID0000000 (775.0.0) [recovery mode]
+07/09/18 14:57:28 Number of idle job procs: 0
+07/09/18 14:57:28 Node svn0_ID0000000 job completed
+07/09/18 14:57:28 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node svn0_ID0000000 (775.0.0) [recovery mode]
+07/09/18 14:57:28 POST Script of Node svn0_ID0000000 failed with status 1
+07/09/18 14:57:28 POST for Node svn0_ID0000000 returned 1
+07/09/18 14:57:28 Looking for retry of node svn0_ID0000000 (retry #1 of 1)...
+07/09/18 14:57:28 Reassigning the id of job svn0_ID0000000 from (775.0.0) to (-1.-1.-1)
+07/09/18 14:57:28 Event: ULOG_SUBMIT for Condor Node svn0_ID0000000 (814.0.0) [recovery mode]
+07/09/18 14:57:28 Number of idle job procs: 1
+07/09/18 14:57:28 Event: ULOG_EXECUTE for Condor Node svn0_ID0000000 (814.0.0) [recovery mode]
+07/09/18 14:57:28 Number of idle job procs: 0
+07/09/18 14:57:28 Event: ULOG_SHADOW_EXCEPTION for Condor Node svn0_ID0000000 (814.0.0) [recovery mode]
+07/09/18 14:57:28 Number of idle job procs: 1
+07/09/18 14:57:28 Event: ULOG_JOB_HELD for Condor Node svn0_ID0000000 (814.0.0) [recovery mode]
+07/09/18 14:57:28   Hold reason: Error from slot2@qh-Lenovo-R720-15IKBN: STARTER at 127.0.0.1 failed to send file(s) to <127.0.0.1:5641>: error reading from /var/lib/condor/execute/dir_18665/a.csv: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <127.0.0.1:55235>
+07/09/18 14:57:28 Number of idle job procs: 1
+07/09/18 14:57:28     ------------------------------
+07/09/18 14:57:28        Condor Recovery Complete
+07/09/18 14:57:28     ------------------------------
+07/09/18 14:57:28 ...done with RECOVERY mode <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+07/09/18 14:57:28 DAG status: 0 (DAG_STATUS_OK)
+07/09/18 14:57:28 Of 19 nodes total:
+07/09/18 14:57:28  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+07/09/18 14:57:28   ===     ===      ===     ===     ===        ===      ===
+07/09/18 14:57:28     1       0        1       0       0         17        0
+07/09/18 14:57:28 2 job proc(s) currently held
+07/09/18 14:57:28 DAG status: 0 (DAG_STATUS_OK)
+07/09/18 14:57:28 Of 19 nodes total:
+07/09/18 14:57:28  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+07/09/18 14:57:28   ===     ===      ===     ===     ===        ===      ===
+07/09/18 14:57:28     1       0        1       0       0         17        0
+07/09/18 14:57:28 2 job proc(s) currently held
+07/09/18 14:57:28 Registering condor_event_timer...
+07/09/18 14:57:29 Currently monitoring 1 Condor log file(s)
+07/09/18 14:57:29 DAG status: 0 (DAG_STATUS_OK)
+07/09/18 14:57:29 Of 19 nodes total:
+07/09/18 14:57:29  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+07/09/18 14:57:29   ===     ===      ===     ===     ===        ===      ===
+07/09/18 14:57:29     1       0        1       0       0         17        0
+07/09/18 14:57:29 2 job proc(s) currently held
+07/09/18 15:02:19 Currently monitoring 1 Condor log file(s)
+07/09/18 15:02:19 Event: ULOG_JOB_ABORTED for Condor Node svn0_ID0000000 (814.0.0)
+07/09/18 15:02:19 Number of idle job procs: 0
+07/09/18 15:02:19 Node svn0_ID0000000 job completed
+07/09/18 15:02:19 Running POST script of Node svn0_ID0000000...
+07/09/18 15:02:19 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+07/09/18 15:02:19 DAG status: 0 (DAG_STATUS_OK)
+07/09/18 15:02:19 Of 19 nodes total:
+07/09/18 15:02:19  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+07/09/18 15:02:19   ===     ===      ===     ===     ===        ===      ===
+07/09/18 15:02:19     1       0        0       1       0         17        0
+07/09/18 15:02:19 2 job proc(s) currently held
+07/09/18 15:02:19 Initializing user log writer for /home/qh/wranglingWF/submit/qh/pegasus/wrangling/run0004/./wrangling-0.dag.nodes.log, (814.0.0)
+07/09/18 15:02:24 Currently monitoring 1 Condor log file(s)
+07/09/18 15:02:24 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node svn0_ID0000000 (814.0.0)
+07/09/18 15:02:24 POST Script of Node svn0_ID0000000 failed with status 1
+07/09/18 15:02:24 POST for Node svn0_ID0000000 returned 1
+07/09/18 15:02:24 DAG status: 2 (DAG_STATUS_NODE_FAILED)
+07/09/18 15:02:24 Of 19 nodes total:
+07/09/18 15:02:24  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+07/09/18 15:02:24   ===     ===      ===     ===     ===        ===      ===
+07/09/18 15:02:24     1       0        0       0       0         17        1
+07/09/18 15:02:24 2 job proc(s) currently held
+07/09/18 15:02:24 ERROR: the following job(s) failed:
+07/09/18 15:02:24 ---------------------- Job ----------------------
+07/09/18 15:02:24       Node Name: svn0_ID0000000
+07/09/18 15:02:24            Noop: false
+07/09/18 15:02:24          NodeID: 1
+07/09/18 15:02:24     Node Status: STATUS_ERROR    
+07/09/18 15:02:24 Node return val: 1
+07/09/18 15:02:24           Error: Job failed due to DAGMAN error -1002 and POST Script failed with status 1 (after 1 node retries)
+07/09/18 15:02:24 Job Submit File: 00/00/svn0_ID0000000.sub
+07/09/18 15:02:24     POST Script: /usr/bin/pegasus-exitcode  -s PegasusLite:+exitcode+0 -l wrangling-0.exitcode.log  .//00/00/svn0_ID0000000.out
+07/09/18 15:02:24           Retry: 1
+07/09/18 15:02:24   Condor Job ID: (814.0.0)
+07/09/18 15:02:24       Q_PARENTS: create_dir_wrangling_0_local, <END>
+07/09/18 15:02:24       Q_WAITING: <END>
+07/09/18 15:02:24      Q_CHILDREN: filter1_ID0000002, stage_out_local_local_0_0, filter1_ID0000001, <END>
+07/09/18 15:02:24 ---------------------------------------	<END>
+07/09/18 15:02:24 Aborting DAG...
+07/09/18 15:02:24 Writing Rescue DAG to wrangling-0.dag.rescue001...
+07/09/18 15:02:24 Removing submitted jobs...
+07/09/18 15:02:24 Removing any/all submitted Condor jobs...
+07/09/18 15:02:24 Running: /usr/bin/condor_rm -const DAGManJobId' '=?=' '773
+07/09/18 15:02:24 Note: 0 total job deferrals because of -MaxJobs limit (0)
+07/09/18 15:02:24 Note: 0 total job deferrals because of -MaxIdle limit (1000)
+07/09/18 15:02:24 Note: 0 total job deferrals because of node category throttles
+07/09/18 15:02:24 Note: 0 total PRE script deferrals because of -MaxPre limit (20) or DEFER
+07/09/18 15:02:24 Note: 0 total POST script deferrals because of -MaxPost limit (20) or DEFER
+07/09/18 15:02:24 DAG status: 2 (DAG_STATUS_NODE_FAILED)
+07/09/18 15:02:24 Of 19 nodes total:
+07/09/18 15:02:24  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+07/09/18 15:02:24   ===     ===      ===     ===     ===        ===      ===
+07/09/18 15:02:24     1       0        0       0       0         17        1
+07/09/18 15:02:24 2 job proc(s) currently held
+07/09/18 15:02:24 Wrote metrics file wrangling-0.dag.metrics.
+07/09/18 15:02:24 Reporting metrics to Pegasus metrics server(s); output is in wrangling-0.dag.metrics.out.
+07/09/18 15:02:24 Running command </usr/lib/condor/libexec/condor_dagman_metrics_reporter -f wrangling-0.dag.metrics -t 100>
+07/09/18 15:02:24 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+07/09/18 15:02:24 **** condor_scheduniv_exec.773.0 (condor_DAGMAN) pid 10219 EXITING WITH STATUS 1
