@@ -12,15 +12,14 @@ host = '127.0.0.1'
 port = 8881
 
 # Include the API functions
-import weather_json2csv
-import file_downloader
+from endpoints import weather_json2csv, file_downloader, union
 
 # Start the server
 if __name__ == '__main__':
     run( host = host, port = port)
 
 def clear_downloads():
-    dir = os.path.abspath('../downloads/') # Set downloads directory
+    dir =  os.path.abspath(os.path.join(os.path.dirname(__file__), 'downloads'))
     print "[Shutdown] Clearing downloads from %s." % (dir)
     files = os.listdir(dir)
     for file in files:
