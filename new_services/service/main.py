@@ -19,7 +19,7 @@ if __name__ == '__main__':
     run( host = host, port = port)
 
 def clear_downloads():
-    dir =  os.path.abspath(os.path.join(os.path.dirname(__file__), 'downloads'))
+    dir =  os.path.join(os.path.abspath('__file__'), 'downloads')
     print "[Shutdown] Clearing downloads from %s." % (dir)
     files = os.listdir(dir)
     for file in files:
