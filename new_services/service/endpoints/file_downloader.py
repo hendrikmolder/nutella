@@ -28,7 +28,7 @@ def get_static_file(filename):
 @put('/files/import/raw/<newfile>')
 def download_from_path(newfile):
     text = request.body
-    filename = newfile + '.csv'
+    filename = newfile
     file_path = os.path.join(downloads_path, filename)
 
     with open(file_path,'wb') as file:

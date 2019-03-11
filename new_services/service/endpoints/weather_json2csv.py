@@ -28,7 +28,7 @@ def handle_objects(x, i):
 @post('/services/weather_json_to_csv/<filename>')
 def weather_json2csv(filename):
     # Look for file in the "downloads" directory
-    file_path = os.path.abspath('../../downloads') + '/' + filename
+    file_path = os.path.join(os.path.dirname(__file__), '..', 'downloads', filename)
 
     with open(file_path) as f:
         d = json.load(f)
@@ -54,7 +54,7 @@ def weather_json2csv(filename):
     # Construct the full url for the converted file
     host = request.get_header('host')
     new_filename = filename.replace('.json', '.csv', 1)
-    new_file_path = os.path.abspath('../../downloads') + '/' + new_filename
+    new_file_path = os.path.join(os.path.dirname(__file__), '..', 'downloads', new_filename)
     host = request.get_header('host')
     new_file_url = 'http://{}/files/'.format(host) + new_filename
     result.to_csv(new_file_path, index=False)
