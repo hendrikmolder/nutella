@@ -8,12 +8,19 @@ _Services created by Hendrik Molder. Where indicated, parts of Hapsoro's code is
 
 **For more detailed docuemntation please see [REST API documentation](api-doc.md).**
 
-1. **Weather JSON to CSV**\
-    Transforms the weather observations nested JSON file into a CSV file. Returns the _full_ URL of the CSV file, which can be used or downloaded from the server.
+### Wrangling services
 
-2. **File importer**\
-    Downloads a file to the webserver - this file can be used for processing later. Returns the file name, which can be passed to other scripts (such as weather json to csv) as they will always look for the file in the `downloads` directory.\
-    **NB!** When you shut down the server, _all_ files in `downloads` directory are deleted!
+1. [**Weather JSON to CSV**](api-doc.md#convert-weather-json-to-csv)
+2. [**Union two CSV files**](api-doc.md#union-two-files)
+
+### File upload/download services
+
+Downloads a file to the webserver - this file can be used for processing later. Returns the file name, which can be passed to other scripts (such as weather json to csv) as they will always look for the file in the `downloads` directory.\
+**NB!** When you shut down the server, _all_ files in `downloads` directory are deleted!
+
+1. [**Raw file upload**](api-doc.md#upload-a-file-to-the-server-using-the-file-itself)
+2. [**File upload via file URL**](api-doc.md#upload-a-file-to-the-server-using-file-url)
+3. [**File download**](api-doc.md#get-the-file-from-the-server)
 
 ## Running
 To start the web server, first ensure you have Python installed. Then navigate into the `new_service` directory in your terminal and follow these steps.
