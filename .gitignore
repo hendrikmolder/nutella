@@ -1,3 +1,6 @@
 .idea/
 nutella.iml
 .Rproj.user
+
+# Ignore .pyc files in all subfolders.
+**/*.pyc
