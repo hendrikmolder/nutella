@@ -4,7 +4,7 @@ This is the third year project of Hendrik Molder (March 2019).\
 Contact: `hendrik@molder.eu`\
 GitHub: `hendrikmolder`
 
-Please see the [new services](new_services) folder for the web services and its documentation. An overview of the structure can be found below.
+Please see the [new services](../new_services) folder for the web services and its documentation. An overview of the structure can be found below.
 
 ## Important Notice
 
@@ -12,7 +12,7 @@ _Some folders include reused functions implemented by other students in previous
 
 ## OpenCPU Documentation
 
-Documentation for using OpenCPU on a *nix system can be found in [OpenCPU Set-Up Guide](OpenCPU%20Set-Up%20Guide.pdf).
+Documentation for using OpenCPU on a *nix system can be found in [OpenCPU Set-Up Guide](../OpenCPU%20Set-Up%20Guide.pdf).
 
 ## Project Structure
 
