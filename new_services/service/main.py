@@ -2,18 +2,12 @@ import bottle
 from bottle import run, get, post, request
 import atexit, os
 
-'''
-configuration parameters
-========================
-set host to localhost (or 127.0.0.1) to run it on local machine
-set port number
-'''
 host = '127.0.0.1'
 port = 8881
 downloads_dir =  os.path.join(os.path.abspath(os.path.dirname(__file__)), 'downloads')
 
 # Include the API functions
-from endpoints import weather_json2csv, file_downloader, union
+from endpoints import weather_json2csv, file_downloader, union, join
 
 # Start the server
 if __name__ == '__main__':
