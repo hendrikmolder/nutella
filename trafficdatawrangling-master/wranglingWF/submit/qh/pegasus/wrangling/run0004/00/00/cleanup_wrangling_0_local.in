@@ -1,6 +1,0 @@
-[
-  {
-    "id": 1,
-    "type": "remove",
-    "target": { "site_label": "local", "url": "file:///home/qh/scratch/qh/pegasus/wrangling/run0004", "recursive": "True" } }
-]
