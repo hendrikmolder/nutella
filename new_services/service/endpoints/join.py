@@ -31,7 +31,7 @@ def calculate_earth_distance(lat1, lon1, lat2, lon2):
     c = 2 * np.arctan2(np.sqrt(a), np.sqrt(1-a))
 
     distance = EARTH_DIA * KM_TO_MILES * c # convert km to miles
-    print("Calculated distance: {}".format(str(distance)))
+    # print("Calculated distance: {}".format(str(distance)))
 
     return distance
 
@@ -61,7 +61,7 @@ def nearest_space_time_distance(lat, lon, dt, data2, lat_col_name,
         time_distance = calculate_time_distance(dt, data2_temp[date_col_name], dt_date_format, date_date_format)
         )
     data2_temp = data2_temp.sort_values([EARTH_DIST_COL_NAME, TIME_DIST_COL_NAME], ascending = True)
-    print("data2_temp: " + str(data2_temp.iloc[0][TIME_DIST_COL_NAME]))
+    # print("data2_temp: " + str(data2_temp.iloc[0][TIME_DIST_COL_NAME]))
     if (data2_temp.iloc[0][EARTH_DIST_COL_NAME] > space_threshold or
         (int(data2_temp.iloc[0][TIME_DIST_COL_NAME]/np.timedelta64(1, 's'))) > time_threshold):
         return NaN
@@ -109,8 +109,10 @@ def join_space():
         y_temp = y_temp.sort_values([EARTH_DIST_COL_NAME], ascending = True)
 
         if (y_temp.iloc[0][EARTH_DIST_COL_NAME] > space_threshold):
+            print('Earth distance is {}, which is more than {}'.format(str(y_temp.iloc[0][EARTH_DIST_COL_NAME]), str(space_threshold)))
             result.loc[i] = NaN
         else:
+            print('Earth distance is {}, which is less than {}'.format(str(y_temp.iloc[0][EARTH_DIST_COL_NAME]), str(space_threshold)))
             result.loc[i] = y_temp.iloc[0]
 
     result = pd.concat([x,result], axis = 1)
@@ -146,14 +148,10 @@ def join_space_time():
     x_date_format = request.forms.get('x_date_format') if request.forms.get('x_date_format') is not None else DEFAULT_DATE_FORMAT
     y_date_format = request.forms.get('y_date_format') if request.forms.get('y_date_format') is not None else DEFAULT_DATE_FORMAT
 
-    print("All Params have been fetched.")
     # read data from URL
     x = file_io.read_from_url(url_1)
-    print(url_1 + " has been read.")
     y = file_io.read_from_url(url_2)
-    print(url_2 + " has been read.")
     num_rows = len(x.index)
-    print("Files are read in.")
 
     # buffer
     match_column_names = list(y.columns.values)
@@ -167,8 +165,8 @@ def join_space_time():
         lon = x.loc[i][x_lon]
         dt = x.loc[i][x_date]
 
-        # if i % 100 == 0:
-        print("Processing {} of {}".format(str(i), str(num_rows)))
+        if i % 100 == 0:
+            print("Processing {} of {}".format(str(i), str(num_rows)))
 
         result.loc[i] = nearest_space_time_distance(lat, lon, dt,
             y, y_lat, y_lon, y_date,
