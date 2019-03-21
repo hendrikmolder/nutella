@@ -4,3 +4,6 @@ nutella.iml
 
 # Ignore .pyc files in all subfolders.
 **/*.pyc
+
+# Ignore the latest.zip -- the latest zipped HEAD of the repo
+latest.zip
